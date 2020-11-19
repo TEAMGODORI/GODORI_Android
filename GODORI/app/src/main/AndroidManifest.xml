@@ -8,6 +8,10 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.GODORI" />
+        android:theme="@style/Theme.GODORI">
+        <activity android:name=".GroupBeforeMain"></activity>
+        <activity android:name=".Group_before" />
+        <activity android:name=".MainActivity" />
+    </application>
 
 </manifest>
