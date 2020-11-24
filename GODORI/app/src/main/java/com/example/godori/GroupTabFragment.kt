@@ -22,7 +22,7 @@ class GroupTabBeforeFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        val view =  inflater.inflate(R.layout.fragment_group_tab_before, container, false)
+        val view =  inflater.inflate(R.layout.fragment_group_tab, container, false)
         return view
     }
 
