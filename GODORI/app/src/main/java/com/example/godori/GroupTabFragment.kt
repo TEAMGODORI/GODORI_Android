@@ -16,7 +16,7 @@ private const val ARG_PARAM2 = "param2"
  * Use the [GroupTabBeforeFragment.newInstance] factory method to
  * create an instance of this fragment.
  */
-class GroupTabBeforeFragment : Fragment() {
+class GroupTabFragment : Fragment() {
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?

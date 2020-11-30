@@ -2,7 +2,33 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:id="@+id/fragment_certif_tab_detail">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginLeft="15dp"
+            android:background="@drawable/arrow"
+            android:layout_gravity="center_vertical"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="110dp"
+            android:layout_gravity="center_vertical"
+            android:text="12월 6일 : 혜인정"
+            android:textSize="16dp" />
+    </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="4dp"
+        android:background="#D6D6D6" />
 
     <ScrollView
         android:layout_width="match_parent"
@@ -16,7 +42,7 @@
 
             <HorizontalScrollView
                 android:layout_width="match_parent"
-                android:layout_height="210dp">
+                android:layout_height="260dp">
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -24,109 +50,117 @@
                     android:orientation="horizontal">
 
                     <ImageButton
-                        android:layout_width="200dp"
-                        android:layout_height="200dp"
-                        android:layout_marginRight="30dp" />
+                        android:layout_width="240dp"
+                        android:layout_height="240dp"
+                        android:layout_marginRight="30dp"
+                        android:background="@drawable/certifi"/>
 
                     <ImageButton
-                        android:layout_width="200dp"
-                        android:layout_height="200dp"
-                        android:layout_marginRight="30dp" />
+                        android:layout_width="240dp"
+                        android:layout_height="240dp"
+                        android:layout_marginRight="30dp"
+                        android:background="@drawable/certifi"/>
                 </LinearLayout>
             </HorizontalScrollView>
 
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="4dp"
+                android:background="#D6D6D6" />
+
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="120dp"
                 android:orientation="vertical">
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="10dp"
+                    android:layout_marginTop="20dp"
                     android:text="운동시간" />
 
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="70dp"
-                    android:layout_marginTop="10dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
                     android:orientation="horizontal">
 
                     <EditText
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content" />
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:background="@drawable/edittext_rounded_corner_rectangle"/>
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="시간  " />
+                        android:text=" 시간  " />
 
                     <EditText
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content" />
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:background="@drawable/edittext_rounded_corner_rectangle"/>
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="분" />
+                        android:text=" 분"/>
                 </LinearLayout>
-
-                <View
-                    android:layout_width="match_parent"
-                    android:layout_height="4dp"
-                    android:background="#D6D6D6" />
             </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="4dp"
+                android:background="#D6D6D6" />
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="120dp"
                 android:orientation="vertical">
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="10dp"
+                    android:layout_marginTop="20dp"
                     android:text="운동 종목" />
 
                 <LinearLayout
                     android:layout_width="wrap_content"
-                    android:layout_height="70dp"
-                    android:layout_marginTop="10dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
                     android:orientation="horizontal">
 
                     <ImageView
                         android:layout_width="50dp"
                         android:layout_height="50dp"
-                        android:background="@drawable/button_round" />
+                        android:background="@drawable/button_circle" />
 
                     <ImageView
                         android:layout_width="50dp"
                         android:layout_height="50dp"
                         android:layout_marginLeft="20dp"
-                        android:background="@drawable/button_round" />
+                        android:background="@drawable/button_circle" />
                 </LinearLayout>
-
-                <View
-                    android:layout_width="match_parent"
-                    android:layout_height="4dp"
-                    android:background="#D6D6D6" />
             </LinearLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="4dp"
+                android:background="#D6D6D6" />
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="120dp"
                 android:orientation="vertical">
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="10dp"
+                    android:layout_marginTop="20dp"
                     android:text="운동 강도" />
 
                 <LinearLayout
                     android:layout_width="wrap_content"
-                    android:layout_height="70dp"
-                    android:layout_marginTop="10dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
                     android:orientation="horizontal">
 
                     <Button
@@ -163,28 +197,28 @@
                         android:background="@drawable/button_circle"
                         android:text="5" />
                 </LinearLayout>
-
-                <View
-                    android:layout_width="match_parent"
-                    android:layout_height="4dp"
-                    android:background="#D6D6D6" />
             </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="4dp"
+                android:background="#D6D6D6" />
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="90dp"
+                android:layout_height="120dp"
                 android:orientation="vertical">
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="10dp"
+                    android:layout_marginTop="20dp"
                     android:text="오늘의 평가" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="10dp"
+                    android:layout_marginTop="20dp"
                     android:text="시원하게 땀흘렸어요!" />
 
                 <TextView
@@ -198,22 +232,21 @@
                 android:layout_height="4dp"
                 android:background="#D6D6D6" />
 
-
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="120dp"
                 android:orientation="vertical">
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="10dp"
+                    android:layout_marginTop="20dp"
                     android:text="한 줄 설명" />
 
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="70dp"
-                    android:layout_marginTop="10dp"
+                    android:layout_height="120dp"
+                    android:layout_marginTop="20dp"
                     android:orientation="vertical">
 
                     <TextView
@@ -226,28 +259,34 @@
                         android:layout_height="wrap_content"
                         android:text="오랜만에 런닝까지 하니까 개운하네요 :)" />
                 </LinearLayout>
-
-                <View
-                    android:layout_width="match_parent"
-                    android:layout_height="4dp"
-                    android:background="#D6D6D6" />
             </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="4dp"
+                android:background="#D6D6D6" />
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="120dp"
                 android:orientation="vertical">
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="10dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginBottom="10dp"
                     android:text="댓글" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:background="#232323" />
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="70dp"
-                    android:layout_marginTop="10dp"
+                    android:layout_marginTop="20dp"
                     android:orientation="horizontal">
 
                     <TextView
@@ -271,7 +310,6 @@
                     android:layout_height="4dp"
                     android:background="#D6D6D6" />
             </LinearLayout>
-
         </LinearLayout>
     </ScrollView>
 </LinearLayout>
