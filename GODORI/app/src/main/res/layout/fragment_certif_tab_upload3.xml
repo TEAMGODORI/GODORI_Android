@@ -120,24 +120,6 @@
                             android:layout_marginLeft="10dp"
                             android:text="시원하게 땀 흘렸어요" />
 
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="50dp"
-                            android:orientation="horizontal">
-
-                            <ImageButton
-                                android:layout_width="40dp"
-                                android:layout_height="40dp"
-                                android:layout_gravity="center"
-                                android:background="@drawable/button_unchecked" />
-
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_gravity="center"
-                                android:layout_marginLeft="10dp"
-                                android:text="시원하게 땀 흘렸어요" />
-                        </LinearLayout>
                     </LinearLayout>
 
                     <LinearLayout
