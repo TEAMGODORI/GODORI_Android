@@ -9,6 +9,7 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentTransaction
 import kotlinx.android.synthetic.main.fragment_certif_tab.*
+import kotlinx.android.synthetic.main.fragment_certif_tab_upload1.*
 
 
 // TODO: Rename parameter arguments, choose names that match
@@ -29,6 +30,7 @@ class CertifTabFragment : Fragment(){
         // Inflate the layout for this fragment
         val view = inflater.inflate(R.layout.fragment_certif_tab, container, false)
         return view
+
     }
 
 }

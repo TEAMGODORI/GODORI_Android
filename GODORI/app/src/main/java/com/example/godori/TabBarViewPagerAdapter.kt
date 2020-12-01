@@ -15,10 +15,9 @@ class TabBarViewPagerAdapter (fm : FragmentManager) : FragmentStatePagerAdapter(
         0 -> GroupTabFragment()
         1 -> CertifTabFragment()
         2 -> MyInfoTabFragment()
-        3 -> CertifTabDetailFragment()
         else -> throw IllegalStateException("Unexpected position $position")
     }
-    override fun getCount(): Int = 4
+    override fun getCount(): Int = 3
     // 뷰페이저어댑터는 위 두가지 메소드를 반드시 오버라이드 해야한다
     // getItem() -> 리스트에 있는 프래그먼트의 인스턴스를 새 페이지로 제공하는 함수
     // getCount() -> 어댑터에서 만들 페이지 수를 반환하는 함수

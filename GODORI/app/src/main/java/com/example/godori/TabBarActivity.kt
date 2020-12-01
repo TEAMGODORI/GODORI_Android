@@ -1,20 +1,16 @@
 package com.example.godori
 
-import android.net.wifi.p2p.nsd.WifiP2pServiceRequest.newInstance
 import android.os.Bundle
-import android.widget.ImageButton
 import androidx.appcompat.app.AppCompatActivity
-import androidx.fragment.app.Fragment
 import androidx.viewpager.widget.ViewPager
 import kotlinx.android.synthetic.main.activity_tab_bar.*
-import kotlinx.android.synthetic.main.fragment_certif_tab.*
-import java.lang.reflect.Array.newInstance
+import kotlinx.android.synthetic.main.fragment_certif_tab_upload1.*
 import kotlin.properties.Delegates
 
 
 class TabBarActivity : AppCompatActivity() {
     private lateinit var viewpagerAdapter: TabBarViewPagerAdapter
-    var certifTabDetailFragment: CertifTabDetailFragment? = null
+//    private lateinit var certifAdapter: CertifTabAdapter
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -22,9 +18,10 @@ class TabBarActivity : AppCompatActivity() {
 
         // 뷰 페이저 세팅
         viewpagerAdapter = TabBarViewPagerAdapter(supportFragmentManager)
-
-
         tabbar_viewpager.adapter = viewpagerAdapter
+
+//        certifAdapter = CertifTabAdapter(supportFragmentManager)
+//        tabbar_viewpager.adapter = certifAdapter
 
         tabbar_viewpager.addOnPageChangeListener(object : ViewPager.OnPageChangeListener {
             override fun onPageScrollStateChanged(state: Int) {}
@@ -52,6 +49,7 @@ class TabBarActivity : AppCompatActivity() {
             true
 
         }
+
     }
 
 }
