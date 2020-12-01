@@ -43,12 +43,6 @@
                 android:textSize="12dp"/>
 
 
-            <!--이미지버튼 오른쪽 정렬용-->
-<!--            <view-->
-<!--                android:layout_width="0dp"-->
-<!--                android:layout_height="0dp"-->
-<!--                android:layout_weight="1"/>-->
-
 
             <ImageButton
                 android:id="@+id/btnNotice"
@@ -75,8 +69,8 @@
 
             <ImageView
                 android:id="@+id/imgBusy"
-                android:layout_width="123dp"
-                android:layout_height="129dp"
+                android:layout_width="134dp"
+                android:layout_height="142dp"
                 android:adjustViewBounds="true"
                 android:scaleType="centerCrop"
                 android:src="@drawable/img_appnotice"/>
@@ -86,8 +80,8 @@
             <ImageButton
                 android:id="@+id/btnMkGroup"
                 android:layout_width="wrap_content"
-                android:layout_height="32dp"
-                android:layout_marginTop="20dp"
+                android:layout_height="36dp"
+                android:layout_marginTop="24dp"
                 android:scaleType="fitStart"
                 android:adjustViewBounds="true"
                 android:layout_below="@+id/imgBusy"
@@ -116,7 +110,7 @@
             android:textStyle="bold"
             android:text="그룹 찾아보기"
             android:textColor="@color/black"
-            android:textSize="12dp"/>
+            android:textSize="14dp"/>
 
         <androidx.appcompat.widget.SearchView
             android:id="@+id/searchGroup"
@@ -135,7 +129,7 @@
             android:text="어떤 그룹에 들어가지?"
             android:textColor="@color/black"
             android:textStyle="bold"
-            android:textSize="12dp"/>
+            android:textSize="14dp"/>
 
 
         <!--스크롤 뷰를 쓰기 위해서 LinearLayout으로 묶-->
@@ -151,18 +145,20 @@
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="25dp">
+            android:layout_marginTop="25dp"
+            android:layout_marginBottom="10dp">
 
 
             <TextView
                 android:id="@+id/tvGroupIng"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="모집 중인 그룹"
+                android:layout_height="match_parent"
                 android:layout_centerVertical="true"
+
+                android:text="오늘 인증한 그룹원"
                 android:textColor="@color/black"
-                android:textStyle="bold"
-                android:textSize="12dp"/>
+                android:textSize="14dp"
+                android:textStyle="bold" />
 
 
             <Button
@@ -179,20 +175,146 @@
                 android:textSize="11dp" />
 
 
+
+
         </RelativeLayout>
 
+<!--recyclerview로 구현, Adapter 연결 못함, 잠시 주-->
+<!--        <androidx.recyclerview.widget.RecyclerView-->
+<!--            android:id="@+id/recyclerview_main"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="match_parent"-->
+<!--            android:orientation="horizontal"-->
+<!--            app:layout_behavior="@string/appbar_scrolling_view_behavior"-->
+<!--            tools:itemCount="5"-->
+<!--            tools:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"-->
+<!--            tools:listitem="@layout/group_more_card_layout">-->
 
-        <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/recyclerview_main"
-            android:orientation="horizontal"
+<!--        </androidx.recyclerview.widget.RecyclerView>-->
+
+
+        <HorizontalScrollView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="30dp"
+            android:id="@+id/sv_grouptab">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                >
+
+
+                <ImageView
+                    android:layout_width="90dp"
+                    android:layout_height="137dp"
+                    android:layout_marginRight="20dp"
+                    android:src="@drawable/img_groupafter_card"/>
+
+                <ImageView
+                    android:layout_width="90dp"
+                    android:layout_height="137dp"
+                    android:layout_marginRight="20dp"
+                    android:src="@drawable/img_groupafter_card"/>
+
+                <ImageView
+                    android:layout_width="90dp"
+                    android:layout_height="137dp"
+                    android:layout_marginRight="20dp"
+                    android:src="@drawable/img_groupafter_card"/>
+
+
+            </LinearLayout>
+
+        </HorizontalScrollView>
+
+
+        <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            app:layout_behavior="@string/appbar_scrolling_view_behavior"
-            tools:itemCount="5"
-            tools:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-            tools:listitem="@layout/group_more_card_layout">
-        </androidx.recyclerview.widget.RecyclerView>
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp">
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_centerVertical="true"
+
+                android:text="곧 인증한 그룹원"
+                android:textColor="@color/black"
+                android:textSize="14dp"
+                android:textStyle="bold" />
+
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/transparent"
+                android:minHeight="0dp"
+                android:minWidth="0dp"
+                android:layout_alignParentRight="true"
+                android:includeFontPadding="false"
+                android:text="더보기"
+                android:textColor="#939393"
+                android:textSize="11dp" />
+
+
+
+
+        </RelativeLayout>
+
+<!--recyclerview로 구현, Adapter 연결 못함, 잠시 주-->
+<!--        <androidx.recyclerview.widget.RecyclerView-->
+<!--            android:id="@+id/recyclerview_main"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="match_parent"-->
+<!--            android:orientation="horizontal"-->
+<!--            app:layout_behavior="@string/appbar_scrolling_view_behavior"-->
+<!--            tools:itemCount="5"-->
+<!--            tools:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"-->
+<!--            tools:listitem="@layout/group_more_card_layout">-->
+
+<!--        </androidx.recyclerview.widget.RecyclerView>-->
+
+
+        <HorizontalScrollView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="30dp">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                >
+
+
+                <ImageView
+                    android:layout_width="90dp"
+                    android:layout_height="177dp"
+                    android:layout_marginRight="20dp"
+                     android:src="@drawable/img_groupafter_card2"/>
+
+
+                <ImageView
+                    android:layout_width="90dp"
+                    android:layout_height="177dp"
+                    android:layout_marginRight="20dp"
+                    android:src="@drawable/img_groupafter_card2_1"/>
+
+            </LinearLayout>
+
+        </HorizontalScrollView>
+
+
+
+
+
+
+
 
     </LinearLayout>
+
 
 </ScrollView>
