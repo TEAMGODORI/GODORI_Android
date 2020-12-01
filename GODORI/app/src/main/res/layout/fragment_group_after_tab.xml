@@ -4,8 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-
-    tools:context=".GroupTabFragment">
+    android:background="#F9F9F9"
+    tools:context=".GroupAfterTabFragment">
 
     <!--스크롤 뷰를 쓰기 위해서 LinearLayout으로 묶음-->
     <LinearLayout
@@ -38,6 +38,8 @@
                 android:text="님 환영합니다!"
                 android:textColor="#3C3C3C"
                 android:textSize="12dp"/>
+
+
 
 
             <!--이미지버튼 오른쪽 정렬용-->
@@ -105,87 +107,88 @@
 
 
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+        <Button
+            android:id="@+id/btnManito"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
             android:layout_marginTop="30dp"
+            android:background="#677BF0"
+            android:textAlignment="viewStart"
+            android:textSize="14dp"
+            android:text="이번주 당신이 응원할 마니또는?"
             android:textStyle="bold"
-            android:text="그룹 찾아보기"
-            android:textColor="@color/black"
-            android:textSize="12dp"/>
+            android:layout_gravity="start" />
 
-        <androidx.appcompat.widget.SearchView
-            android:id="@+id/searchGroup"
-            android:layout_marginTop="10dp"
+        <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            app:iconifiedByDefault="false"
-            app:queryHint="그룹명을 입력하세요" />
-
-
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="95dp"
             android:layout_marginTop="30dp"
-            android:text="어떤 그룹에 들어가지?"
-            android:textColor="@color/black"
-            android:textStyle="bold"
-            android:textSize="12dp"/>
+            android:background="#FFFFFF"
+            android:padding="16dp">
 
+            <TextView
+                android:id="@+id/tvTitleCalories"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="이번주 감량한 칼로리는?"
+                android:textSize="14dp"
+                android:textStyle="bold"
+                android:textColor="#3C3C3C"/>
 
-        <!--스크롤 뷰를 쓰기 위해서 LinearLayout으로 묶-->
-        <ImageButton
-            android:id="@+id/btnRecommandGroup"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_marginTop="10dp"
-            android:padding="0sp"
-            android:scaleType="centerCrop"
-            android:src="@drawable/ic_recommandgroup" />
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="30dp">
-
+            <TextView
+                android:id="@+id/tvFoodnameCalories"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="투썸플레이스 아이스박스 1개"
+                android:textSize="11dp"
+                android:layout_marginTop="9dp"
+                android:textColor="#939393"
+                android:layout_below="@+id/tvTitleCalories"
+                />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="모집 중인 그룹"
-                android:textColor="@color/black"
-                android:textStyle="bold"
-                android:textSize="12dp"/>
-
-
-            <View
-                android:layout_width="0dp"
-                android:layout_height="0dp"
-                android:layout_weight="1"/>
-
-            <Button
-                android:id="@+id/btnMoreGroup"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:background="@color/transparent"
-                android:minHeight="0dp"
-                android:minWidth="0dp"
-                android:includeFontPadding="false"
-                android:text="더보기"
+                android:layout_below="@+id/tvFoodnameCalories"
+                android:layout_marginTop="0dp"
+                android:text="610kcal"
                 android:textColor="#939393"
                 android:textSize="11dp" />
 
 
-        </LinearLayout>
+            <ImageView
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:adjustViewBounds="true"
+                android:scaleType="centerCrop"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentRight="true"
+                android:src="@drawable/img_cake"/>
 
 
-        <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/recyclerview_main"
-            android:layout_height="match_parent"
-            android:layout_width="match_parent"
-            app:layout_behavior="@string/appbar_scrolling_view_behavior">
-        </androidx.recyclerview.widget.RecyclerView>
+
+        </RelativeLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:text="오늘 인증한 그룹원"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:textSize="12dp"/>
+
+
+
+
+
+
+
+
+
+
+
+
 
 
     </LinearLayout>
