@@ -1,12 +1,14 @@
 package com.example.godori
 
+import android.net.wifi.p2p.nsd.WifiP2pServiceRequest.newInstance
 import android.os.Bundle
-import android.view.Menu
-import android.view.View
+import android.widget.ImageButton
 import androidx.appcompat.app.AppCompatActivity
+import androidx.fragment.app.Fragment
 import androidx.viewpager.widget.ViewPager
 import kotlinx.android.synthetic.main.activity_tab_bar.*
 import kotlinx.android.synthetic.main.fragment_certif_tab.*
+import java.lang.reflect.Array.newInstance
 import kotlin.properties.Delegates
 
 
@@ -17,8 +19,6 @@ class TabBarActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_tab_bar)
-
-        certifTabDetailFragment = CertifTabDetailFragment()
 
         // 뷰 페이저 세팅
         viewpagerAdapter = TabBarViewPagerAdapter(supportFragmentManager)
@@ -53,11 +53,5 @@ class TabBarActivity : AppCompatActivity() {
 
         }
     }
-    fun onChangeFragment(index: Int){
-        if(index == 1){
-            supportFragmentManager.beginTransaction().replace(R.id.fragment_certif_tab_detail,
-                certifTabDetailFragment!!
-            ).commit();
-        }
-    }
+
 }
