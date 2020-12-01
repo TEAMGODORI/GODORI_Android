@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".TabBarActivity">
+
+    tools:context=".GroupTabFragment">
 
     <!--스크롤 뷰를 쓰기 위해서 LinearLayout으로 묶음-->
     <LinearLayout
@@ -108,7 +109,9 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="30dp"
+            android:textStyle="bold"
             android:text="그룹 찾아보기"
+            android:textColor="@color/black"
             android:textSize="12dp"/>
 
         <androidx.appcompat.widget.SearchView
@@ -126,27 +129,21 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="30dp"
             android:text="어떤 그룹에 들어가지?"
+            android:textColor="@color/black"
             android:textStyle="bold"
             android:textSize="12dp"/>
 
+
+        <!--스크롤 뷰를 쓰기 위해서 LinearLayout으로 묶-->
         <ImageButton
-            android:layout_marginTop="10dp"
             android:id="@+id/btnRecommandGroup"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:layout_marginTop="10dp"
             android:padding="0sp"
             android:scaleType="centerCrop"
-            android:src="@drawable/ic_recommandgroup"/>
+            android:src="@drawable/ic_recommandgroup" />
 
-
-
-
-
-
-
-
-
-        <!--스크롤 뷰를 쓰기 위해서 LinearLayout으로 묶-->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -157,6 +154,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="모집 중인 그룹"
+                android:textColor="@color/black"
+                android:textStyle="bold"
                 android:textSize="12dp"/>
 
 
@@ -182,21 +181,11 @@
 
 
         <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/rvList"
+            android:id="@+id/recyclerview_main"
+            android:layout_height="match_parent"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:orientation="horizontal" />
-
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-
-
-        </RelativeLayout>
-
-
-
+            app:layout_behavior="@string/appbar_scrolling_view_behavior">
+        </androidx.recyclerview.widget.RecyclerView>
 
 
     </LinearLayout>

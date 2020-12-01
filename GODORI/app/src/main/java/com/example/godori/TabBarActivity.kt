@@ -55,11 +55,11 @@ class TabBarActivity : AppCompatActivity() {
 
         }
     }
-    fun onChangeFragment(index: Int){
-        if(index == 1){
-            supportFragmentManager.beginTransaction().replace(R.id.fragment_certif_tab_detail,
-                certifTabDetailFragment!!
-            ).commit();
-        }
-    }
+//    fun onChangeFragment(index: Int){
+//        if(index == 1){
+//            supportFragmentManager.beginTransaction().replace(R.id.fragment_certif_tab_detail,
+//                certifTabDetailFragment!!
+//            ).commit();
+//        }
+//    }
 }

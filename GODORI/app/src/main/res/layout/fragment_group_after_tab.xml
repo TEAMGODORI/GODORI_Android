@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#F9F9F9"
-    tools:context=".TabBarActivity">
+    tools:context=".GroupAfterTabFragment">
 
     <!--스크롤 뷰를 쓰기 위해서 LinearLayout으로 묶음-->
     <LinearLayout
@@ -168,6 +168,19 @@
 
 
         </RelativeLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:text="오늘 인증한 그룹원"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:textSize="12dp"/>
+
+
+
+
 
 
 
