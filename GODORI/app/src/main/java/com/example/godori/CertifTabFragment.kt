@@ -41,7 +41,7 @@ class CertifTabFragment : Fragment() {
         // Inflate the layout for this fragment
         val view = inflater.inflate(R.layout.fragment_certif_tab, container, false)
 
-       // certi1.setOnClickListener(View.OnClickListener { tabBarActivity?.onChangeFragment(1) })
+//        certi1.setOnClickListener(View.OnClickListener { tabBarActivity?.onChangeFragment(3) })
         return view
     }
 

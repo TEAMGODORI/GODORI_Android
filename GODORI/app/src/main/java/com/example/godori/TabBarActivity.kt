@@ -20,8 +20,6 @@ class TabBarActivity : AppCompatActivity() {
 
         certifTabDetailFragment = CertifTabDetailFragment()
 
-
-
         // 뷰 페이저 세팅
         viewpagerAdapter = TabBarViewPagerAdapter(supportFragmentManager)
 
