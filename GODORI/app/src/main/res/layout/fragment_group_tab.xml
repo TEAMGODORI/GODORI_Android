@@ -16,7 +16,7 @@
         android:baselineAligned="true"
         android:layout_margin="16dp">
 
-        <LinearLayout
+        <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
@@ -28,6 +28,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="도리"
+                android:layout_centerVertical="true"
                 android:textColor="#3C3C3C"
                 android:textSize="12dp"/>
 
@@ -36,15 +37,17 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="님 환영합니다!"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/text_userName"
                 android:textColor="#3C3C3C"
                 android:textSize="12dp"/>
 
 
             <!--이미지버튼 오른쪽 정렬용-->
-            <view
-                android:layout_width="0dp"
-                android:layout_height="0dp"
-                android:layout_weight="1"/>
+<!--            <view-->
+<!--                android:layout_width="0dp"-->
+<!--                android:layout_height="0dp"-->
+<!--                android:layout_weight="1"/>-->
 
 
             <ImageButton
@@ -52,13 +55,14 @@
                 android:layout_width="24dp"
                 android:layout_height="24dp"
                 android:layout_gravity="right"
+                android:layout_alignParentRight="true"
                 android:scaleType="fitCenter"
                 android:adjustViewBounds="true"
                 android:src="@drawable/ic_notice"
                 android:background="@color/transparent"/>
 
 
-        </LinearLayout>
+        </RelativeLayout>
 
 
         <RelativeLayout
@@ -144,25 +148,22 @@
             android:scaleType="centerCrop"
             android:src="@drawable/ic_recommandgroup" />
 
-        <LinearLayout
+        <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="30dp">
+            android:layout_marginTop="25dp">
 
 
             <TextView
+                android:id="@+id/tvGroupIng"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="모집 중인 그룹"
+                android:layout_centerVertical="true"
                 android:textColor="@color/black"
                 android:textStyle="bold"
                 android:textSize="12dp"/>
 
-
-            <View
-                android:layout_width="0dp"
-                android:layout_height="0dp"
-                android:layout_weight="1"/>
 
             <Button
                 android:id="@+id/btnMoreGroup"
@@ -171,20 +172,26 @@
                 android:background="@color/transparent"
                 android:minHeight="0dp"
                 android:minWidth="0dp"
+                android:layout_alignParentRight="true"
                 android:includeFontPadding="false"
                 android:text="더보기"
                 android:textColor="#939393"
                 android:textSize="11dp" />
 
 
-        </LinearLayout>
+        </RelativeLayout>
 
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/recyclerview_main"
-            android:layout_height="match_parent"
+            android:orientation="horizontal"
             android:layout_width="match_parent"
-            app:layout_behavior="@string/appbar_scrolling_view_behavior">
+            android:layout_height="match_parent"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior"
+            tools:itemCount="5"
+            tools:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            tools:listitem="@layout/group_more_card_layout">
+
         </androidx.recyclerview.widget.RecyclerView>
 
 
