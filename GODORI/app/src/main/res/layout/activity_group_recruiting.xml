@@ -63,6 +63,7 @@
                 android:layout_marginTop="15dp"
                 android:text="운동 취향을 선택하고\n나에게 맞는 그룹을 찾아보세요"
                 android:textSize="14dp"
+                android:lineSpacingExtra="3dp"
                 android:layout_below="@+id/tvGroupRecruitingTitle"
                 android:textColor="@color/white"/>
 
@@ -102,15 +103,50 @@
 
         </RelativeLayout>
 
-        <androidx.recyclerview.widget.RecyclerView
+<!--카드뷰 레이아-->
+<!--        <androidx.recyclerview.widget.RecyclerView-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_marginTop="8dp"-->
+<!--            tools:itemCount="10"-->
+<!--            tools:listitem="@layout/group_recruiting_card_layout"-->
+<!--            >-->
+
+<!--        </androidx.recyclerview.widget.RecyclerView>-->
+
+
+        <ScrollView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            tools:itemCount="10"
-            tools:listitem="@layout/group_recruiting_card_layout"
-            >
+            android:layout_marginTop="10dp">
 
-        </androidx.recyclerview.widget.RecyclerView>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                >
+
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:layout_marginBottom="4dp"
+                    android:src="@drawable/img_recruiting_ltem"/>
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:layout_marginBottom="4dp"
+                    android:src="@drawable/img_recruiting_ltem"/>
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:layout_marginBottom="4dp"
+                    android:src="@drawable/img_recruiting_ltem"/>
+
+
+            </LinearLayout>
+
+        </ScrollView>
 
     </LinearLayout>
 </ScrollView>
