@@ -13,6 +13,7 @@
         <activity android:name=".CertifTabUpload2Activity" />
         <activity android:name=".CertifTabUpload1Activity" />
         <activity android:name=".CertifTabDetailActivity" />
+        <activity android:name=".GroupRecruitingActivity" />
         <activity android:name=".TabBarActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
