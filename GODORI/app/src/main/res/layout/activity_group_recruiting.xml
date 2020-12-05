@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".GroupRecruitingActivity"
+    android:background="#F7F7F7">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context=".GroupRecruitingFragment"
+        android:background="#F7F7F7">
+
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/btnRecruitingBack"
+            android:layout_width="match_parent"
+            android:layout_height="54dp"
+            android:background="@color/main">
+
+            <ImageButton
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginLeft="15dp"
+                android:background="@drawable/arrow"
+                android:backgroundTint="@color/white"
+                android:gravity="center" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:text="모집 중인 그룹"
+                android:textColor="#ffffff"
+                android:textSize="14dp" />
+
+        </androidx.appcompat.widget.Toolbar>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:background="@color/main"
+            android:padding="28dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/tvGroupRecruitingTitle"
+                android:layout_marginTop="6dp"
+                android:text="도리 님의 운동 취향"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                android:textColor="@color/white"/>
+
+            <TextView
+                android:id="@+id/tvGroupRecruitingSubtitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:text="운동 취향을 선택하고\n나에게 맞는 그룹을 찾아보세요"
+                android:textSize="14dp"
+                android:layout_below="@+id/tvGroupRecruitingTitle"
+                android:textColor="@color/white"/>
+
+
+            <ImageButton
+                android:id="@+id/btnModifyFavorite"
+                android:layout_width="130dp"
+                android:layout_height="55dp"
+                android:layout_below="@+id/tvGroupRecruitingSubtitle"
+                android:layout_marginTop="19dp"
+                android:adjustViewBounds="true"
+                android:background="@color/transparent"
+                android:scaleType="fitStart"
+                android:src="@drawable/ic_modifyfavorite" />
+
+            <ImageView
+                android:layout_width="130dp"
+                android:layout_height="120dp"
+                android:adjustViewBounds="true"
+                android:scaleType="centerCrop"
+                android:layout_marginBottom="9dp"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentRight="true"
+                android:src="@drawable/img_running"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="145dp"
+            android:background="#ffffff">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/img_grouprecuiting_favorite"/>
+
+        </RelativeLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            tools:itemCount="10"
+            tools:listitem="@layout/group_recruiting_card_layout"
+            >
+
+        </androidx.recyclerview.widget.RecyclerView>
+
+    </LinearLayout>
+</ScrollView>
