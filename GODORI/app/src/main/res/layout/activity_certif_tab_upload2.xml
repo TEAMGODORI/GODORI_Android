@@ -1,43 +1,33 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    tools:context=".CertifTabUpload2Fragment">
-
+    tools:context=".CertifTabUpload2Activity">
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical">
 
-        <LinearLayout
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar1"
             android:layout_width="match_parent"
-            android:layout_height="70dp"
-            android:orientation="horizontal">
-
-            <ImageView
-                android:layout_width="20dp"
-                android:layout_height="20dp"
-                android:layout_gravity="center_vertical"
-                android:layout_marginLeft="15dp"
-                android:background="@drawable/arrow" />
+            android:layout_height="54dp">
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_marginLeft="-35dp"
                 android:gravity="center"
                 android:text="업로드"
                 android:textColor="#000000"
-                android:textSize="20dp" />
-        </LinearLayout>
+                android:textSize="14dp" />
+        </androidx.appcompat.widget.Toolbar>
 
 
         <ScrollView
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_weight="1">
+            android:layout_height="wrap_content">
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -55,8 +45,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginTop="15dp"
                         android:text="운동시간"
-                        android:textColor="#000000"
-                        android:textSize="18dp" />
+                        android:textColor="#000000"/>
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -73,6 +62,7 @@
                         <EditText
                             android:layout_width="50dp"
                             android:layout_height="50dp"
+                            android:gravity="center"
                             android:background="@drawable/edittext_rounded_corner_rectangle" />
 
                         <TextView
@@ -83,6 +73,7 @@
                         <EditText
                             android:layout_width="50dp"
                             android:layout_height="50dp"
+                            android:gravity="center"
                             android:background="@drawable/edittext_rounded_corner_rectangle" />
 
                         <TextView
@@ -94,8 +85,8 @@
 
                 <View
                     android:layout_width="match_parent"
-                    android:layout_height="4dp"
-                    android:background="#D6D6D6" />
+                    android:layout_height="8dp"
+                    android:background="#F7F7F7" />
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -108,8 +99,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginTop="15dp"
                         android:text="운동 강도"
-                        android:textColor="#000000"
-                        android:textSize="18dp" />
+                        android:textColor="#000000"/>
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -118,9 +108,9 @@
                         android:text="오늘의 운동 강도를 평가해 주세요" />
 
                     <LinearLayout
-                        android:layout_width="wrap_content"
+                        android:layout_width="380dp"
                         android:layout_height="55dp"
-                        android:layout_gravity="center"
+                        android:layout_gravity="center_horizontal"
                         android:layout_marginTop="20dp"
                         android:orientation="horizontal">
 
@@ -130,37 +120,48 @@
                             android:orientation="horizontal">//바꾸기
 
                             <Button
+                                android:id="@+id/Btn1"
                                 android:layout_width="50dp"
                                 android:layout_height="50dp"
-                                android:background="@drawable/button_circle"
+                                android:layout_marginLeft="3dp"
+                                android:layout_gravity="center"
+                                android:background="@drawable/button_color"
                                 android:text="1" />
 
                             <Button
+                                android:id="@+id/Btn2"
                                 android:layout_width="50dp"
                                 android:layout_height="50dp"
                                 android:layout_marginLeft="25dp"
-                                android:background="@drawable/button_circle"
+                                android:layout_gravity="center"
+                                android:background="@drawable/button_color"
                                 android:text="2" />
 
                             <Button
+                                android:id="@+id/Btn3"
                                 android:layout_width="50dp"
                                 android:layout_height="50dp"
                                 android:layout_marginLeft="25dp"
-                                android:background="@drawable/button_circle"
+                                android:layout_gravity="center"
+                                android:background="@drawable/button_color"
                                 android:text="3" />
 
                             <Button
+                                android:id="@+id/Btn4"
                                 android:layout_width="50dp"
                                 android:layout_height="50dp"
+                                android:layout_gravity="center"
                                 android:layout_marginLeft="25dp"
-                                android:background="@drawable/button_circle"
+                                android:background="@drawable/button_color"
                                 android:text="4" />
 
                             <Button
+                                android:id="@+id/Btn5"
                                 android:layout_width="50dp"
                                 android:layout_height="50dp"
+                                android:layout_gravity="center"
                                 android:layout_marginLeft="25dp"
-                                android:background="@drawable/button_circle"
+                                android:background="@drawable/button_color"
                                 android:text="5" />
                         </RadioGroup>
                     </LinearLayout>
@@ -168,8 +169,8 @@
 
                 <View
                     android:layout_width="match_parent"
-                    android:layout_height="4dp"
-                    android:background="#D6D6D6" />
+                    android:layout_height="8dp"
+                    android:background="#F7F7F7" />
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -182,8 +183,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginTop="15dp"
                         android:text="운동 종목"
-                        android:textColor="#000000"
-                        android:textSize="18dp" />
+                        android:textColor="#000000"/>
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -199,6 +199,7 @@
                         android:orientation="horizontal">
 
                         <ImageView
+                            android:id="@+id/ImgRun"
                             android:layout_width="80dp"
                             android:layout_height="80dp"
                             android:layout_marginTop="10dp"
@@ -207,6 +208,7 @@
                             android:src="@drawable/img_running_m" />
 
                         <ImageView
+                            android:id="@+id/imgHealth"
                             android:layout_width="80dp"
                             android:layout_height="80dp"
                             android:layout_marginLeft="20dp"
@@ -216,6 +218,7 @@
                             android:src="@drawable/img_health" />
 
                         <ImageView
+                            android:id="@+id/imgYoga"
                             android:layout_width="80dp"
                             android:layout_height="80dp"
                             android:layout_marginLeft="20dp"
@@ -225,6 +228,7 @@
                             android:src="@drawable/img_yoga" />
 
                         <ImageView
+                            android:id="@+id/imgSoccer"
                             android:layout_width="80dp"
                             android:layout_height="80dp"
                             android:layout_marginLeft="20dp"
@@ -277,21 +281,15 @@
                             android:src="@drawable/img_soccer" />
                     </LinearLayout>
                 </LinearLayout>
+                <Button
+                    android:id="@+id/next2Btn"
+                    android:layout_width="match_parent"
+                    android:layout_height="62dp"
+                    android:background="@drawable/button_rectangle"
+                    android:gravity="center"
+                    android:text="다음"
+                    android:textColor="#FFFFFF" />
             </LinearLayout>
-
         </ScrollView>
-
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="62dp">
-
-            <Button
-                android:layout_width="match_parent"
-                android:layout_height="62dp"
-                android:background="@drawable/button_rectangle"
-                android:gravity="center"
-                android:text="다음"
-                android:textColor="#FFFFFF" />
-        </RelativeLayout>
     </LinearLayout>
-</LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,39 +1,32 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:id="@+id/fragment_certif_tab_detail">
+    tools:context=".CertifTabDetailActivity">
 
-    <LinearLayout
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar1"
         android:layout_width="match_parent"
-        android:layout_height="60dp"
-        android:orientation="horizontal">
-
-        <ImageView
-            android:layout_width="20dp"
-            android:layout_height="20dp"
-            android:layout_marginLeft="15dp"
-            android:background="@drawable/arrow"
-            android:layout_gravity="center_vertical"/>
+        android:layout_height="70dp">
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="110dp"
-            android:layout_gravity="center_vertical"
+            android:layout_gravity="center"
             android:text="12월 6일 : 혜인정"
             android:textSize="16dp" />
-    </LinearLayout>
+    </androidx.appcompat.widget.Toolbar>
     <View
         android:layout_width="match_parent"
         android:layout_height="4dp"
-        android:background="#D6D6D6" />
+        android:background="#F7F7F7" />
 
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:padding="20dp">
+        android:layout_height="match_parent">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -47,37 +40,39 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
+                    android:padding="15dp"
                     android:orientation="horizontal">
 
                     <ImageButton
                         android:layout_width="240dp"
                         android:layout_height="240dp"
                         android:layout_marginRight="30dp"
-                        android:background="@drawable/certifi"/>
+                        android:background="@drawable/certif"/>
 
                     <ImageButton
                         android:layout_width="240dp"
                         android:layout_height="240dp"
                         android:layout_marginRight="30dp"
-                        android:background="@drawable/certifi"/>
+                        android:background="@drawable/certif"/>
                 </LinearLayout>
             </HorizontalScrollView>
 
             <View
                 android:layout_width="match_parent"
-                android:layout_height="4dp"
-                android:background="#D6D6D6" />
+                android:layout_height="8dp"
+                android:background="#F7F7F7" />
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="120dp"
+                android:padding="15dp"
                 android:orientation="vertical">
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="20dp"
-                    android:text="운동시간" />
+                    android:textColor="#000000"
+                    android:text="운동 시간" />
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -88,6 +83,9 @@
                     <EditText
                         android:layout_width="40dp"
                         android:layout_height="40dp"
+                        android:text="2"
+                        android:textColor="#939393"
+                        android:gravity="center"
                         android:background="@drawable/edittext_rounded_corner_rectangle"/>
 
                     <TextView
@@ -98,6 +96,9 @@
                     <EditText
                         android:layout_width="40dp"
                         android:layout_height="40dp"
+                        android:gravity="center"
+                        android:text="30"
+                        android:textColor="#939393"
                         android:background="@drawable/edittext_rounded_corner_rectangle"/>
 
                     <TextView
@@ -109,18 +110,19 @@
 
             <View
                 android:layout_width="match_parent"
-                android:layout_height="4dp"
-                android:background="#D6D6D6" />
+                android:layout_height="8dp"
+                android:background="#F7F7F7" />
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="120dp"
+                android:padding="15dp"
                 android:orientation="vertical">
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="20dp"
+                    android:textColor="#000000"
                     android:text="운동 종목" />
 
                 <LinearLayout
@@ -133,30 +135,33 @@
                         android:layout_width="50dp"
                         android:layout_height="50dp"
                         android:src="@drawable/img_yoga"
-                        android:background="@drawable/button_circle" />
+                        android:padding="2dp"
+                        android:background="@drawable/button_circle2" />
 
                     <ImageView
                         android:layout_width="50dp"
                         android:layout_height="50dp"
                         android:layout_marginLeft="20dp"
                         android:src="@drawable/img_health"
-                        android:background="@drawable/button_circle" />
+                        android:padding="2dp"
+                        android:background="@drawable/button_circle2" />
                 </LinearLayout>
             </LinearLayout>
             <View
                 android:layout_width="match_parent"
-                android:layout_height="4dp"
-                android:background="#D6D6D6" />
+                android:layout_height="8dp"
+                android:background="#F7F7F7" />
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="120dp"
+                android:padding="15dp"
                 android:orientation="vertical">
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="20dp"
+                    android:textColor="#000000"
                     android:text="운동 강도" />
 
                 <LinearLayout
@@ -168,6 +173,7 @@
                     <Button
                         android:layout_width="40dp"
                         android:layout_height="40dp"
+                        android:layout_marginLeft="2dp"
                         android:background="@drawable/button_circle"
                         android:text="1" />
 
@@ -189,7 +195,7 @@
                         android:layout_width="40dp"
                         android:layout_height="40dp"
                         android:layout_marginLeft="25dp"
-                        android:background="@drawable/button_circle"
+                        android:background="@drawable/button_circle2"
                         android:text="4" />
 
                     <Button
@@ -203,46 +209,76 @@
 
             <View
                 android:layout_width="match_parent"
-                android:layout_height="4dp"
-                android:background="#D6D6D6" />
+                android:layout_height="8dp"
+                android:background="#F7F7F7" />
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="120dp"
-                android:orientation="vertical">
+                android:layout_height="150dp"
+                android:orientation="vertical"
+                android:padding="15dp">
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="20dp"
-                    android:text="오늘의 평가" />
+                    android:text="오늘의 평가"
+                    android:textColor="#000000" />
 
-                <TextView
-                    android:layout_width="wrap_content"
+                <LinearLayout
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="20dp"
-                    android:text="시원하게 땀흘렸어요!" />
+                    android:orientation="horizontal">
 
-                <TextView
-                    android:layout_width="wrap_content"
+                    <ImageButton
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="7dp"
+                        android:background="@drawable/button_check" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="7dp"
+                        android:textColor="@color/blue"
+                        android:text="시원하게 땀 흘렸어요" />
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="시원하게 땀흘렸어요!" />
+                    android:orientation="horizontal">
+
+                    <ImageButton
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_gravity="center"
+                        android:background="@drawable/button_check" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:textColor="@color/blue"
+                        android:text="시원하게 땀 흘렸어요" />
+                </LinearLayout>
             </LinearLayout>
 
             <View
                 android:layout_width="match_parent"
-                android:layout_height="4dp"
-                android:background="#D6D6D6" />
+                android:layout_height="8dp"
+                android:background="#F7F7F7" />
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="120dp"
+                android:padding="15dp"
                 android:orientation="vertical">
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="20dp"
+                    android:textColor="#000000"
                     android:text="한 줄 설명" />
 
                 <LinearLayout
@@ -254,64 +290,69 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="오늘은 요가학원에 다녀왔어요! " />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="오랜만에 런닝까지 하니까 개운하네요 :)" />
+                        android:textColor="#000000"
+                        android:text="오늘은 요가학원에 다녀왔어요!\n오랜만에 런닝까지 하니까 개운하네요 :) " />
                 </LinearLayout>
             </LinearLayout>
 
             <View
                 android:layout_width="match_parent"
-                android:layout_height="4dp"
-                android:background="#D6D6D6" />
+                android:layout_height="8dp"
+                android:background="#F7F7F7" />
 
-            <LinearLayout
+            <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="120dp"
-                android:orientation="vertical">
+                android:padding="15dp">
+
+                <ImageView
+                    android:id="@+id/chat"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:src="@drawable/chat"/>
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="20dp"
                     android:layout_marginBottom="10dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_toRightOf="@+id/chat"
+                    android:textColor="#000000"
                     android:text="댓글" />
 
                 <View
                     android:layout_width="match_parent"
                     android:layout_height="2dp"
-                    android:background="#232323" />
+                    android:layout_below="@+id/chat"
+                    android:layout_marginTop="5dp"
+                    android:background="#000000" />
 
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="70dp"
-                    android:layout_marginTop="20dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="25dp"
                     android:orientation="horizontal">
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:padding="10dp"
+                        android:layout_margin="10dp"
                         android:text="송송"
+                        android:textColor="#000000"
                         android:textSize="15dp"/>
 
                     <EditText
                         android:layout_width="match_parent"
-                        android:layout_height="25dp"
-                        android:hint="댓글을 남겨보아요~"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:hint=" 오늘도 수고한 팀원에게 한마디!"
+                        android:padding="10dp"
                         android:background="@drawable/edittext_rounded_corner_rectangle"
                         android:textSize="15dp"
                         android:privateImeOptions="defaultInputmode=korean"/>
                 </LinearLayout>
 
-                <View
-                    android:layout_width="match_parent"
-                    android:layout_height="4dp"
-                    android:background="#D6D6D6" />
-            </LinearLayout>
+            </RelativeLayout>
         </LinearLayout>
     </ScrollView>
 </LinearLayout>

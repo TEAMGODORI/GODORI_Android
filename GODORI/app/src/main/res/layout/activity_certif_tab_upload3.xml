@@ -1,42 +1,35 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    tools:context=".CertifTabUpload3Fragment">
+    tools:context=".CertifTabUpload3Activity">
+
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical">
 
-        <LinearLayout
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar1"
             android:layout_width="match_parent"
-            android:layout_height="70dp"
-            android:orientation="horizontal">
-
-            <ImageView
-                android:layout_width="20dp"
-                android:layout_height="20dp"
-                android:layout_gravity="center_vertical"
-                android:layout_marginLeft="15dp"
-                android:background="@drawable/arrow" />
+            android:layout_height="54dp">
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_marginLeft="-35dp"
                 android:gravity="center"
                 android:text="업로드"
+                android:textStyle="bold"
                 android:textColor="#000000"
-                android:textSize="20dp" />
-        </LinearLayout>
+                android:textSize="14dp" />
+        </androidx.appcompat.widget.Toolbar>
 
         <ScrollView
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_weight="1">
+            android:layout_height="wrap_content">
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -45,7 +38,7 @@
 
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="470dp"
+                    android:layout_height="420dp"
                     android:orientation="vertical"
                     android:padding="15dp">
 
@@ -65,11 +58,13 @@
                         android:text="전반적인 하루를 평가해 주세요" />
 
                     <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="50dp"
-                        android:orientation="horizontal">
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:id="@+id/Lay1">
 
                         <ImageButton
+                            android:id="@+id/Ibn1"
                             android:layout_width="40dp"
                             android:layout_height="40dp"
                             android:layout_gravity="center"
@@ -79,16 +74,16 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center"
-                            android:layout_marginLeft="10dp"
                             android:text="시원하게 땀 흘렸어요" />
                     </LinearLayout>
 
                     <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="50dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
                         android:orientation="horizontal">
 
                         <ImageButton
+                            android:id="@+id/Ibn2"
                             android:layout_width="40dp"
                             android:layout_height="40dp"
                             android:layout_gravity="center"
@@ -98,16 +93,16 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center"
-                            android:layout_marginLeft="10dp"
                             android:text="시원하게 땀 흘렸어요" />
                     </LinearLayout>
 
                     <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="50dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
                         android:orientation="horizontal">
 
                         <ImageButton
+                            android:id="@+id/Ibn3"
                             android:layout_width="40dp"
                             android:layout_height="40dp"
                             android:layout_gravity="center"
@@ -117,17 +112,17 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center"
-                            android:layout_marginLeft="10dp"
                             android:text="시원하게 땀 흘렸어요" />
 
                     </LinearLayout>
 
                     <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="50dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
                         android:orientation="horizontal">
 
                         <ImageButton
+                            android:id="@+id/Ibn4"
                             android:layout_width="40dp"
                             android:layout_height="40dp"
                             android:layout_gravity="center"
@@ -137,16 +132,16 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center"
-                            android:layout_marginLeft="10dp"
                             android:text="시원하게 땀 흘렸어요" />
                     </LinearLayout>
 
                     <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="50dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
                         android:orientation="horizontal">
 
                         <ImageButton
+                            android:id="@+id/Ibn5"
                             android:layout_width="40dp"
                             android:layout_height="40dp"
                             android:layout_gravity="center"
@@ -156,16 +151,16 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center"
-                            android:layout_marginLeft="10dp"
                             android:text="시원하게 땀 흘렸어요" />
                     </LinearLayout>
 
                     <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="50dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
                         android:orientation="horizontal">
 
                         <ImageButton
+                            android:id="@+id/Ibn6"
                             android:layout_width="40dp"
                             android:layout_height="40dp"
                             android:layout_gravity="center"
@@ -175,21 +170,19 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center"
-                            android:layout_marginLeft="10dp"
                             android:text="시원하게 땀 흘렸어요" />
                     </LinearLayout>
-
 
                 </LinearLayout>
 
                 <View
                     android:layout_width="match_parent"
-                    android:layout_height="4dp"
-                    android:background="#D6D6D6" />
+                    android:layout_height="8dp"
+                    android:background="#F7F7F7" />
 
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="270dp"
+                    android:layout_height="230dp"
                     android:orientation="vertical"
                     android:padding="15dp">
 
@@ -207,39 +200,30 @@
                         android:layout_marginTop="10dp"
                         android:text="더 기록하고 싶은 것이 있으면 적어주세요" />
 
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="20dp"
-                        android:orientation="horizontal">
 
                         <EditText
                             android:layout_width="match_parent"
-                            android:layout_height="100dp"
-                            android:layout_marginTop="10dp"
+                            android:layout_height="80dp"
+                            android:layout_marginTop="20dp"
                             android:background="@drawable/edittext_rounded_corner_rectangle"
                             android:gravity="top"
+                            android:layout_marginLeft="5dp"
                             android:hint="기록을 남겨보아요~"
-                            android:padding="5dp"
+                            android:padding="10dp"
                             android:privateImeOptions="defaultInputmode=korean"
                             android:textSize="15dp" />
-                    </LinearLayout>
+
                 </LinearLayout>
+                <Button
+                    android:id="@+id/next3Btn"
+                    android:layout_width="match_parent"
+                    android:layout_height="62dp"
+                    android:background="@drawable/button_rectangle"
+                    android:gravity="center"
+                    android:text="다음"
+                    android:textColor="#FFFFFF" />
             </LinearLayout>
-
         </ScrollView>
-
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="62dp">
-
-            <Button
-                android:layout_width="match_parent"
-                android:layout_height="62dp"
-                android:background="@drawable/button_rectangle"
-                android:gravity="center"
-                android:text="다음"
-                android:textColor="#FFFFFF" />
-        </RelativeLayout>
     </LinearLayout>
-</LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
