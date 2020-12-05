@@ -9,12 +9,15 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.GODORI">
-        <activity android:name=".TabBarActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
+        <!-- 모집중인 그룹 액티비티 -->
+        <activity android:name=".GroupRecruitingActivity" />
+        <activity android:name=".TabBarActivity" >
+            <intent-filter>
+                <action android:name="anodroid.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
     </application>
+
 </manifest>
