@@ -9,6 +9,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.GODORI">
+        <activity android:name=".CertifTabUpload3Activity"></activity>
+        <activity android:name=".CertifTabUpload2Activity" />
+        <activity android:name=".CertifTabUpload1Activity" />
+        <activity android:name=".CertifTabDetailActivity" />
         <activity android:name=".TabBarActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -17,4 +21,5 @@
             </intent-filter>
         </activity>
     </application>
+
 </manifest>
