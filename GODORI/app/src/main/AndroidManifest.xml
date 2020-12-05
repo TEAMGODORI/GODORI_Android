@@ -9,6 +9,14 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.GODORI">
+<<<<<<< HEAD
+=======
+        <activity
+            android:name=".SplashActivity"
+            android:theme="@style/SplashTheme">
+            <intent-filter>
+                <action android:name="anodroid.intent.action.MAIN" />
+>>>>>>> 5792cb13c545778b92d7337de5da8c9a300a7a06
 
         <!-- 모집중인 그룹 액티비티 -->
         <activity android:name=".GroupRecruitingActivity" />
@@ -18,6 +26,9 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <!-- 모집중인 그룹 액티비티 -->
+        <activity android:name=".GroupRecruitingActivity" />
+        <activity android:name=".TabBarActivity" />
     </application>
 
 </manifest>
