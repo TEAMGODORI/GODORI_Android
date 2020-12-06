@@ -1,5 +1,6 @@
 package com.example.godori
 
+import CertifTabUpload1Activity
 import android.content.Context
 import android.content.Intent
 import android.graphics.Insets.add

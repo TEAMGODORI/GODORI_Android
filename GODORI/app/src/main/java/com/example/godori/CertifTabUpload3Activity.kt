@@ -1,12 +1,14 @@
 package com.example.godori
 
 import android.annotation.SuppressLint
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.MotionEvent
-import android.widget.Button
+import android.view.View
+import androidx.appcompat.app.AppCompatActivity
+import androidx.fragment.app.Fragment
+import androidx.fragment.app.FragmentManager
+import androidx.fragment.app.FragmentTransaction
 import kotlinx.android.synthetic.main.activity_certif_tab_upload2.*
-import kotlinx.android.synthetic.main.activity_certif_tab_upload2.Btn3
 import kotlinx.android.synthetic.main.activity_certif_tab_upload3.*
 
 class CertifTabUpload3Activity : AppCompatActivity() {
@@ -25,5 +27,16 @@ class CertifTabUpload3Activity : AppCompatActivity() {
             }
             false
         }
+//        next3Btn.setOnClickListener(View.OnClickListener {
+//            val mainFragment: MainFragment = fragmentManager.findFragmentById(android.R.id.certifTabFrag) as MainFragment
+//        })
     }
+//    fun replaceFragment() {
+//        val certifTabFragment = CertifTabFragment()
+//        val fragmentManager: android.app.FragmentManager? = fragmentManager
+//        val fragmentTransaction = fragmentManager.beginTransaction()
+//        fragmentTransaction.replace(android.R.id.certifTabFrag, certifTabFragment)
+//        fragmentTransaction.commit()
+//    }
 }
+

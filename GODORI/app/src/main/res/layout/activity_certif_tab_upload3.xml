@@ -17,10 +17,14 @@
             android:layout_width="match_parent"
             android:layout_height="54dp">
 
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/arrow"/>
             <TextView
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
                 android:text="업로드"
                 android:textStyle="bold"
                 android:textColor="#000000"
@@ -220,7 +224,7 @@
                     android:layout_height="62dp"
                     android:background="@drawable/button_rectangle"
                     android:gravity="center"
-                    android:text="다음"
+                    android:text="완료"
                     android:textColor="#FFFFFF" />
             </LinearLayout>
         </ScrollView>

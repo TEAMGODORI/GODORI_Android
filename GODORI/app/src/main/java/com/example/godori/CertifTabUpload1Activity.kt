@@ -1,4 +1,6 @@
-package com.example.godori
+import com.example.godori.CertifTabUpload2Activity
+import com.example.godori.R
+
 
 import android.annotation.SuppressLint
 import android.content.Intent
