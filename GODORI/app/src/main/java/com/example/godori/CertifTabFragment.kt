@@ -45,5 +45,4 @@ class CertifTabFragment : Fragment(){
             startActivity(intent)
         }
     }
-
 }
