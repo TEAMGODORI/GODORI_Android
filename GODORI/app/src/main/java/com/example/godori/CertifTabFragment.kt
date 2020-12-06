@@ -1,15 +1,11 @@
 package com.example.godori
 
-import CertifTabUpload1Activity
-import android.content.Context
 import android.content.Intent
-import android.graphics.Insets.add
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
-import androidx.fragment.app.FragmentTransaction
 import kotlinx.android.synthetic.main.fragment_certif_tab.*
 import kotlinx.android.synthetic.main.activity_certif_tab_upload1.*
 
