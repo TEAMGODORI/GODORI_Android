@@ -9,21 +9,20 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.GODORI">
-        <activity android:name=".SplashActivity"
-                  android:theme="@style/SplashTheme">
+<<<<<<< HEAD
+        <activity android:name=".GroupRecruitingActivity"></activity>
+=======
+        <activity android:name=".CertifTabUpload3Activity"></activity>
+        <activity android:name=".CertifTabUpload2Activity" />
+        <activity android:name=".CertifTabUpload1Activity" />
+        <activity android:name=".CertifTabDetailActivity" />
+>>>>>>> 8c5d1a694d01a1ef076f4cbb70fb12a9243175a6
+        <activity android:name=".TabBarActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-        </activity>
-        <activity android:name=".GroupRecruitingActivity" />
-        <activity android:name=".CertifTabUpload3Activity" />
-        <activity android:name=".CertifTabUpload2Activity" />
-        <activity android:name=".CertifTabUpload1Activity" />
-        <activity android:name=".CertifTabDetailActivity" />
-        <activity android:name=".TabBarActivity">
-
         </activity>
     </application>
 
