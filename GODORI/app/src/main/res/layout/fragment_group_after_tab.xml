@@ -80,12 +80,12 @@
             <ImageButton
                 android:id="@+id/btnMkGroup"
                 android:layout_width="wrap_content"
-                android:layout_height="36dp"
+                android:layout_height="42dp"
                 android:layout_marginTop="24dp"
                 android:scaleType="fitStart"
                 android:adjustViewBounds="true"
                 android:layout_below="@+id/imgBusy"
-                android:src="@drawable/ic_mkgroup"
+                android:src="@drawable/ic_ifgroup"
                 android:background="@color/transparent"/>
 
 
@@ -103,22 +103,25 @@
 
 
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="30dp"
-            android:textStyle="bold"
-            android:text="그룹 찾아보기"
-            android:textColor="@color/black"
-            android:textSize="14dp"/>
-
-        <androidx.appcompat.widget.SearchView
-            android:id="@+id/searchGroup"
-            android:layout_marginTop="10dp"
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            app:iconifiedByDefault="false"
-            app:queryHint="그룹명을 입력하세요" />
+            android:layout_height="40dp"
+            android:layout_marginTop="30dp"
+            android:background="@color/main"
+            android:textSize="14dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="16dp"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                android:textSize="14dp"
+                android:paddingVertical="10dp"
+                android:text="이번주 당신이 응원할 마니또는?"/>
+
+        </LinearLayout>
+
 
 
 
@@ -126,10 +129,10 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="30dp"
-            android:text="어떤 그룹에 들어가지?"
+            android:text="여기에 칼로리 사진 넣어야"
             android:textColor="@color/black"
             android:textStyle="bold"
-            android:textSize="14dp"/>
+            android:textSize="16dp"/>
 
 
         <!--스크롤 뷰를 쓰기 위해서 LinearLayout으로 묶-->
@@ -157,7 +160,7 @@
 
                 android:text="오늘 인증한 그룹원"
                 android:textColor="@color/black"
-                android:textSize="14dp"
+                android:textSize="16dp"
                 android:textStyle="bold" />
 
 
@@ -168,6 +171,7 @@
                 android:background="@color/transparent"
                 android:minHeight="0dp"
                 android:minWidth="0dp"
+                android:layout_centerVertical="true"
                 android:layout_alignParentRight="true"
                 android:includeFontPadding="false"
                 android:text="더보기"
@@ -202,8 +206,7 @@
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                >
+                android:orientation="horizontal"  >
 
 
                 <ImageView
@@ -243,7 +246,7 @@
 
                 android:text="곧 인증한 그룹원"
                 android:textColor="@color/black"
-                android:textSize="14dp"
+                android:textSize="16dp"
                 android:textStyle="bold" />
 
 
@@ -255,9 +258,10 @@
                 android:minWidth="0dp"
                 android:layout_alignParentRight="true"
                 android:includeFontPadding="false"
+                android:layout_centerVertical="true"
                 android:text="더보기"
                 android:textColor="#939393"
-                android:textSize="11dp" />
+                android:textSize="14dp" />
 
 
 
