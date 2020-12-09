@@ -130,7 +130,7 @@
                                 android:layout_height="50dp"
                                 android:layout_marginLeft="3dp"
                                 android:layout_gravity="center"
-                                android:background="@drawable/button_color"
+                                android:background="@drawable/button_circle"
                                 android:text="1" />
 
                             <Button
@@ -139,7 +139,7 @@
                                 android:layout_height="50dp"
                                 android:layout_marginLeft="25dp"
                                 android:layout_gravity="center"
-                                android:background="@drawable/button_color"
+                                android:background="@drawable/button_circle"
                                 android:text="2" />
 
                             <Button
@@ -148,7 +148,7 @@
                                 android:layout_height="50dp"
                                 android:layout_marginLeft="25dp"
                                 android:layout_gravity="center"
-                                android:background="@drawable/button_color"
+                                android:background="@drawable/button_circle"
                                 android:text="3" />
 
                             <Button
@@ -157,7 +157,7 @@
                                 android:layout_height="50dp"
                                 android:layout_gravity="center"
                                 android:layout_marginLeft="25dp"
-                                android:background="@drawable/button_color"
+                                android:background="@drawable/button_circle"
                                 android:text="4" />
 
                             <Button
@@ -166,7 +166,7 @@
                                 android:layout_height="50dp"
                                 android:layout_gravity="center"
                                 android:layout_marginLeft="25dp"
-                                android:background="@drawable/button_color"
+                                android:background="@drawable/button_circle"
                                 android:text="5" />
                         </RadioGroup>
                     </LinearLayout>
@@ -179,7 +179,7 @@
 
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="340dp"
+                    android:layout_height="360dp"
                     android:orientation="vertical"
                     android:padding="15dp">
 
@@ -196,95 +196,167 @@
                         android:layout_marginTop="10dp"
                         android:text="어떤 운동을 했는지 선택해 주세요" />
 
-                    <LinearLayout
+                    <RelativeLayout
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_gravity="center"
                         android:layout_marginTop="20dp"
                         android:orientation="horizontal">
 
                         <ImageView
-                            android:id="@+id/ImgRun"
+                            android:id="@+id/imgRun"
                             android:layout_width="80dp"
                             android:layout_height="80dp"
                             android:layout_marginTop="10dp"
                             android:background="@drawable/button_circle"
                             android:padding="1dp"
                             android:src="@drawable/img_running_m" />
-
                         <ImageView
                             android:id="@+id/imgHealth"
                             android:layout_width="80dp"
                             android:layout_height="80dp"
+                            android:layout_toRightOf="@+id/imgRun"
                             android:layout_marginLeft="20dp"
                             android:layout_marginTop="10dp"
                             android:background="@drawable/button_circle"
                             android:padding="1dp"
                             android:src="@drawable/img_health" />
-
                         <ImageView
                             android:id="@+id/imgYoga"
                             android:layout_width="80dp"
                             android:layout_height="80dp"
+                            android:layout_toRightOf="@+id/imgHealth"
                             android:layout_marginLeft="20dp"
                             android:layout_marginTop="10dp"
                             android:background="@drawable/button_circle"
                             android:padding="1dp"
                             android:src="@drawable/img_yoga" />
-
                         <ImageView
                             android:id="@+id/imgSoccer"
                             android:layout_width="80dp"
                             android:layout_height="80dp"
+                            android:layout_toRightOf="@+id/imgYoga"
                             android:layout_marginLeft="20dp"
                             android:layout_marginTop="10dp"
                             android:background="@drawable/button_circle"
                             android:padding="1dp"
                             android:src="@drawable/img_soccer" />
-                    </LinearLayout>
+                        <TextView
+                            android:id="@+id/imgRunText"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="7dp"
+                            android:layout_marginLeft="27dp"
+                            android:layout_below="@+id/imgRun"
+                            android:text="런닝"/>
+                        <TextView
+                            android:id="@+id/imgHealthText"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="7dp"
+                            android:layout_marginLeft="77dp"
+                            android:layout_below="@+id/imgHealth"
+                            android:layout_toRightOf="@+id/imgRunText"
+                            android:text="헬스"/>
+                        <TextView
+                            android:id="@+id/imgYogaText"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="7dp"
+                            android:layout_marginLeft="75dp"
+                            android:layout_below="@+id/imgYoga"
+                            android:layout_toRightOf="@+id/imgHealthText"
+                            android:text="요가"/>
+                        <TextView
+                            android:id="@+id/imgSoccerText"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="7dp"
+                            android:layout_marginLeft="73dp"
+                            android:layout_below="@+id/imgSoccer"
+                            android:layout_toRightOf="@+id/imgYogaText"
+                            android:text="축구"/>
 
-                    <LinearLayout
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:layout_marginTop="20dp"
-                        android:orientation="horizontal">
 
                         <ImageView
+                            android:id="@+id/imgRun2"
                             android:layout_width="80dp"
                             android:layout_height="80dp"
-                            android:layout_marginTop="10dp"
+                            android:layout_marginTop="20dp"
+                            android:layout_below="@+id/imgRunText"
                             android:background="@drawable/button_circle"
                             android:padding="1dp"
                             android:src="@drawable/img_running_m" />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="7dp"
+                            android:layout_marginLeft="27dp"
+                            android:layout_below="@+id/imgRun2"
+                            android:text="런닝"/>
 
                         <ImageView
+                            android:id="@+id/imgHealth2"
                             android:layout_width="80dp"
                             android:layout_height="80dp"
+                            android:layout_below="@+id/imgHealthText"
+                            android:layout_toRightOf="@+id/imgRun2"
                             android:layout_marginLeft="20dp"
-                            android:layout_marginTop="10dp"
+                            android:layout_marginTop="20dp"
                             android:background="@drawable/button_circle"
                             android:padding="1dp"
                             android:src="@drawable/img_health" />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="7dp"
+                            android:layout_marginLeft="77dp"
+                            android:layout_below="@+id/imgHealth2"
+                            android:layout_toRightOf="@+id/imgRunText"
+                            android:text="헬스"/>
 
                         <ImageView
+                            android:id="@+id/imgYoga2"
                             android:layout_width="80dp"
                             android:layout_height="80dp"
+                            android:layout_below="@+id/imgYogaText"
+                            android:layout_toRightOf="@+id/imgHealth2"
                             android:layout_marginLeft="20dp"
-                            android:layout_marginTop="10dp"
+                            android:layout_marginTop="20dp"
                             android:background="@drawable/button_circle"
                             android:padding="1dp"
                             android:src="@drawable/img_yoga" />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="7dp"
+                            android:layout_marginLeft="75dp"
+                            android:layout_below="@+id/imgHealth2"
+                            android:layout_toRightOf="@+id/imgHealthText"
+                            android:text="요가"/>
+
 
                         <ImageView
+                            android:id="@+id/imgSoccer2"
                             android:layout_width="80dp"
                             android:layout_height="80dp"
+                            android:layout_below="@+id/imgSoccerText"
+                            android:layout_toRightOf="@+id/imgYoga2"
                             android:layout_marginLeft="20dp"
-                            android:layout_marginTop="10dp"
+                            android:layout_marginTop="20dp"
                             android:background="@drawable/button_circle"
                             android:padding="1dp"
                             android:src="@drawable/img_soccer" />
-                    </LinearLayout>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="7dp"
+                            android:layout_marginLeft="73dp"
+                            android:layout_below="@+id/imgHealth2"
+                            android:layout_toRightOf="@+id/imgYogaText"
+                            android:text="축구"/>
+
+
+                    </RelativeLayout>
                 </LinearLayout>
                 <Button
                     android:id="@+id/next2Btn"
