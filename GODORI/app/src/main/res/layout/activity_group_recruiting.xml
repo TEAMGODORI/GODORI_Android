@@ -70,10 +70,10 @@
 
             <ImageButton
                 android:id="@+id/btnModifyFavorite"
-                android:layout_width="130dp"
-                android:layout_height="55dp"
+                android:layout_width="wrap_content"
+                android:layout_height="64dp"
                 android:layout_below="@+id/tvGroupRecruitingSubtitle"
-                android:layout_marginTop="19dp"
+                android:layout_marginTop="20dp"
                 android:adjustViewBounds="true"
                 android:background="@color/transparent"
                 android:scaleType="fitStart"
@@ -93,13 +93,16 @@
 
         <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="145dp"
+            android:layout_height="165dp"
             android:background="#ffffff">
 
             <ImageView
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:src="@drawable/img_grouprecuiting_favorite"/>
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginHorizontal="30dp"
+                android:layout_marginVertical="10dp"
+                android:src="@drawable/img_grouprecuiting_favorite" />
 
         </RelativeLayout>
 
