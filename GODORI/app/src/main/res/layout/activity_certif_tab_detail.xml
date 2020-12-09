@@ -195,6 +195,7 @@
                         android:layout_width="40dp"
                         android:layout_height="40dp"
                         android:layout_marginLeft="25dp"
+                        android:textColor="#FFFFFF"
                         android:background="@drawable/button_circle2"
                         android:text="4" />
 
