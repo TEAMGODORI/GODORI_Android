@@ -27,6 +27,16 @@ class CertifTabUpload3Activity : AppCompatActivity() {
             }
             false
         }
+        Lay2.setOnTouchListener { view, motionEvent ->
+            if (motionEvent.action == MotionEvent.ACTION_DOWN) {
+                //터치했을 때
+                Ibn2.setBackgroundResource(R.drawable.button_check)
+            } else if (motionEvent.action == MotionEvent.ACTION_UP) {
+                //터치 해제했을 때
+                Ibn2.setBackgroundResource(R.drawable.button_check)
+            }
+            false
+        }
 //        next3Btn.setOnClickListener(View.OnClickListener {
 //            val mainFragment: MainFragment = fragmentManager.findFragmentById(android.R.id.certifTabFrag) as MainFragment
 //        })
