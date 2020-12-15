@@ -141,11 +141,11 @@
         <ImageButton
             android:id="@+id/btnRecommandGroup"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="100dp"
             android:layout_marginTop="10dp"
             android:padding="0sp"
-            android:scaleType="centerCrop"/>
-<!--            android:src="@drawable/ic_recommandgroup"/>-->
+            android:scaleType="centerCrop"
+            android:src="@drawable/ic_recommand_group"/>
 
         <RelativeLayout
             android:layout_width="match_parent"
