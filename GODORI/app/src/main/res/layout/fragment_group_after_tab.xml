@@ -144,8 +144,7 @@
             android:layout_height="100dp"
             android:layout_marginTop="10dp"
             android:padding="0sp"
-            android:scaleType="centerCrop"
-            android:src="@drawable/ic_recommand_group"/>
+            android:scaleType="centerCrop"/>
 
         <RelativeLayout
             android:layout_width="match_parent"
