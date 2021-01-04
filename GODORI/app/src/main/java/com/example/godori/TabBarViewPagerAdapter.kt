@@ -12,7 +12,7 @@ class TabBarViewPagerAdapter (fm : FragmentManager) : FragmentStatePagerAdapter(
     // 후자는 프래그먼트의 인스턴스를 완전히 파괴하지 않고 onDestroyView()만 호출한다. 프래그먼트 개수가 고정적일 때 효과적
 
     override fun getItem(position: Int): Fragment = when(position){
-        0 -> GroupTabBeforeFragment()
+        0 -> GroupTabFragment()
         1 -> CertifTabFragment()
         2 -> MyInfoTabFragment()
         else -> throw IllegalStateException("Unexpected position $position")

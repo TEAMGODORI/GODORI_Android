@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">GODORI</string>
+    <string name="app_name">오늘은 운동해야지</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

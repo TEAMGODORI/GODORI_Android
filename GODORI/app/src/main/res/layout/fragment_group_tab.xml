@@ -1,14 +1,253 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".GroupTabBeforeFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    tools:context=".GroupTabFragment">
+
+    <!--스크롤 뷰를 쓰기 위해서 LinearLayout으로 묶음-->
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="top"
+        android:baselineAligned="true"
+        android:layout_margin="16dp">
 
-</FrameLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp">
+
+            <TextView
+                android:id="@+id/text_userName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="도리"
+                android:layout_centerVertical="true"
+                android:textColor="#3C3C3C"
+                android:textStyle="bold"
+                android:textSize="14dp"/>
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="님 환영합니다!"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/text_userName"
+                android:textColor="#3C3C3C"
+                android:textStyle="bold"
+                android:textSize="14dp"/>
+
+
+
+            <ImageButton
+                android:id="@+id/btnNotice"
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                android:layout_gravity="right"
+                android:layout_alignParentRight="true"
+                android:scaleType="fitCenter"
+                android:adjustViewBounds="true"
+                android:src="@drawable/ic_notice"
+                android:background="@color/transparent"/>
+
+
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:id="@+id/groupRelactive"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="23dp"
+            android:layout_marginLeft="16dp">
+
+
+            <ImageView
+                android:id="@+id/imgBusy"
+                android:layout_width="150dp"
+                android:layout_height="155dp"
+                android:adjustViewBounds="true"
+                android:scaleType="centerCrop"
+                android:src="@drawable/img_appnotice" />
+
+            <ImageButton
+                android:id="@+id/btnMkGroup"
+                android:layout_width="120dp"
+                android:layout_height="42dp"
+                android:layout_marginTop="24dp"
+                android:scaleType="fitStart"
+                android:adjustViewBounds="true"
+                android:layout_below="@+id/imgBusy"
+                android:src="@drawable/ic_mkgroup"
+                android:background="@color/transparent"/>
+
+
+            <ImageView
+                android:layout_width="180dp"
+                android:layout_height="150dp"
+                android:adjustViewBounds="true"
+                android:scaleType="centerCrop"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentRight="true"
+                android:src="@drawable/img_ballet"/>
+        </RelativeLayout>
+
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:textStyle="bold"
+            android:text="그룹 찾아보기"
+            android:textColor="@color/black"
+            android:textSize="16dp"/>
+
+        <!--        <androidx.appcompat.widget.SearchView-->
+        <!--            android:id="@+id/searchGroup"-->
+        <!--            android:layout_marginTop="10dp"-->
+        <!--            android:layout_width="match_parent"-->
+        <!--            android:layout_height="wrap_content"-->
+        <!--            app:iconifiedByDefault="false"-->
+        <!--            app:queryHint="그룹명을 입력하세요" />-->
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="46dp"
+            android:src="@drawable/img_search_group"
+            android:layout_marginTop="10dp"
+            android:adjustViewBounds="true"
+            android:scaleType="centerCrop"/>
+
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:text="어떤 그룹에 들어가지?"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:textSize="16dp"/>
+
+
+
+        <!--스크롤 뷰를 쓰기 위해서 LinearLayout으로 묶-->
+
+        <ImageButton
+            android:id="@+id/btnRecommandGroup"
+            android:layout_width="match_parent"
+            android:layout_height="110dp"
+            android:layout_marginTop="10dp"
+            android:padding="0sp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/ic_recommand_group" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="25dp"
+            android:layout_marginBottom="10dp">
+
+
+            <TextView
+                android:id="@+id/tvGroupIng"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_centerVertical="true"
+
+                android:text="모집 중인 그룹"
+                android:textColor="@color/black"
+                android:textSize="16dp"
+                android:textStyle="bold" />
+
+
+            <Button
+                android:id="@+id/btnMoreGroup"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/transparent"
+                android:minHeight="0dp"
+                android:minWidth="0dp"
+                android:layout_alignParentRight="true"
+                android:includeFontPadding="false"
+                android:text="더보기"
+                android:textColor="#939393"
+                android:textSize="14dp" />
+
+
+
+
+        </RelativeLayout>
+
+
+
+
+
+
+        <!--recyclerview로 구현, Adapter 연결 못함, 잠시 주-->
+        <!--        <androidx.recyclerview.widget.RecyclerView-->
+        <!--            android:id="@+id/recyclerview_main"-->
+        <!--            android:layout_width="match_parent"-->
+        <!--            android:layout_height="match_parent"-->
+        <!--            android:orientation="horizontal"-->
+        <!--            app:layout_behavior="@string/appbar_scrolling_view_behavior"-->
+        <!--            tools:itemCount="5"-->
+        <!--            tools:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"-->
+        <!--            tools:listitem="@layout/group_more_card_layout">-->
+
+        <!--        </androidx.recyclerview.widget.RecyclerView>-->
+
+
+        <HorizontalScrollView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="30dp">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                >
+
+
+                <ImageView
+                    android:layout_width="151dp"
+                    android:layout_height="170dp"
+                    android:layout_marginRight="10dp"
+                    android:src="@drawable/img_grouptab_groupinfocard"/>
+
+                <ImageView
+                    android:layout_width="151dp"
+                    android:layout_height="170dp"
+                    android:layout_marginRight="10dp"
+                    android:src="@drawable/img_grouptab_groupinfocard"/>
+
+                <ImageView
+                    android:layout_width="151dp"
+                    android:layout_height="170dp"
+                    android:layout_marginRight="10dp"
+                    android:src="@drawable/img_grouptab_groupinfocard"/>
+
+            </LinearLayout>
+
+        </HorizontalScrollView>
+
+
+
+
+
+
+
+
+    </LinearLayout>
+
+
+</ScrollView>
