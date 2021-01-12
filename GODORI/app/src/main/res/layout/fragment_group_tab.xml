@@ -126,9 +126,6 @@
             android:layout_marginTop="10dp"
             android:adjustViewBounds="true"
             android:scaleType="centerCrop"/>
-
-
-
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -137,11 +134,7 @@
             android:textColor="@color/black"
             android:textStyle="bold"
             android:textSize="16dp"/>
-
-
-
         <!--스크롤 뷰를 쓰기 위해서 LinearLayout으로 묶-->
-
         <ImageButton
             android:id="@+id/btnRecommandGroup"
             android:layout_width="match_parent"
@@ -150,26 +143,19 @@
             android:padding="0sp"
             android:scaleType="centerCrop"
             android:src="@drawable/ic_recommand_group" />
-
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="25dp"
             android:layout_marginBottom="10dp">
-
-
             <TextView
                 android:id="@+id/tvGroupIng"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:layout_centerVertical="true"
-
                 android:text="모집 중인 그룹"
                 android:textColor="@color/black"
                 android:textSize="16dp"
                 android:textStyle="bold" />
-
-
             <Button
                 android:id="@+id/btnMoreGroup"
                 android:layout_width="wrap_content"
@@ -182,73 +168,25 @@
                 android:text="더보기"
                 android:textColor="#939393"
                 android:textSize="14dp" />
-
-
-
-
         </RelativeLayout>
-
-
-
-
-
-
-        <!--recyclerview로 구현, Adapter 연결 못함, 잠시 주-->
-        <!--        <androidx.recyclerview.widget.RecyclerView-->
-        <!--            android:id="@+id/recyclerview_main"-->
-        <!--            android:layout_width="match_parent"-->
-        <!--            android:layout_height="match_parent"-->
-        <!--            android:orientation="horizontal"-->
-        <!--            app:layout_behavior="@string/appbar_scrolling_view_behavior"-->
-        <!--            tools:itemCount="5"-->
-        <!--            tools:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"-->
-        <!--            tools:listitem="@layout/group_more_card_layout">-->
-
-        <!--        </androidx.recyclerview.widget.RecyclerView>-->
-
-
         <HorizontalScrollView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="30dp">
-
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+            android:id="@+id/groupHorizontalView"
+            android:layout_marginBottom="30dp"
+            android:scrollbars="none">
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerview_groupmore"
+                android:divider="@null"
                 android:orientation="horizontal"
-                >
-
-
-                <ImageView
-                    android:layout_width="151dp"
-                    android:layout_height="170dp"
-                    android:layout_marginRight="10dp"
-                    android:src="@drawable/img_grouptab_groupinfocard"/>
-
-                <ImageView
-                    android:layout_width="151dp"
-                    android:layout_height="170dp"
-                    android:layout_marginRight="10dp"
-                    android:src="@drawable/img_grouptab_groupinfocard"/>
-
-                <ImageView
-                    android:layout_width="151dp"
-                    android:layout_height="170dp"
-                    android:layout_marginRight="10dp"
-                    android:src="@drawable/img_grouptab_groupinfocard"/>
-
-            </LinearLayout>
-
+                app:reverseLayout="true"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                app:layout_behavior="@string/appbar_scrolling_view_behavior"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+            </androidx.recyclerview.widget.RecyclerView>
         </HorizontalScrollView>
 
-
-
-
-
-
-
-
     </LinearLayout>
-
 
 </ScrollView>
