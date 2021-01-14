@@ -9,7 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.GODORI">
-        <activity android:name=".CertifTabUpload1Activity"></activity>
+        <activity android:name=".GroupInfoActivity"></activity>
+        <activity android:name=".CertifTabUpload1Activity" />
         <activity
             android:name=".SplashActivity"
             android:theme="@style/SplashTheme">
@@ -23,7 +24,7 @@
         <activity android:name=".CertifTabUpload3Activity" />
         <activity android:name=".CertifTabUpload2Activity" />
         <activity android:name=".CertifTabDetailActivity" />
-        <activity android:name=".TabBarActivity"></activity>
+        <activity android:name=".TabBarActivity" />
     </application>
 
 </manifest>

@@ -176,7 +176,7 @@
             android:layout_marginBottom="30dp"
             android:scrollbars="none">
             <androidx.recyclerview.widget.RecyclerView
-                android:id="@+id/recyclerview_groupmore"
+                android:id="@+id/recyclerview_groupInfo"
                 android:divider="@null"
                 android:orientation="horizontal"
                 app:reverseLayout="true"

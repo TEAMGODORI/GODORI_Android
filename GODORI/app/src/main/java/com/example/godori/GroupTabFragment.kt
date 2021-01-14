@@ -10,7 +10,9 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager.HORIZONTAL
 import androidx.recyclerview.widget.RecyclerView
 import kotlinx.android.synthetic.*
+import kotlinx.android.synthetic.main.activity_group_info.*
 import kotlinx.android.synthetic.main.fragment_group_tab.*
+import kotlinx.android.synthetic.main.fragment_group_tab.recyclerview_groupInfo
 
 
 class GroupTabFragment : Fragment() {
@@ -37,7 +39,7 @@ class GroupTabFragment : Fragment() {
         viewManager = LinearLayoutManager(context, HORIZONTAL, true)
         viewAdapter = GroupMoreAdapter()
 
-        recyclerView = recyclerview_groupmore.apply {
+        recyclerView = recyclerview_favoriteExercise.apply {
             setHasFixedSize(true)
             // use a linear layout manager
             layoutManager = viewManager

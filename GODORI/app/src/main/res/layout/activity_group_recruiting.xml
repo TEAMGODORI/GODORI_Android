@@ -19,7 +19,7 @@
             android:id="@+id/btnRecruitingBack"
             android:layout_width="match_parent"
             android:layout_height="54dp"
-            android:background="@color/main">
+            android:background="@drawable/group_info_gradation">
 
             <ImageButton
                 android:layout_width="20dp"
@@ -43,7 +43,7 @@
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="200dp"
-            android:background="@color/main"
+            android:background="@drawable/group_info_gradation"
             android:padding="28dp">
 
             <TextView
