@@ -9,7 +9,12 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.GODORI">
-        <activity android:name=".GroupInfoActivity"></activity>
+        <activity android:name=".GroupJoinCompleteActivity"></activity>
+        <activity android:name=".GroupCreationCompleteActivity" />
+        <activity android:name=".GroupCreation3Activity" />
+        <activity android:name=".GroupCreation2Activity" />
+        <activity android:name=".GroupCreation1Activity" />
+        <activity android:name=".GroupInfoActivity" />
         <activity android:name=".CertifTabUpload1Activity" />
         <activity
             android:name=".SplashActivity"
