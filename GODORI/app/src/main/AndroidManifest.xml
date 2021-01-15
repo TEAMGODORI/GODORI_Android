@@ -9,9 +9,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.GODORI">
-        <activity android:name=".CertifTabUpload1Activity"></activity>
+        <activity android:name=".Activity.InformationActivity"></activity>
+        <activity android:name=".Activity.GroupProdCompleActivity" />
+        <activity android:name=".Activity.GroupJoinCompleActivity" />
         <activity
-            android:name=".SplashActivity"
+            android:name=".Activity.SplashActivity"
             android:theme="@style/SplashTheme">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -19,11 +21,12 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".GroupRecruitingActivity" />
-        <activity android:name=".CertifTabUpload3Activity" />
-        <activity android:name=".CertifTabUpload2Activity" />
-        <activity android:name=".CertifTabDetailActivity" />
-        <activity android:name=".TabBarActivity"></activity>
+        <activity android:name=".Activity.GroupRecruitingActivity" />
+        <activity android:name=".Activity.CertifTabUpload1Activity" />
+        <activity android:name=".Activity.CertifTabUpload2Activity" />
+        <activity android:name=".Activity.CertifTabUpload3Activity" />
+        <activity android:name=".Activity.CertifTabDetailActivity" />
+        <activity android:name=".Activity.TabBarActivity" />
     </application>
 
 </manifest>

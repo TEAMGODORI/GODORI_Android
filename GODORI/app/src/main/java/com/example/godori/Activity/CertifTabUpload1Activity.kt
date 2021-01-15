@@ -1,4 +1,4 @@
-package com.example.godori
+package com.example.godori.Activity
 
 import android.annotation.SuppressLint
 import android.content.Intent
@@ -6,6 +6,7 @@ import android.graphics.Color
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.MotionEvent
+import com.example.godori.R
 import kotlinx.android.synthetic.main.activity_certif_tab_upload1.*
 
 class CertifTabUpload1Activity : AppCompatActivity() {

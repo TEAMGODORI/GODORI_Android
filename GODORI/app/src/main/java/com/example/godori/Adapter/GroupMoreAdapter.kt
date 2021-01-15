@@ -1,4 +1,4 @@
-//package com.example.godori
+package com.example.godori.Adapter//package com.example.godori
 //
 //import android.view.LayoutInflater
 //import android.view.View

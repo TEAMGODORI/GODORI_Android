@@ -1,14 +1,12 @@
-package com.example.godori
+package com.example.godori.Activity
 
 import android.annotation.SuppressLint
 import android.content.Intent
 import android.graphics.Color
 import android.os.Bundle
 import android.view.MotionEvent
-import android.view.View
-import android.widget.Button
 import androidx.appcompat.app.AppCompatActivity
-import kotlinx.android.synthetic.main.activity_certif_tab_upload1.*
+import com.example.godori.R
 import kotlinx.android.synthetic.main.activity_certif_tab_upload2.*
 
 
@@ -17,6 +15,11 @@ class CertifTabUpload2Activity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_certif_tab_upload2)
+
+        backBtn1.setOnClickListener {
+            //백버튼 눌렀을 때
+            onBackPressed()
+        }
 
         next2Btn.setOnClickListener {
             val intent = Intent(this, CertifTabUpload3Activity::class.java)

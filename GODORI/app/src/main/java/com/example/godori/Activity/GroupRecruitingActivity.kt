@@ -1,8 +1,9 @@
-package com.example.godori
+package com.example.godori.Activity
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.example.godori.R
 import kotlinx.android.synthetic.main.activity_group_recruiting.*
 
 class GroupRecruitingActivity : AppCompatActivity() {

@@ -1,10 +1,11 @@
-package com.example.godori
+package com.example.godori.Activity
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.viewpager.widget.ViewPager
+import com.example.godori.R
+import com.example.godori.Adapter.TabBarViewPagerAdapter
 import kotlinx.android.synthetic.main.activity_tab_bar.*
-import kotlinx.android.synthetic.main.activity_certif_tab_upload1.*
 import kotlin.properties.Delegates
 
 

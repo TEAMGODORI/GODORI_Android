@@ -1,4 +1,4 @@
-package com.example.godori
+package com.example.godori.Activity
 
 import android.annotation.SuppressLint
 import android.os.Bundle
@@ -8,7 +8,8 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
 import androidx.fragment.app.FragmentTransaction
-import kotlinx.android.synthetic.main.activity_certif_tab_upload2.*
+import com.example.godori.Fragment.CertifTabFragment
+import com.example.godori.R
 import kotlinx.android.synthetic.main.activity_certif_tab_upload3.*
 
 class CertifTabUpload3Activity : AppCompatActivity() {
@@ -16,6 +17,11 @@ class CertifTabUpload3Activity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_certif_tab_upload3)
+
+        backBtn2.setOnClickListener {
+            //백버튼 눌렀을 때
+            onBackPressed()
+        }
 
         Lay1.setOnTouchListener { view, motionEvent ->
             if (motionEvent.action == MotionEvent.ACTION_DOWN) {
@@ -37,16 +43,22 @@ class CertifTabUpload3Activity : AppCompatActivity() {
             }
             false
         }
-//        next3Btn.setOnClickListener(View.OnClickListener {
-//            val mainFragment: MainFragment = fragmentManager.findFragmentById(android.R.id.certifTabFrag) as MainFragment
-//        })
+
+        val certifTabFragment = CertifTabFragment()
+
+        next3Btn.setOnClickListener(View.OnClickListener {
+            replaceFragment(certifTabFragment)
+        })
+
     }
-//    fun replaceFragment() {
-//        val certifTabFragment = CertifTabFragment()
-//        val fragmentManager: android.app.FragmentManager? = fragmentManager
-//        val fragmentTransaction = fragmentManager.beginTransaction()
-//        fragmentTransaction.replace(android.R.id.certifTabFrag, certifTabFragment)
-//        fragmentTransaction.commit()
-//    }
+
+    // Fragment로 이동
+    fun replaceFragment(fragment: Fragment?) {
+        val certifTabFragment = CertifTabFragment()
+        val fragmentManager: FragmentManager = supportFragmentManager
+        val fragmentTransaction: FragmentTransaction = fragmentManager.beginTransaction()
+        fragmentTransaction.replace(R.id.certifTabFrag, certifTabFragment)
+        fragmentTransaction.commit()
+    }
 }
 

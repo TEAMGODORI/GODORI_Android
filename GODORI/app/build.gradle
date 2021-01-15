@@ -45,6 +45,10 @@ dependencies {
 //    카드,리사이클을 위해 추가
     implementation 'androidx.recyclerview:recyclerview:1.0.0'
     implementation 'androidx.cardview:cardview:1.0.0'
+    implementation 'androidx.fragment:fragment-ktx:1.2.4'
+
+//    커스텀 캘린더뷰를 위해 추가
+    implementation 'com.prolificinteractive:material-calendarview:1.4.3'
 
     testImplementation 'junit:junit:4.+'
     androidTestImplementation 'androidx.test.ext:junit:1.1.2'
