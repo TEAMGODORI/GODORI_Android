@@ -4,10 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-
     tools:context=".GroupTabFragment">
-
-    <!--스크롤 뷰를 쓰기 위해서 LinearLayout으로 묶음-->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -15,14 +12,12 @@
         android:gravity="top"
         android:baselineAligned="true"
         android:layout_margin="16dp">
-
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
             android:layout_marginLeft="16dp"
             android:layout_marginRight="16dp">
-
             <TextView
                 android:id="@+id/text_userName"
                 android:layout_width="wrap_content"
@@ -31,8 +26,6 @@
                 android:layout_centerVertical="true"
                 android:textColor="#3C3C3C"
                 android:textSize="12dp"/>
-
-
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -41,9 +34,6 @@
                 android:layout_toRightOf="@+id/text_userName"
                 android:textColor="#3C3C3C"
                 android:textSize="12dp"/>
-
-
-
             <ImageButton
                 android:id="@+id/btnNotice"
                 android:layout_width="24dp"
@@ -54,10 +44,7 @@
                 android:adjustViewBounds="true"
                 android:src="@drawable/ic_notice"
                 android:background="@color/transparent"/>
-
-
         </RelativeLayout>
-
 
         <RelativeLayout
             android:id="@+id/groupRelactive"
@@ -66,8 +53,6 @@
             android:layout_marginTop="23dp"
             android:layout_marginLeft="16dp"
             android:layout_marginRight="16dp">
-
-
             <ImageView
                 android:id="@+id/imgBusy"
                 android:layout_width="134dp"
@@ -75,9 +60,6 @@
                 android:adjustViewBounds="true"
                 android:scaleType="centerCrop"
                 android:src="@drawable/img_appnotice"/>
-
-
-
             <ImageButton
                 android:id="@+id/btnMkGroup"
                 android:layout_width="wrap_content"
@@ -88,8 +70,6 @@
                 android:layout_below="@+id/imgBusy"
                 android:src="@drawable/ic_ifgroup"
                 android:background="@color/transparent"/>
-
-
             <ImageView
                 android:layout_width="168dp"
                 android:layout_height="143dp"
@@ -101,31 +81,17 @@
                 android:src="@drawable/img_ballet"/>
         </RelativeLayout>
 
-
-
-
-
-        <LinearLayout
+        <Button
             android:layout_width="match_parent"
             android:layout_height="40dp"
             android:layout_marginTop="30dp"
+            android:gravity="start"
             android:background="@color/main"
-            android:textSize="14dp">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:paddingLeft="16dp"
-                android:textColor="@color/white"
-                android:textStyle="bold"
-                android:textSize="14dp"
-                android:paddingVertical="10dp"
-                android:text="이번주 당신이 응원할 마니또는?"/>
-
-        </LinearLayout>
-
-
-
+            android:textSize="14dp"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:paddingLeft="20dp"
+            android:text="이번주 당신이 응원할 마니또는?"/>
 
         <TextView
             android:layout_width="wrap_content"
@@ -136,8 +102,6 @@
             android:textStyle="bold"
             android:textSize="16dp"/>
 
-
-        <!--스크롤 뷰를 쓰기 위해서 LinearLayout으로 묶-->
         <ImageButton
             android:id="@+id/btnRecommandGroup"
             android:layout_width="match_parent"
