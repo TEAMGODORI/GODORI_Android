@@ -16,9 +16,11 @@
     </style>
         <!-- Customize your theme here. -->
 
-        <!--splash 화면에 사용될 테마-->
-        <style name="SplashTheme" parent = "Theme.AppCompat.NoActionBar">
-            <item name="android:windowBackground">@drawable/background_splash</item>
-        </style>
+    <!--splash 화면에 사용될 테마-->
+    <style name="SplashTheme" parent = "Theme.AppCompat.NoActionBar">
+        <item name="android:windowBackground">@drawable/background_splash</item>
+    </style>
+
+    <!--editText material Theme-->
 
 </resources>

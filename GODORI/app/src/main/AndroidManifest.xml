@@ -9,9 +9,19 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.GODORI">
+<<<<<<< HEAD
         <activity android:name=".Activity.InformationActivity"></activity>
         <activity android:name=".Activity.GroupProdCompleActivity" />
         <activity android:name=".Activity.GroupJoinCompleActivity" />
+=======
+        <activity android:name=".GroupJoinCompleteActivity"></activity>
+        <activity android:name=".GroupCreationCompleteActivity" />
+        <activity android:name=".GroupCreation3Activity" />
+        <activity android:name=".GroupCreation2Activity" />
+        <activity android:name=".GroupCreation1Activity" />
+        <activity android:name=".GroupInfoActivity" />
+        <activity android:name=".CertifTabUpload1Activity" />
+>>>>>>> e98b50b1c4338a35d045555711101dcc0745d7d8
         <activity
             android:name=".Activity.SplashActivity"
             android:theme="@style/SplashTheme">
@@ -21,12 +31,20 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+<<<<<<< HEAD
         <activity android:name=".Activity.GroupRecruitingActivity" />
         <activity android:name=".Activity.CertifTabUpload1Activity" />
         <activity android:name=".Activity.CertifTabUpload2Activity" />
         <activity android:name=".Activity.CertifTabUpload3Activity" />
         <activity android:name=".Activity.CertifTabDetailActivity" />
         <activity android:name=".Activity.TabBarActivity" />
+=======
+        <activity android:name=".GroupRecruitingActivity" />
+        <activity android:name=".CertifTabUpload3Activity" />
+        <activity android:name=".CertifTabUpload2Activity" />
+        <activity android:name=".CertifTabDetailActivity" />
+        <activity android:name=".TabBarActivity" />
+>>>>>>> e98b50b1c4338a35d045555711101dcc0745d7d8
     </application>
 
 </manifest>

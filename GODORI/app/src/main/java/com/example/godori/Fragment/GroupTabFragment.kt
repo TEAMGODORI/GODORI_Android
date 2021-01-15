@@ -6,29 +6,33 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+<<<<<<< HEAD:GODORI/app/src/main/java/com/example/godori/Fragment/GroupTabFragment.kt
 import com.example.godori.Activity.GroupRecruitingActivity
 import com.example.godori.R
+=======
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.LinearLayoutManager.HORIZONTAL
+import androidx.recyclerview.widget.RecyclerView
+import kotlinx.android.synthetic.*
+import kotlinx.android.synthetic.main.activity_group_info.*
+>>>>>>> e98b50b1c4338a35d045555711101dcc0745d7d8:GODORI/app/src/main/java/com/example/godori/GroupTabFragment.kt
 import kotlinx.android.synthetic.main.fragment_group_tab.*
+import kotlinx.android.synthetic.main.fragment_group_tab.recyclerview_groupInfo
 
 
 class GroupTabFragment : Fragment() {
-
-    //reycle관련
-//    private var titleList = mutableListOf<String>()
-//    private var descList = mutableListOf<String>()
-//    private var imagesList = mutableListOf<String>()
-
+    private lateinit var recyclerView: RecyclerView
+    private lateinit var viewAdapter: RecyclerView.Adapter<*>
+    private lateinit var viewManager: RecyclerView.LayoutManager
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        val view =  inflater.inflate(R.layout.fragment_group_tab, container, false)
-
+        val view = inflater.inflate(R.layout.fragment_group_tab, container, false)
 
         return view
-
     }
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
@@ -36,6 +40,16 @@ class GroupTabFragment : Fragment() {
             val intent = Intent(getActivity(), GroupRecruitingActivity::class.java)
             startActivity(intent)
         }
-    }
 
+        viewManager = LinearLayoutManager(context, HORIZONTAL, true)
+        viewAdapter = GroupMoreAdapter()
+
+        recyclerView = recyclerview_favoriteExercise.apply {
+            setHasFixedSize(true)
+            // use a linear layout manager
+            layoutManager = viewManager
+            // specify an viewAdapter (see also next example)
+            adapter = viewAdapter
+        }
+    }
 }
