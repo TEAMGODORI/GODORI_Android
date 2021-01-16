@@ -39,12 +39,12 @@ class GroupTabFragment : Fragment() {
         viewManager = LinearLayoutManager(context, HORIZONTAL, true)
         viewAdapter = GroupMoreAdapter()
 
-        recyclerView = recyclerview_favoriteExercise.apply {
-            setHasFixedSize(true)
-            // use a linear layout manager
-            layoutManager = viewManager
-            // specify an viewAdapter (see also next example)
-            adapter = viewAdapter
-        }
+//        recyclerView = recyclerview_favoriteExercise.apply {
+//            setHasFixedSize(true)
+//            // use a linear layout manager
+//            layoutManager = viewManager
+//            // specify an viewAdapter (see also next example)
+//            adapter = viewAdapter
+//        }
     }
 }

@@ -51,5 +51,5 @@ dependencies {
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
 
     // edit text material 을 위해 추가
-    implementation 'com.google.android.material:material:1.1.0'
+//    implementation 'com.google.android.material:material:1.1.0'
 }

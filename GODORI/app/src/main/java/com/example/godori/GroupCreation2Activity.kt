@@ -11,15 +11,6 @@ class GroupCreation2Activity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_group_creation2)
 
-        //switch 리스너
-        groupCreation_switch.setOnCheckedChangeListener { buttonView, isChecked ->
-            if (isChecked){
-
-            }
-            else{
-
-            }
-        }
     }
 
 }

@@ -13,29 +13,30 @@
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="51dp">
 
         <ImageView
             android:id="@+id/favoriteExercise_img"
             android:layout_width="27dp"
             android:layout_height="35dp"
-            android:src="@drawable/ic_runner"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="6dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginRight="16dp"
             android:adjustViewBounds="true"
             android:scaleType="centerInside"
-            android:layout_marginTop="6dp"
-            android:layout_centerHorizontal="true"
-            android:layout_marginEnd="16dp"
-            android:layout_marginRight="16dp" />
+            android:src="@drawable/ic_runner" />
 
         <TextView
             android:id="@+id/favoriteExercise_tv"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="런닝"
-            android:textSize="8dp"
-            android:layout_centerHorizontal="true"
+            android:includeFontPadding="false"
             android:layout_below="@+id/favoriteExercise_img"
-            android:textColor="@color/black"/>
+            android:layout_centerHorizontal="true"
+            android:text="런닝"
+            android:textColor="@color/black"
+            android:textSize="8dp" />
 
     </RelativeLayout>
 </androidx.cardview.widget.CardView>
