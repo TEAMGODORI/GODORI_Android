@@ -6,7 +6,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
     android:id="@+id/certifTabFrag"
-    tools:context=".Fragment.CertifTabFragment">
+    tools:context=".fragment.CertifTabFragment">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -27,14 +27,16 @@
                 android:text="운동 인증"
                 android:textColor="#ffffff"
                 android:textSize="30dp"
-                android:textStyle="bold" />
+                android:textStyle="bold"
+                android:includeFontPadding="false"/>
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
                 android:text="오늘의 운동을 간편하게 공유해보세요!"
-                android:textColor="#ffffff" />
+                android:textColor="#ffffff"
+                android:includeFontPadding="false"/>
         </LinearLayout>
 
         <LinearLayout
@@ -63,11 +65,11 @@
             android:layout_height="match_parent"
             android:orientation="vertical">
 
-            <ImageView
+            <com.view.calender.horizontal.umar.horizontalcalendarview.HorizontalCalendarView
+                android:id="@+id/horizontalcalendarview"
                 android:layout_width="match_parent"
-                android:layout_height="190dp"
-                android:padding="5dp"
-                android:src="@drawable/img_month_x" />
+                android:layout_height="190dp">
+            </com.view.calender.horizontal.umar.horizontalcalendarview.HorizontalCalendarView>
 
             <View
                 android:layout_width="match_parent"
@@ -86,7 +88,8 @@
                     android:layout_marginTop="15dp"
                     android:layout_marginBottom="10dp"
                     android:id="@+id/calendar_text"
-                    android:text="2020.12.17" />
+                    android:text="2020.12.17"
+                    android:includeFontPadding="false"/>
 
                 <androidx.recyclerview.widget.RecyclerView
                     android:id="@+id/certifRecycler"

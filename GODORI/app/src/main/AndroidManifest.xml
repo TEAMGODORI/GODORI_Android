@@ -9,21 +9,20 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.GODORI">
-<<<<<<< HEAD
-        <activity android:name=".Activity.InformationActivity"></activity>
-        <activity android:name=".Activity.GroupProdCompleActivity" />
-        <activity android:name=".Activity.GroupJoinCompleActivity" />
-=======
-        <activity android:name=".GroupJoinCompleteActivity"></activity>
+        <activity android:name=".activity.LoginActivity"></activity>
+        <activity android:name=".activity.TutorialHeightActivity" />
+        <activity android:name=".activity.Information2Activity" />
+        <activity android:name=".activity.Information1Activity" />
+        <activity android:name=".activity.GroupProdCompleActivity" />
+        <activity android:name=".activity.GroupJoinCompleActivity" />
+        <activity android:name=".GroupJoinCompleteActivity" />
         <activity android:name=".GroupCreationCompleteActivity" />
         <activity android:name=".GroupCreation3Activity" />
         <activity android:name=".GroupCreation2Activity" />
         <activity android:name=".GroupCreation1Activity" />
         <activity android:name=".GroupInfoActivity" />
-        <activity android:name=".CertifTabUpload1Activity" />
->>>>>>> e98b50b1c4338a35d045555711101dcc0745d7d8
         <activity
-            android:name=".Activity.SplashActivity"
+            android:name=".activity.SplashActivity"
             android:theme="@style/SplashTheme">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -31,20 +30,12 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-<<<<<<< HEAD
-        <activity android:name=".Activity.GroupRecruitingActivity" />
-        <activity android:name=".Activity.CertifTabUpload1Activity" />
-        <activity android:name=".Activity.CertifTabUpload2Activity" />
-        <activity android:name=".Activity.CertifTabUpload3Activity" />
-        <activity android:name=".Activity.CertifTabDetailActivity" />
-        <activity android:name=".Activity.TabBarActivity" />
-=======
-        <activity android:name=".GroupRecruitingActivity" />
-        <activity android:name=".CertifTabUpload3Activity" />
-        <activity android:name=".CertifTabUpload2Activity" />
-        <activity android:name=".CertifTabDetailActivity" />
-        <activity android:name=".TabBarActivity" />
->>>>>>> e98b50b1c4338a35d045555711101dcc0745d7d8
+        <activity android:name=".activity.GroupRecruitingActivity" />
+        <activity android:name=".activity.CertifTabUpload1Activity" />
+        <activity android:name=".activity.CertifTabUpload2Activity" />
+        <activity android:name=".activity.CertifTabUpload3Activity" />
+        <activity android:name=".activity.CertifTabDetailActivity" />
+        <activity android:name=".activity.TabBarActivity" />
     </application>
 
 </manifest>

@@ -49,11 +49,18 @@ dependencies {
 
 //    커스텀 캘린더뷰를 위해 추가
     implementation 'com.prolificinteractive:material-calendarview:1.4.3'
+    implementation 'com.github.mybringback22:HorizontalCalendarView-Android-:0.1.0'
 
     testImplementation 'junit:junit:4.+'
     androidTestImplementation 'androidx.test.ext:junit:1.1.2'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
 
-    // edit text material 을 위해 추가
+//    edit text material 을 위해 추가
     implementation 'com.google.android.material:material:1.1.0'
+
+//      튜토리얼의 인디케이터를 위해 추가
+    implementation 'me.relex:circleindicator:1.2.2'
+
+//      다중 선택을 위해 추가
+    implementation 'com.google.android:flexbox:2.0.1'
 }

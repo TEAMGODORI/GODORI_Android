@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Activity.CertifTabUpload3Activity">
+    tools:context=".activity.CertifTabUpload3Activity">
 
 
     <LinearLayout
@@ -54,14 +54,15 @@
                         android:layout_marginTop="15dp"
                         android:text="오늘의 평가"
                         android:textColor="#000000"
-                        android:textSize="18dp" />
+                        android:textSize="18dp"
+                        android:includeFontPadding="false"/>
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="10dp"
                         android:layout_marginBottom="20dp"
-                        android:text="전반적인 하루를 평가해 주세요" />
+                        android:text="전반적인 하루를 평가해 주세요"
+                        android:includeFontPadding="false"/>
 
                     <LinearLayout
                         android:layout_width="wrap_content"
@@ -199,13 +200,14 @@
                         android:layout_marginTop="15dp"
                         android:text="한 줄 설명"
                         android:textColor="#000000"
-                        android:textSize="18dp" />
+                        android:textSize="18dp"
+                        android:includeFontPadding="false"/>
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="10dp"
-                        android:text="더 기록하고 싶은 것이 있으면 적어주세요" />
+                        android:text="더 기록하고 싶은 것이 있으면 적어주세요"
+                        android:includeFontPadding="false"/>
 
 
                         <EditText
@@ -214,11 +216,11 @@
                             android:layout_marginTop="20dp"
                             android:background="@drawable/edittext_rounded_corner_rectangle"
                             android:gravity="top"
-                            android:layout_marginLeft="5dp"
                             android:hint="기록을 남겨보아요~"
                             android:padding="12dp"
                             android:privateImeOptions="defaultInputmode=korean"
-                            android:textSize="15dp" />
+                            android:textSize="15dp"
+                            android:includeFontPadding="false"/>
 
                 </LinearLayout>
                 <Button

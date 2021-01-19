@@ -5,7 +5,7 @@
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
-    tools:context=".GroupRecruitingActivity"
+    tools:context=".GroupCreation3Activity"
     android:background="#F7F7F7">
 
     <LinearLayout
@@ -87,7 +87,7 @@
                     android:layout_height="36dp"
                     android:layout_marginLeft="14dp"
                     android:layout_gravity="center"
-                    android:background="@drawable/button_circle"
+                    android:background="@drawable/button_uncircle"
                     android:text="1" />
 
                 <Button
@@ -96,7 +96,7 @@
                     android:layout_height="36dp"
                     android:layout_marginLeft="14dp"
                     android:layout_gravity="center"
-                    android:background="@drawable/button_circle"
+                    android:background="@drawable/button_uncircle"
                     android:text="2" />
 
                 <Button
@@ -105,7 +105,7 @@
                     android:layout_height="36dp"
                     android:layout_marginLeft="14dp"
                     android:layout_gravity="center"
-                    android:background="@drawable/button_circle"
+                    android:background="@drawable/button_uncircle"
                     android:text="3" />
 
                 <Button
@@ -114,7 +114,7 @@
                     android:layout_height="36dp"
                     android:layout_marginLeft="14dp"
                     android:layout_gravity="center"
-                    android:background="@drawable/button_circle"
+                    android:background="@drawable/button_uncircle"
                     android:text="4" />
 
                 <Button
@@ -123,7 +123,7 @@
                     android:layout_height="36dp"
                     android:layout_marginLeft="14dp"
                     android:layout_gravity="center"
-                    android:background="@drawable/button_circle"
+                    android:background="@drawable/button_uncircle"
                     android:text="5" />
                 <Button
                     android:id="@+id/groupCreation_cycle6"
@@ -131,7 +131,7 @@
                     android:layout_height="36dp"
                     android:layout_marginLeft="14dp"
                     android:layout_gravity="center"
-                    android:background="@drawable/button_circle"
+                    android:background="@drawable/button_uncircle"
                     android:text="6" />
                 <Button
                     android:id="@+id/groupCreation_cycle7"
@@ -139,7 +139,7 @@
                     android:layout_height="36dp"
                     android:layout_marginLeft="14dp"
                     android:layout_gravity="center"
-                    android:background="@drawable/button_circle"
+                    android:background="@drawable/button_uncircle"
                     android:text="7" />
             </RadioGroup>
             <TextView
@@ -152,28 +152,28 @@
                 android:textSize="14dp" />
             <RadioGroup
                 android:layout_width="match_parent"
-                android:layout_height="90dp"
+                android:layout_height="80dp"
                 android:layout_marginTop="12dp"
                 android:orientation="horizontal">
                 <Button
                     android:id="@+id/groupCreation_intensity1"
-                    android:layout_width="90dp"
-                    android:layout_height="90dp"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
                     android:layout_marginLeft="14dp"
                     android:background="@drawable/edittext_rounded_corner_rectangle"
                     android:text="상" />
                 <Button
                     android:id="@+id/groupCreation_intensity2"
-                    android:layout_width="90dp"
-                    android:layout_height="90dp"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
                     android:layout_marginLeft="14dp"
                     android:layout_gravity="center"
                     android:background="@drawable/edittext_rounded_corner_rectangle"
                     android:text="중" />
                 <Button
                     android:id="@+id/groupCreation_intensity3"
-                    android:layout_width="90dp"
-                    android:layout_height="90dp"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
                     android:layout_marginLeft="14dp"
                     android:layout_gravity="center"
                     android:background="@drawable/edittext_rounded_corner_rectangle"
