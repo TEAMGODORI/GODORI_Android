@@ -37,14 +37,25 @@
                 android:textColor="#3C3C3C"
                 android:textSize="12dp"/>
             <ImageButton
-                android:id="@+id/btnNotice"
+                android:id="@+id/GroupAfter_btnNotice"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_gravity="right"
+                android:scaleType="fitCenter"
+                android:layout_toLeftOf="@id/GroupAfter_btnGroup"
+                android:layout_marginRight="26dp"
+                android:adjustViewBounds="true"
+                android:src="@drawable/ic_notice"
+                android:background="@color/transparent"/>
+            <ImageButton
+                android:id="@+id/GroupAfter_btnGroup"
                 android:layout_width="24dp"
                 android:layout_height="24dp"
                 android:layout_gravity="right"
                 android:layout_alignParentRight="true"
                 android:scaleType="fitCenter"
                 android:adjustViewBounds="true"
-                android:src="@drawable/ic_notice"
+                android:src="@drawable/img_group"
                 android:background="@color/transparent"/>
         </RelativeLayout>
 

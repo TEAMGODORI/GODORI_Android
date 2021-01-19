@@ -55,6 +55,7 @@ dependencies {
     androidTestImplementation 'androidx.test.ext:junit:1.1.2'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
 
+<<<<<<< HEAD
 //    edit text material 을 위해 추가
     implementation 'com.google.android.material:material:1.1.0'
 
@@ -63,4 +64,8 @@ dependencies {
 
 //      다중 선택을 위해 추가
     implementation 'com.google.android:flexbox:2.0.1'
+=======
+    // edit text material 을 위해 추가
+//    implementation 'com.google.android.material:material:1.1.0'
+>>>>>>> 731838fa22d60e7561e2365740b7d5871aaa9409
 }

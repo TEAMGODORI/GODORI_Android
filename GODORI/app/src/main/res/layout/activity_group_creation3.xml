@@ -27,6 +27,7 @@
                 android:gravity="center" />
             <TextView
                 android:layout_width="wrap_content"
+                android:includeFontPadding="false"
                 android:layout_height="wrap_content"
                 android:layout_gravity="right"
                 android:layout_marginRight="20dp"
@@ -48,6 +49,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:includeFontPadding="false"
                 android:layout_marginTop="14dp"
                 android:text="그룹 만들기"
                 android:textColor="#3C3C3C"
@@ -55,6 +57,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:includeFontPadding="false"
                 android:layout_marginTop="8dp"
                 android:text="그룹 성격을 입력해 주세요"
                 android:textColor="#3C3C3C"
@@ -85,6 +88,7 @@
                     android:id="@+id/groupCreation_cycle1"
                     android:layout_width="36dp"
                     android:layout_height="36dp"
+                    android:includeFontPadding="false"
                     android:layout_marginLeft="14dp"
                     android:layout_gravity="center"
                     android:background="@drawable/button_uncircle"
@@ -94,6 +98,7 @@
                     android:id="@+id/groupCreation_cycle2"
                     android:layout_width="36dp"
                     android:layout_height="36dp"
+                    android:includeFontPadding="false"
                     android:layout_marginLeft="14dp"
                     android:layout_gravity="center"
                     android:background="@drawable/button_uncircle"
@@ -103,6 +108,7 @@
                     android:id="@+id/groupCreation_cycle3"
                     android:layout_width="36dp"
                     android:layout_height="36dp"
+                    android:includeFontPadding="false"
                     android:layout_marginLeft="14dp"
                     android:layout_gravity="center"
                     android:background="@drawable/button_uncircle"
@@ -112,6 +118,7 @@
                     android:id="@+id/groupCreation_cycle4"
                     android:layout_width="36dp"
                     android:layout_height="36dp"
+                    android:includeFontPadding="false"
                     android:layout_marginLeft="14dp"
                     android:layout_gravity="center"
                     android:background="@drawable/button_uncircle"
@@ -121,6 +128,7 @@
                     android:id="@+id/groupCreation_cycle5"
                     android:layout_width="36dp"
                     android:layout_height="36dp"
+                    android:includeFontPadding="false"
                     android:layout_marginLeft="14dp"
                     android:layout_gravity="center"
                     android:background="@drawable/button_uncircle"
@@ -131,7 +139,12 @@
                     android:layout_height="36dp"
                     android:layout_marginLeft="14dp"
                     android:layout_gravity="center"
+<<<<<<< HEAD
                     android:background="@drawable/button_uncircle"
+=======
+                    android:includeFontPadding="false"
+                    android:background="@drawable/button_circle"
+>>>>>>> 731838fa22d60e7561e2365740b7d5871aaa9409
                     android:text="6" />
                 <Button
                     android:id="@+id/groupCreation_cycle7"
@@ -139,7 +152,12 @@
                     android:layout_height="36dp"
                     android:layout_marginLeft="14dp"
                     android:layout_gravity="center"
+<<<<<<< HEAD
                     android:background="@drawable/button_uncircle"
+=======
+                    android:includeFontPadding="false"
+                    android:background="@drawable/button_circle"
+>>>>>>> 731838fa22d60e7561e2365740b7d5871aaa9409
                     android:text="7" />
             </RadioGroup>
             <TextView
@@ -147,6 +165,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="26dp"
                 android:text="운동을 잘하시나요?"
+                android:includeFontPadding="false"
                 android:textColor="#3C3C3C"
                 android:textStyle="bold"
                 android:textSize="14dp" />
@@ -184,6 +203,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="26dp"
                 android:text="선호하는 운동이 있나요?"
+                android:includeFontPadding="false"
                 android:textColor="#3C3C3C"
                 android:textStyle="bold"
                 android:textSize="14dp" />

@@ -58,6 +58,7 @@
                 android:text="고도리"
                 android:textStyle="bold"
                 android:textSize="20dp"
+                android:includeFontPadding="false"
                 android:layout_centerHorizontal="true"
                 android:layout_marginTop="25dp"
                 android:textColor="@color/black"/>
@@ -80,6 +81,7 @@
                     android:layout_height="wrap_content"
                     android:text="시작날짜"
                     android:textStyle="bold"
+                    android:includeFontPadding="false"
                     android:textSize="16dp"
                     android:layout_marginLeft="10dp"
                     android:textColor="@color/black"
@@ -90,6 +92,7 @@
                     android:layout_height="wrap_content"
                     android:text="2020/11/16"
                     android:textSize="15dp"
+                    android:includeFontPadding="false"
                     android:layout_marginLeft="10dp"
                     android:textColor="@color/main"
                     android:layout_below="@+id/groupInfo_startDate_tv"
@@ -117,6 +120,7 @@
                     android:textStyle="bold"
                     android:textSize="16dp"
                     android:layout_marginLeft="10dp"
+                    android:includeFontPadding="false"
                     android:textColor="@color/black"
                     android:layout_toRightOf="@+id/groupInfo_host_img"/>
                 <TextView
@@ -125,6 +129,7 @@
                     android:layout_height="wrap_content"
                     android:text="벅지니"
                     android:textSize="15dp"
+                    android:includeFontPadding="false"
                     android:layout_marginLeft="9dp"
                     android:textColor="@color/main"
                     android:layout_below="@+id/groupInfo_host_tv"

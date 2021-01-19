@@ -141,6 +141,7 @@
             android:layout_marginTop="10dp"
             android:padding="0sp"
             android:scaleType="centerCrop"
+            android:elevation="4dp"
             android:src="@drawable/ic_recommand_group" />
         <RelativeLayout
             android:layout_width="match_parent"
