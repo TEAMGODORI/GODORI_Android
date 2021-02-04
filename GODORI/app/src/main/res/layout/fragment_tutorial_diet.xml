@@ -58,6 +58,24 @@
         android:textStyle="bold"
         android:gravity="center_horizontal" />
 
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_marginTop="200dp"
+        android:button="@drawable/mealcheck"
+        android:id="@+id/meal1Check" />
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_marginTop="200dp"
+        android:layout_marginLeft="100dp"
+        android:button="@drawable/mealcheck"
+        android:id="@+id/meal2Check" />
+
+
     <Button
         android:id="@+id/next2Btn"
         android:layout_width="match_parent"

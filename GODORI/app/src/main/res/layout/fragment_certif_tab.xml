@@ -64,12 +64,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="vertical">
-
-            <com.view.calender.horizontal.umar.horizontalcalendarview.HorizontalCalendarView
-                android:id="@+id/horizontalcalendarview"
-                android:layout_width="match_parent"
-                android:layout_height="190dp">
-            </com.view.calender.horizontal.umar.horizontalcalendarview.HorizontalCalendarView>
+            <!--달력-->
 
             <View
                 android:layout_width="match_parent"

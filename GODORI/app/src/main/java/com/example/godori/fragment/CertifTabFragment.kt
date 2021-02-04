@@ -15,7 +15,6 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.godori.activity.CertifTabDetailActivity
 import com.example.godori.activity.CertifTabUpload1Activity
 import com.example.godori.R
-import com.view.calender.horizontal.umar.horizontalcalendarview.HorizontalCalendarView
 import kotlinx.android.synthetic.main.activity_certif_tab_upload1.*
 import kotlinx.android.synthetic.main.fragment_certif_tab.*
 

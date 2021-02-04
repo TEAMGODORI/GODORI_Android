@@ -10,7 +10,6 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.GODORI">
         <activity android:name=".activity.LoginActivity"></activity>
-        <activity android:name=".activity.TutorialHeightActivity" />
         <activity android:name=".activity.Information2Activity" />
         <activity android:name=".activity.Information1Activity" />
         <activity android:name=".activity.GroupProdCompleActivity" />

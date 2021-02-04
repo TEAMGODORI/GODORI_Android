@@ -82,7 +82,7 @@
             <RadioGroup
                 android:layout_width="match_parent"
                 android:layout_height="55dp"
-                android:orientation="horizontal">//바꾸기
+                android:orientation="horizontal">
 
                 <Button
                     android:id="@+id/groupCreation_cycle1"
@@ -139,12 +139,8 @@
                     android:layout_height="36dp"
                     android:layout_marginLeft="14dp"
                     android:layout_gravity="center"
-<<<<<<< HEAD
                     android:background="@drawable/button_uncircle"
-=======
                     android:includeFontPadding="false"
-                    android:background="@drawable/button_circle"
->>>>>>> 731838fa22d60e7561e2365740b7d5871aaa9409
                     android:text="6" />
                 <Button
                     android:id="@+id/groupCreation_cycle7"
@@ -152,12 +148,8 @@
                     android:layout_height="36dp"
                     android:layout_marginLeft="14dp"
                     android:layout_gravity="center"
-<<<<<<< HEAD
                     android:background="@drawable/button_uncircle"
-=======
                     android:includeFontPadding="false"
-                    android:background="@drawable/button_circle"
->>>>>>> 731838fa22d60e7561e2365740b7d5871aaa9409
                     android:text="7" />
             </RadioGroup>
             <TextView
