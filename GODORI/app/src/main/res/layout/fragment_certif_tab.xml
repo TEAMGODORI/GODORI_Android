@@ -3,9 +3,10 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
     android:id="@+id/certifTabFrag"
-    tools:context=".CertifTabFragment">
+    tools:context=".fragment.CertifTabFragment">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -26,14 +27,16 @@
                 android:text="운동 인증"
                 android:textColor="#ffffff"
                 android:textSize="30dp"
-                android:textStyle="bold" />
+                android:textStyle="bold"
+                android:includeFontPadding="false"/>
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
                 android:text="오늘의 운동을 간편하게 공유해보세요!"
-                android:textColor="#ffffff" />
+                android:textColor="#ffffff"
+                android:includeFontPadding="false"/>
         </LinearLayout>
 
         <LinearLayout
@@ -54,18 +57,25 @@
 
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:fillViewport="true">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="vertical">
 
-            <ImageView
+            <com.prolificinteractive.materialcalendarview.MaterialCalendarView
+                android:id="@+id/cal"
                 android:layout_width="match_parent"
-                android:layout_height="190dp"
-                android:padding="5dp"
-                android:src="@drawable/img_month_x" />
+                android:layout_height="wrap_content"
+                tools:ignore="MissingConstraints"
+                app:mcv_weekDayTextAppearance="@style/customTextViewFontStyle"
+                app:mcv_dateTextAppearance="@style/customTextViewFontStyle"
+                app:mcv_leftArrowMask="@drawable/certif_left_arrow"
+                app:mcv_rightArrowMask="@drawable/certif_right_arrow"
+                app:mcv_selectionColor="@color/blue"
+                app:mcv_showOtherDates="other_months"/>
 
             <View
                 android:layout_width="match_parent"
@@ -83,80 +93,21 @@
                     android:layout_height="17dp"
                     android:layout_marginTop="15dp"
                     android:layout_marginBottom="10dp"
-                    android:text="2020.12.17" />
+                    android:id="@+id/calendarText"
+                    android:text="date"
+                    android:includeFontPadding="false"/>
 
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal">
-
-                    <ImageView
-                        android:id="@+id/certi1"
-                        android:layout_width="160dp"
-                        android:layout_height="160dp"
-                        android:layout_marginRight="50dp"
-                        android:src="@drawable/certif_un" />
-
-                    <ImageView
-                        android:layout_width="160dp"
-                        android:layout_height="160dp"
-                        android:background="#E3E3E3" />
-                </LinearLayout>
-
-                <LinearLayout
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/certifRecycler"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal">
+                    android:layout_height="match_parent">
+                </androidx.recyclerview.widget.RecyclerView>
 
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="70dp"
-                        android:text="혜인" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="185dp"
-                        android:text="송아" />
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="20dp"
-                    android:gravity="center"
-                    android:orientation="horizontal">
-
-                    <ImageView
-                        android:layout_width="160dp"
-                        android:layout_height="160dp"
-                        android:layout_marginRight="50dp"
-                        android:background="#E3E3E3" />
-
-                    <ImageView
-                        android:layout_width="160dp"
-                        android:layout_height="160dp"
-                        android:background="#E3E3E3" />
-                </LinearLayout>
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal">
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="70dp"
-                        android:text="지현" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="185dp"
-                        android:text="진희" />
-                </LinearLayout>
             </LinearLayout>
         </LinearLayout>
     </ScrollView>
+    <FrameLayout
+        android:id="@+id/fragment_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
 </LinearLayout>
