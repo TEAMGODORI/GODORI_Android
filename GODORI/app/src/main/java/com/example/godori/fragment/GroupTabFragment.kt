@@ -1,4 +1,4 @@
-package com.example.godori
+package com.example.godori.fragment
 
 import android.content.Intent
 import android.os.Bundle
@@ -9,10 +9,11 @@ import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager.HORIZONTAL
 import androidx.recyclerview.widget.RecyclerView
-import kotlinx.android.synthetic.*
+import com.example.godori.activity.GroupRecruitingActivity
+import com.example.godori.adapter.GroupMoreAdapter
+import com.example.godori.R
 import kotlinx.android.synthetic.main.activity_group_info.*
 import kotlinx.android.synthetic.main.fragment_group_tab.*
-import kotlinx.android.synthetic.main.fragment_group_tab.recyclerview_groupInfo
 
 
 class GroupTabFragment : Fragment() {

@@ -1,6 +1,7 @@
 plugins {
     id 'com.android.application'
     id 'kotlin-android'
+    id 'kotlin-kapt'
     id 'kotlin-android-extensions'
 }
 
@@ -45,11 +46,24 @@ dependencies {
 //    카드,리사이클을 위해 추가
     implementation 'androidx.recyclerview:recyclerview:1.0.0'
     implementation 'androidx.cardview:cardview:1.0.0'
+    implementation 'androidx.fragment:fragment-ktx:1.2.4'
+
+//    커스텀 캘린더뷰를 위해 추가 2
+    implementation 'com.prolificinteractive:material-calendarview:1.4.3'
 
     testImplementation 'junit:junit:4.+'
     androidTestImplementation 'androidx.test.ext:junit:1.1.2'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
 
-    // edit text material 을 위해 추가
+//    edit text material 을 위해 추가
+    implementation 'com.google.android.material:material:1.1.0'
+
+//      튜토리얼의 인디케이터를 위해 추가
+    implementation 'me.relex:circleindicator:1.2.2'
+
+//      다중 선택을 위해 추가
+    implementation 'com.google.android:flexbox:2.0.1'
+
+// edit text material 을 위해 추가
 //    implementation 'com.google.android.material:material:1.1.0'
 }

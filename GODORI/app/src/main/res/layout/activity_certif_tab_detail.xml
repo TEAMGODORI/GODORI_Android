@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".CertifTabDetailActivity">
+    tools:context=".activity.CertifTabDetailActivity">
 
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar1"
@@ -26,7 +26,8 @@
 
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:fillViewport="true">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -69,9 +70,11 @@
                 android:orientation="vertical">
 
                 <TextView
+                    android:id="@+id/time_text"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textColor="#000000"
+                    android:includeFontPadding="false"
                     android:text="운동 시간" />
 
                 <LinearLayout
@@ -123,7 +126,8 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textColor="#000000"
-                    android:text="운동 종목" />
+                    android:text="운동 종목"
+                    android:includeFontPadding="false"/>
 
                 <LinearLayout
                     android:layout_width="wrap_content"
@@ -132,19 +136,19 @@
                     android:orientation="horizontal">
 
                     <ImageView
-                        android:layout_width="50dp"
-                        android:layout_height="50dp"
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
                         android:src="@drawable/img_yoga"
                         android:padding="2dp"
-                        android:background="@drawable/button_circle2" />
+                        android:background="@drawable/button_circle" />
 
                     <ImageView
-                        android:layout_width="50dp"
-                        android:layout_height="50dp"
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
                         android:layout_marginLeft="20dp"
                         android:src="@drawable/img_health"
                         android:padding="2dp"
-                        android:background="@drawable/button_circle2" />
+                        android:background="@drawable/button_circle" />
                 </LinearLayout>
             </LinearLayout>
             <View
@@ -162,7 +166,8 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textColor="#000000"
-                    android:text="운동 강도" />
+                    android:text="운동 강도"
+                    android:includeFontPadding="false"/>
 
                 <LinearLayout
                     android:layout_width="wrap_content"
@@ -174,21 +179,21 @@
                         android:layout_width="40dp"
                         android:layout_height="40dp"
                         android:layout_marginLeft="2dp"
-                        android:background="@drawable/button_circle"
+                        android:background="@drawable/button_uncircle"
                         android:text="1" />
 
                     <Button
                         android:layout_width="40dp"
                         android:layout_height="40dp"
                         android:layout_marginLeft="25dp"
-                        android:background="@drawable/button_circle"
+                        android:background="@drawable/button_uncircle"
                         android:text="2" />
 
                     <Button
                         android:layout_width="40dp"
                         android:layout_height="40dp"
                         android:layout_marginLeft="25dp"
-                        android:background="@drawable/button_circle"
+                        android:background="@drawable/button_uncircle"
                         android:text="3" />
 
                     <Button
@@ -196,14 +201,14 @@
                         android:layout_height="40dp"
                         android:layout_marginLeft="25dp"
                         android:textColor="#FFFFFF"
-                        android:background="@drawable/button_circle2"
+                        android:background="@drawable/button_circle"
                         android:text="4" />
 
                     <Button
                         android:layout_width="40dp"
                         android:layout_height="40dp"
                         android:layout_marginLeft="25dp"
-                        android:background="@drawable/button_circle"
+                        android:background="@drawable/button_uncircle"
                         android:text="5" />
                 </LinearLayout>
             </LinearLayout>
@@ -223,7 +228,8 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="오늘의 평가"
-                    android:textColor="#000000" />
+                    android:textColor="#000000"
+                    android:includeFontPadding="false"/>
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -280,7 +286,8 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textColor="#000000"
-                    android:text="한 줄 설명" />
+                    android:text="한 줄 설명"
+                    android:includeFontPadding="false"/>
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -292,7 +299,8 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:textColor="#000000"
-                        android:text="요가학원 다녀온 날~" />
+                        android:text="요가학원 다녀온 날~"
+                        android:includeFontPadding="false"/>
                 </LinearLayout>
             </LinearLayout>
 
@@ -319,7 +327,8 @@
                     android:layout_marginLeft="5dp"
                     android:layout_toRightOf="@+id/chat"
                     android:textColor="#000000"
-                    android:text="댓글" />
+                    android:text="댓글"
+                    android:includeFontPadding="false"/>
 
                 <View
                     android:layout_width="match_parent"
@@ -340,7 +349,8 @@
                         android:layout_margin="10dp"
                         android:text="도리"
                         android:textColor="#000000"
-                        android:textSize="15dp"/>
+                        android:textSize="15dp"
+                        android:includeFontPadding="false"/>
 
                     <EditText
                         android:layout_width="match_parent"

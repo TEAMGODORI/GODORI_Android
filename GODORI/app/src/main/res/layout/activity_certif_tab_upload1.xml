@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".CertifTabUpload1Activity">
+    tools:context=".activity.CertifTabUpload1Activity">
 
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar1"
@@ -18,9 +18,9 @@
             android:layout_gravity="center"
             android:gravity="center"
             android:text="업로드"
-            android:textStyle="bold"
             android:textColor="#000000"
-            android:textSize="14dp" />
+            android:textSize="14dp"
+            android:textStyle="bold" />
     </androidx.appcompat.widget.Toolbar>
 
     <LinearLayout
@@ -68,7 +68,6 @@
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="300dp"
-                android:gravity="center"
                 android:orientation="vertical">
 
                 <TextView
@@ -76,90 +75,101 @@
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="15dp"
                     android:layout_marginTop="20dp"
+                    android:includeFontPadding="false"
                     android:text="타임 스탬프"
                     android:textColor="#000000" />
 
-                <RelativeLayout
+                <GridLayout
                     android:layout_width="wrap_content"
                     android:layout_height="300dp"
-                    android:padding="22dp"
-                    android:gravity="center"
-                    android:layout_marginTop="15dp">
+                    android:layout_marginTop="15dp"
+                    android:columnCount="2"
+                    android:rowCount="3"
+                    android:padding="20dp">
 
-                    <Button
-                        android:id="@+id/time_Btn1"
-                        android:layout_width="100dp"
-                        android:layout_height="100dp"
-                        android:layout_marginTop="16dp"
-                        android:background="@drawable/button_round"
-                        android:text="2020/11/23\nPM 15:23"
-                        android:textColor="#7C7C7C"/>
+                    <RadioGroup
+                        android:id="@+id/time_RBtn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
 
-                    <Button
-                        android:id="@+id/time_Btn2"
-                        android:layout_width="100dp"
-                        android:layout_height="100dp"
-                        android:layout_marginTop="16dp"
-                        android:layout_marginLeft="30dp"
-                        android:layout_toRightOf="@id/time_Btn1"
-                        android:background="@drawable/button_round"
-                        android:text="2020/11/23\nPM 15:23"
-                        android:textColor="#7C7C7C"
-                        android:padding="5dp"
-                        android:gravity="bottom|center" />
+                        <RadioButton
+                            android:id="@+id/time_Btn1"
+                            android:layout_width="100dp"
+                            android:layout_height="100dp"
+                            android:layout_marginTop="16dp"
+                            android:background="@drawable/button_time_check"
+                            android:button="@null"
+                            android:includeFontPadding="false"
+                            android:textColor="#7C7C7C" />
 
-                    <Button
-                        android:id="@+id/time_Btn3"
-                        android:layout_width="100dp"
-                        android:layout_height="100dp"
-                        android:layout_marginTop="16dp"
-                        android:layout_marginLeft="30dp"
-                        android:layout_toRightOf="@id/time_Btn2"
-                        android:background="@drawable/button_round"
-                        android:text="2020/11/23\nPM 15:23"
-                        android:textColor="#7C7C7C"
-                        android:padding="5dp"
-                        android:gravity="top|center" />
+                        <RadioButton
+                            android:id="@+id/time_Btn2"
+                            android:layout_width="100dp"
+                            android:layout_height="100dp"
+                            android:layout_marginTop="16dp"
+                            android:layout_marginLeft="30dp"
+                            android:background="@drawable/button_round"
+                            android:button="@null"
+                            android:includeFontPadding="false"
+                            android:padding="5dp"
+                            android:textColor="#7C7C7C" />
 
-                    <Button
-                        android:id="@+id/time_Btn4"
-                        android:layout_width="100dp"
-                        android:layout_height="100dp"
-                        android:layout_marginTop="20dp"
-                        android:layout_below="@id/time_Btn1"
-                        android:background="@drawable/button_round"
-                        android:text="2020/11/23\nPM 15:23"
-                        android:gravity="bottom"
-                        android:padding="5dp"
-                        android:textColor="#7C7C7C" />
+                        <RadioButton
+                            android:id="@+id/time_Btn3"
+                            android:layout_width="100dp"
+                            android:layout_height="100dp"
+                            android:layout_marginTop="16dp"
+                            android:layout_marginLeft="30dp"
+                            android:layout_toRightOf="@id/time_Btn2"
+                            android:background="@drawable/button_round"
+                            android:button="@null"
+                            android:includeFontPadding="false"
+                            android:padding="5dp"
+                            android:textColor="#7C7C7C" />
 
-                    <Button
-                        android:id="@+id/time_Btn5"
-                        android:layout_width="100dp"
-                        android:layout_height="100dp"
-                        android:layout_marginTop="20dp"
-                        android:layout_toLeftOf="@id/time_Btn3"
-                        android:layout_below="@+id/time_Btn2"
-                        android:background="@drawable/button_round"
-                        android:text="2020/11/23\nPM 15:23"
-                        android:gravity="bottom|right"
-                        android:padding="5dp"
-                        android:textColor="#7C7C7C" />
+                        <RadioButton
+                            android:id="@+id/time_Btn4"
+                            android:layout_width="100dp"
+                            android:layout_height="100dp"
+                            android:layout_below="@id/time_Btn1"
+                            android:layout_marginTop="20dp"
+                            android:background="@drawable/button_round"
+                            android:button="@null"
+                            android:includeFontPadding="false"
+                            android:padding="5dp"
+                            android:textColor="#7C7C7C" />
 
-                    <Button
-                        android:id="@+id/time_Btn6"
-                        android:layout_width="100dp"
-                        android:layout_height="100dp"
-                        android:layout_marginLeft="30dp"
-                        android:layout_marginTop="20dp"
-                        android:layout_below="@id/time_Btn2"
-                        android:layout_toRightOf="@id/time_Btn5"
-                        android:background="@drawable/button_round"
-                        android:text="None"
-                        android:textAllCaps="false"
-                        android:textColor="#7C7C7C" />
+                        <RadioButton
+                            android:id="@+id/time_Btn5"
+                            android:layout_width="100dp"
+                            android:layout_height="100dp"
+                            android:layout_below="@+id/time_Btn2"
+                            android:layout_marginTop="20dp"
+                            android:layout_toLeftOf="@id/time_Btn3"
+                            android:background="@drawable/button_round"
+                            android:button="@null"
+                            android:includeFontPadding="false"
+                            android:padding="5dp"
+                            android:textColor="#7C7C7C" />
 
-                </RelativeLayout>
+                        <RadioButton
+                            android:id="@+id/time_Btn6"
+                            android:layout_width="100dp"
+                            android:layout_height="100dp"
+                            android:layout_below="@id/time_Btn2"
+                            android:layout_marginLeft="30dp"
+                            android:layout_marginTop="20dp"
+                            android:layout_toRightOf="@id/time_Btn5"
+                            android:background="@drawable/button_round"
+                            android:button="@null"
+                            android:includeFontPadding="false"
+                            android:text="None"
+                            android:gravity="center"
+                            android:textAllCaps="false"
+                            android:textColor="#7C7C7C" />
+                    </RadioGroup>
+                </GridLayout>
             </RelativeLayout>
 
             <Button

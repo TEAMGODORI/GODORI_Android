@@ -9,15 +9,19 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.GODORI">
-        <activity android:name=".GroupJoinCompleteActivity"></activity>
+        <activity android:name=".activity.LoginActivity"></activity>
+        <activity android:name=".activity.Information2Activity" />
+        <activity android:name=".activity.Information1Activity" />
+        <activity android:name=".activity.GroupProdCompleActivity" />
+        <activity android:name=".activity.GroupJoinCompleActivity" />
+        <activity android:name=".GroupJoinCompleteActivity" />
         <activity android:name=".GroupCreationCompleteActivity" />
         <activity android:name=".GroupCreation3Activity" />
         <activity android:name=".GroupCreation2Activity" />
         <activity android:name=".GroupCreation1Activity" />
         <activity android:name=".GroupInfoActivity" />
-        <activity android:name=".CertifTabUpload1Activity" />
         <activity
-            android:name=".SplashActivity"
+            android:name=".activity.SplashActivity"
             android:theme="@style/SplashTheme">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -25,11 +29,12 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".GroupRecruitingActivity" />
-        <activity android:name=".CertifTabUpload3Activity" />
-        <activity android:name=".CertifTabUpload2Activity" />
-        <activity android:name=".CertifTabDetailActivity" />
-        <activity android:name=".TabBarActivity" />
+        <activity android:name=".activity.GroupRecruitingActivity" />
+        <activity android:name=".activity.CertifTabUpload1Activity" />
+        <activity android:name=".activity.CertifTabUpload2Activity" />
+        <activity android:name=".activity.CertifTabUpload3Activity" />
+        <activity android:name=".activity.CertifTabDetailActivity" />
+        <activity android:name=".activity.TabBarActivity" />
     </application>
 
 </manifest>

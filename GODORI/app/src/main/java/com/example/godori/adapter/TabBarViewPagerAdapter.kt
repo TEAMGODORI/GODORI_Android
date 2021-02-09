@@ -1,8 +1,11 @@
-package com.example.godori
+package com.example.godori.adapter
 
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
 import androidx.fragment.app.FragmentStatePagerAdapter
+import com.example.godori.fragment.CertifTabFragment
+import com.example.godori.fragment.GroupTabFragment
+import com.example.godori.fragment.MyInfoTabFragment
 
 class TabBarViewPagerAdapter (fm : FragmentManager) : FragmentStatePagerAdapter(fm, BEHAVIOR_RESUME_ONLY_CURRENT_FRAGMENT) {
     // 뷰페이지의 어댑터는 FragmentManager를 필요로 한다

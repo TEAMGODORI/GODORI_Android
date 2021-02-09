@@ -1,12 +1,12 @@
-package com.example.godori
+package com.example.godori.activity
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.example.godori.R
 
-class CertifTabDetailActivity : AppCompatActivity() {
+class Information1Activity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_certif_tab_detail)
-
+        setContentView(R.layout.activity_information1)
     }
 }

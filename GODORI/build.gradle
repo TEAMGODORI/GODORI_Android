@@ -18,6 +18,9 @@ allprojects {
     repositories {
         google()
         jcenter()
+
+//    커스텀 캘린더뷰를 위해 추가 1
+        maven { url 'https://jitpack.io' }
     }
 }
 

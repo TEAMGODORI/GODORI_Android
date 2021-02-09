@@ -4,7 +4,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".GroupTabFragment">
+    tools:context=".fragment.GroupTabFragment">
+
+    <!--스크롤 뷰를 쓰기 위해서 LinearLayout으로 묶음-->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

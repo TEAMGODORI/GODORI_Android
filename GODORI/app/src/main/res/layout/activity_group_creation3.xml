@@ -82,7 +82,7 @@
             <RadioGroup
                 android:layout_width="match_parent"
                 android:layout_height="55dp"
-                android:orientation="horizontal">//바꾸기
+                android:orientation="horizontal">
 
                 <Button
                     android:id="@+id/groupCreation_cycle1"
@@ -91,7 +91,7 @@
                     android:includeFontPadding="false"
                     android:layout_marginLeft="14dp"
                     android:layout_gravity="center"
-                    android:background="@drawable/button_circle"
+                    android:background="@drawable/button_uncircle"
                     android:text="1" />
 
                 <Button
@@ -101,7 +101,7 @@
                     android:includeFontPadding="false"
                     android:layout_marginLeft="14dp"
                     android:layout_gravity="center"
-                    android:background="@drawable/button_circle"
+                    android:background="@drawable/button_uncircle"
                     android:text="2" />
 
                 <Button
@@ -111,7 +111,7 @@
                     android:includeFontPadding="false"
                     android:layout_marginLeft="14dp"
                     android:layout_gravity="center"
-                    android:background="@drawable/button_circle"
+                    android:background="@drawable/button_uncircle"
                     android:text="3" />
 
                 <Button
@@ -121,7 +121,7 @@
                     android:includeFontPadding="false"
                     android:layout_marginLeft="14dp"
                     android:layout_gravity="center"
-                    android:background="@drawable/button_circle"
+                    android:background="@drawable/button_uncircle"
                     android:text="4" />
 
                 <Button
@@ -131,7 +131,7 @@
                     android:includeFontPadding="false"
                     android:layout_marginLeft="14dp"
                     android:layout_gravity="center"
-                    android:background="@drawable/button_circle"
+                    android:background="@drawable/button_uncircle"
                     android:text="5" />
                 <Button
                     android:id="@+id/groupCreation_cycle6"
@@ -139,8 +139,8 @@
                     android:layout_height="36dp"
                     android:layout_marginLeft="14dp"
                     android:layout_gravity="center"
+                    android:background="@drawable/button_uncircle"
                     android:includeFontPadding="false"
-                    android:background="@drawable/button_circle"
                     android:text="6" />
                 <Button
                     android:id="@+id/groupCreation_cycle7"
@@ -148,8 +148,8 @@
                     android:layout_height="36dp"
                     android:layout_marginLeft="14dp"
                     android:layout_gravity="center"
+                    android:background="@drawable/button_uncircle"
                     android:includeFontPadding="false"
-                    android:background="@drawable/button_circle"
                     android:text="7" />
             </RadioGroup>
             <TextView
