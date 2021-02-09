@@ -32,19 +32,19 @@ class GroupTabFragment : Fragment() {
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
         btnMoreGroup.setOnClickListener {
-            val intent = Intent(getActivity(), GroupRecruitingActivity::class.java)
+            val intent = Intent(context, GroupRecruitingActivity::class.java)
             startActivity(intent)
         }
 
         viewManager = LinearLayoutManager(context, HORIZONTAL, true)
         viewAdapter = GroupMoreAdapter()
 
-//        recyclerView = recyclerview_favoriteExercise.apply {
-//            setHasFixedSize(true)
-//            // use a linear layout manager
-//            layoutManager = viewManager
-//            // specify an viewAdapter (see also next example)
-//            adapter = viewAdapter
-//        }
+        recyclerView = recyclerview_favoriteExercise.apply {
+            setHasFixedSize(true)
+            // use a linear layout manager
+            layoutManager = viewManager
+            // specify an viewAdapter (see also next example)
+            adapter = viewAdapter
+        }
     }
 }
