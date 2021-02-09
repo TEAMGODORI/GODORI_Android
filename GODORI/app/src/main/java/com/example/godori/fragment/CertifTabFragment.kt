@@ -1,22 +1,35 @@
 package com.example.godori.fragment
 
+
 import android.annotation.SuppressLint
 import android.content.Intent
 import android.graphics.Color
+import android.graphics.drawable.Drawable
+import android.os.Build
 import android.os.Bundle
+import android.text.style.ForegroundColorSpan
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
+import androidx.annotation.RequiresApi
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.example.godori.R
 import com.example.godori.activity.CertifTabDetailActivity
 import com.example.godori.activity.CertifTabUpload1Activity
-import com.example.godori.R
+import com.prolificinteractive.materialcalendarview.*
+import com.prolificinteractive.materialcalendarview.CalendarDay.today
 import kotlinx.android.synthetic.main.activity_certif_tab_upload1.*
 import kotlinx.android.synthetic.main.fragment_certif_tab.*
+import kotlinx.android.synthetic.main.fragment_certif_tab.view.*
+import java.text.SimpleDateFormat
+import java.time.format.DateTimeFormatter
+import java.time.temporal.TemporalAccessor
+import java.util.*
+import kotlin.collections.ArrayList
 
 
 // TODO: Rename parameter arguments, choose names that match
@@ -29,7 +42,13 @@ private const val ARG_PARAM2 = "param2"
  * Use the [CertifTabFragment.newInstance] factory method to
  * create an instance of this fragment.
  */
-class CertifTabFragment : Fragment() {
+class CertifTabFragment : Fragment(), OnDateSelectedListener {
+
+    @RequiresApi(Build.VERSION_CODES.O)
+    private val FORMATTER = DateTimeFormatter.ofPattern("yyyy.MM.dd")
+
+    @SuppressLint("ResourceType")
+    @RequiresApi(Build.VERSION_CODES.O)
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -37,9 +56,117 @@ class CertifTabFragment : Fragment() {
         // Inflate the layout for this fragment
         val view = inflater.inflate(R.layout.fragment_certif_tab, container, false)
 
+        val materialCalendarView : MaterialCalendarView = view.findViewById(R.id.cal)
+
+
+        materialCalendarView.state().edit()
+            .setFirstDayOfWeek(Calendar.MONDAY)
+            .setMinimumDate(CalendarDay.from(2020, 1, 1))
+            .setMaximumDate(CalendarDay.from(2030, 12, 31))
+            .setCalendarDisplayMode(CalendarMode.WEEKS)
+            .commit()
+
+        materialCalendarView.addDecorators(
+            SundayDecorator(),
+            SaturdayDecorator(),
+            OneDayDecorator()
+        )
+
+//        calendarText = (TextView)findViewById(R.id.calendarText)
+//        calendarText.setText("getTime")
+
+        // calendarText에 클릭하면 날짜 표시
+        materialCalendarView.setOnDateChangedListener(OnDateSelectedListener { widget, date, selected ->
+            calendarText.setText(String.format("%d.%d.%d", date.year, date.month + 1, date.day))
+        })
+
+        materialCalendarView.setTileSizeDp(55)
+
         return view
     }
 
+    class SundayDecorator : DayViewDecorator { //일요일 데코
+        private val calendar = Calendar.getInstance()
+        override fun shouldDecorate(day: CalendarDay): Boolean {
+            day.copyTo(calendar)
+            val weekDay = calendar[Calendar.DAY_OF_WEEK]
+            return weekDay == Calendar.SUNDAY
+        }
+
+        override fun decorate(view: DayViewFacade) {
+//            view.addSpan(ForegroundColorSpan(Color.RED))
+        }
+    }
+
+    class SaturdayDecorator : DayViewDecorator { //토요일 데코
+        private val calendar = Calendar.getInstance()
+        override fun shouldDecorate(day: CalendarDay): Boolean {
+            day.copyTo(calendar)
+            val weekDay = calendar[Calendar.DAY_OF_WEEK]
+            return weekDay == Calendar.SATURDAY
+        }
+
+        override fun decorate(view: DayViewFacade) { //토요일일 경우, 파란색
+//            view.addSpan(ForegroundColorSpan(Color.BLUE))
+        }
+    }
+
+    class OneDayDecorator : DayViewDecorator { //오늘 날짜에 표시
+        private var date: CalendarDay?
+        private val calendar = Calendar.getInstance()
+
+        override fun shouldDecorate(day: CalendarDay): Boolean { //date가 day오늘 날짜랑 같은지 비교
+            return date != null && day == date
+        }
+
+        override fun decorate(view: DayViewFacade) {
+//            view.addSpan(StyleSpan(Typeface.BOLD))
+//            view.addSpan(RelativeSizeSpan(1.4f))
+            view.addSpan(ForegroundColorSpan(Color.RED))
+//            view.setBackgroundDrawable(getDrawable(R.drawable.button_circle))
+        }
+        /**
+         * We're changing the internals, so make sure to call [MaterialCalendarView.invalidateDecorators]
+         */
+        fun setDate(date: Date?) {
+            this.date = CalendarDay.from(date)
+        }
+
+        init {
+            date = CalendarDay.today()
+        }
+    }
+
+    @RequiresApi(Build.VERSION_CODES.O)
+    override fun onDateSelected(
+        widget: MaterialCalendarView,
+        date: CalendarDay,
+        selected: Boolean
+    ) {
+//        calendarText.setText(if (selected) FORMATTER.format(date.date) else "No Selection")
+    }
+
+    class CurrentDayDecorator(context: CertifTabFragment) : DayViewDecorator { //고치기
+        private val drawable: Drawable?
+            get() {
+                TODO()
+            }
+        var currentDay = CalendarDay.from(Date())
+        override fun shouldDecorate(day: CalendarDay): Boolean {
+            return day == currentDay
+        }
+
+        override fun decorate(view: DayViewFacade) {
+            view.setSelectionDrawable(drawable!!)
+        }
+
+        init {
+//            drawable = ContextCompat.getDrawable(context, R.drawable.first_day_month)
+        }
+
+    }
+
+    // 리사이클러뷰
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 

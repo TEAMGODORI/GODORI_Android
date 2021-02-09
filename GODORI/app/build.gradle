@@ -1,6 +1,7 @@
 plugins {
     id 'com.android.application'
     id 'kotlin-android'
+    id 'kotlin-kapt'
     id 'kotlin-android-extensions'
 }
 
@@ -47,9 +48,8 @@ dependencies {
     implementation 'androidx.cardview:cardview:1.0.0'
     implementation 'androidx.fragment:fragment-ktx:1.2.4'
 
-//    커스텀 캘린더뷰를 위해 추가
+//    커스텀 캘린더뷰를 위해 추가 2
     implementation 'com.prolificinteractive:material-calendarview:1.4.3'
-//    implementation 'com.github.mybringback22:HorizontalCalendarView-Android-:0.1.0'
 
     testImplementation 'junit:junit:4.+'
     androidTestImplementation 'androidx.test.ext:junit:1.1.2'

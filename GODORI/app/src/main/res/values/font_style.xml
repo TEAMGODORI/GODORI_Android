@@ -19,4 +19,5 @@
     <style name="customCheckboxFontStyle" parent="@android:style/Widget.DeviceDefault.CompoundButton.CheckBox">
         <item name="android:fontFamily">@font/notosans</item>
     </style>
+
 </resources>

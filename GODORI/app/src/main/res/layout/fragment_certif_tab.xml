@@ -64,7 +64,18 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="vertical">
-            <!--달력-->
+
+            <com.prolificinteractive.materialcalendarview.MaterialCalendarView
+                android:id="@+id/cal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                tools:ignore="MissingConstraints"
+                app:mcv_weekDayTextAppearance="@style/customTextViewFontStyle"
+                app:mcv_dateTextAppearance="@style/customTextViewFontStyle"
+                app:mcv_leftArrowMask="@drawable/certif_left_arrow"
+                app:mcv_rightArrowMask="@drawable/certif_right_arrow"
+                app:mcv_selectionColor="@color/blue"
+                app:mcv_showOtherDates="other_months"/>
 
             <View
                 android:layout_width="match_parent"
@@ -82,8 +93,8 @@
                     android:layout_height="17dp"
                     android:layout_marginTop="15dp"
                     android:layout_marginBottom="10dp"
-                    android:id="@+id/calendar_text"
-                    android:text="2020.12.17"
+                    android:id="@+id/calendarText"
+                    android:text="date"
                     android:includeFontPadding="false"/>
 
                 <androidx.recyclerview.widget.RecyclerView
