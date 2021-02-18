@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -8,6 +8,11 @@
     tools:context=".GroupCreation1Activity"
     android:background="#F7F7F7">
 
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        >
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -40,11 +45,12 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="vertical"
+            android:id="@+id/gr_creation1_linear"
             android:gravity="center_horizontal">
             <ImageView
                 android:layout_width="40dp"
                 android:layout_height="40dp"
-                android:src="@drawable/group"
+                android:src="@drawable/gr_img_group"
                 android:layout_marginTop="20dp"/>
             <TextView
                 android:layout_width="wrap_content"
@@ -52,17 +58,17 @@
                 android:includeFontPadding="false"
                 android:layout_marginTop="14dp"
                 android:text="그룹 만들기"
-                android:textColor="#3C3C3C"
-                android:textSize="14dp" />
+                android:textColor="#b3ffffff"
+                android:textSize="12sp" />
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
                 android:includeFontPadding="false"
                 android:text="그룹명을 입력해 주세요"
-                android:textColor="#3C3C3C"
+                android:textColor="#ffffff"
                 android:textStyle="bold"
-                android:textSize="14dp" />
+                android:textSize="14sp" />
 
             <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/outlinedTextField"
@@ -84,5 +90,23 @@
             </com.google.android.material.textfield.TextInputLayout>
 
         </LinearLayout>
+
+
     </LinearLayout>
 </ScrollView>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="24dp">
+        <Button
+            android:id="@+id/gr_next1Btn"
+            android:layout_marginHorizontal="32dp"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:background="@drawable/gr_ly_btn_next"
+            android:gravity="center"
+            android:text="다음(1/3)"
+            android:textSize="14sp"
+            android:textColor="#FFFFFF" />
+    </LinearLayout>
+</LinearLayout>
