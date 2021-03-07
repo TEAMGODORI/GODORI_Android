@@ -77,7 +77,7 @@ class CertifTabFragment : Fragment(), OnDateSelectedListener {
 
         // calendarText에 클릭하면 날짜 표시
         materialCalendarView.setOnDateChangedListener(OnDateSelectedListener { widget, date, selected ->
-            calendarText.setText(String.format("%d년% d월 %d일 %d요일", date.year, date.month + 1, date.day, date.calendar.))
+            calendarText.setText(String.format("%d년% d월 %d일 %d요일", date.year, date.month + 1, date.day))
         })
 
         materialCalendarView.setTileSizeDp(55)
