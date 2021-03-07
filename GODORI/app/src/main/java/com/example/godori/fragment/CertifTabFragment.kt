@@ -55,7 +55,6 @@ class CertifTabFragment : Fragment(), OnDateSelectedListener {
     ): View? {
         // Inflate the layout for this fragment
         val view = inflater.inflate(R.layout.fragment_certif_tab, container, false)
-
         val materialCalendarView : MaterialCalendarView = view.findViewById(R.id.cal)
 
 
@@ -73,11 +72,12 @@ class CertifTabFragment : Fragment(), OnDateSelectedListener {
         )
 
 //        calendarText = (TextView)findViewById(R.id.calendarText)
-//        calendarText.setText("getTime")
+
+
 
         // calendarText에 클릭하면 날짜 표시
         materialCalendarView.setOnDateChangedListener(OnDateSelectedListener { widget, date, selected ->
-            calendarText.setText(String.format("%d.%d.%d", date.year, date.month + 1, date.day))
+            calendarText.setText(String.format("%d년% d월 %d일 %d요일", date.year, date.month + 1, date.day, date.calendar.))
         })
 
         materialCalendarView.setTileSizeDp(55)

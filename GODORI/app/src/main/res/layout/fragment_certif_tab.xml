@@ -74,7 +74,7 @@
                 app:mcv_dateTextAppearance="@style/customTextViewFontStyle"
                 app:mcv_leftArrowMask="@drawable/certif_left_arrow"
                 app:mcv_rightArrowMask="@drawable/certif_right_arrow"
-                app:mcv_selectionColor="@color/blue"
+                app:mcv_selectionColor="#7380F3"
                 app:mcv_showOtherDates="other_months"/>
 
             <View
