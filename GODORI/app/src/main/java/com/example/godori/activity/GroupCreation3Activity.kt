@@ -1,11 +1,13 @@
-package com.example.godori
+package com.example.godori.activity
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.example.godori.R
 
-class GroupCreation1Activity : AppCompatActivity() {
+class GroupCreation3Activity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_group_creation1)
+        setContentView(R.layout.activity_group_creation3)
+
     }
 }

@@ -5,8 +5,9 @@
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
-    tools:context=".GroupCreation2Activity"
-    android:background="#F7F7F7">
+    android:background="@drawable/gr_bg_create"
+    tools:context=".activity.GroupCreation2Activity"
+    >
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -14,30 +15,18 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:orientation="vertical"
-            android:background="@color/background">
+            android:orientation="vertical">
 
             <androidx.appcompat.widget.Toolbar
                 android:id="@+id/btnRecruitingBack"
                 android:layout_width="match_parent"
-                android:layout_height="54dp"
-                android:background="@color/background">
+                android:layout_height="54dp">
                 <ImageButton
                     android:layout_width="20dp"
                     android:layout_height="20dp"
                     android:layout_marginLeft="15dp"
-                    android:background="@drawable/arrow"
+                    android:background="@drawable/gr_btn_back"
                     android:gravity="center" />
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:includeFontPadding="false"
-                    android:layout_gravity="right"
-                    android:layout_marginRight="20dp"
-                    android:gravity="center"
-                    android:text="다음"
-                    android:textColor="@color/main"
-                    android:textSize="12dp" />
             </androidx.appcompat.widget.Toolbar>
             <LinearLayout
                 android:layout_width="match_parent"
@@ -45,34 +34,27 @@
                 android:orientation="vertical"
                 android:gravity="center_horizontal">
                 <ImageView
-                    android:layout_width="40dp"
-                    android:layout_height="40dp"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
                     android:src="@drawable/gr_img_group"
                     android:layout_marginTop="20dp"/>
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:textStyle="normal"
-                    android:textSize="12sp"
-                    android:layout_marginTop="12dp"
-                    android:textColor="#b3ffffff"
                     android:includeFontPadding="false"
-                    android:letterSpacing="-0.02"
-                    android:gravity="center_horizontal"
-                    tools:text="그룹 만들기"
-                    />
+                    android:layout_marginTop="14dp"
+                    android:text="그룹 만들기"
+                    android:textColor="#b3ffffff"
+                    android:textSize="12sp" />
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:textStyle="bold"
-                    android:textSize="14sp"
-                    android:textColor="#ffffff"
-                    android:layout_marginTop="4dp"
+                    android:layout_marginTop="8dp"
                     android:includeFontPadding="false"
-                    android:letterSpacing="-0.02"
-                    android:gravity="center_horizontal"
-                    tools:text="기본 정보를 입력해주세요."
-                    />
+                    android:text="기본정보를 입력해 주세요"
+                    android:textColor="#ffffff"
+                    android:textStyle="bold"
+                    android:textSize="14sp" />
             </LinearLayout>
 
             <LinearLayout
@@ -84,35 +66,10 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:includeFontPadding="false"
-                    android:layout_marginTop="8dp"
-                    android:text="그룹장의 한 줄 소개"
-                    android:textColor="#3C3C3C"
-                    android:textStyle="bold"
-                    android:textSize="14dp" />
-                <com.google.android.material.textfield.TextInputLayout
-                    android:layout_width="350dp"
-                    android:layout_height="60dp"
-                    android:layout_marginTop="11dp"
-                    app:boxStrokeColor="@color/main"
-                    app:boxStrokeWidthFocused="2dp"
-                    app:shapeAppearance="?attr/shapeAppearanceSmallComponent"
-                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-                    >
-                    <com.google.android.material.textfield.TextInputEditText
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:hint="예시) 헬린이들 모여라!, 공돌이들 거북목 벗어납시다"
-                        android:textSize="10dp"
-                        />
-                </com.google.android.material.textfield.TextInputLayout>
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
                     android:layout_marginTop="8dp"
                     android:includeFontPadding="false"
                     android:text="모집 인원 설정"
-                    android:textColor="#3C3C3C"
+                    android:textColor="@color/white"
                     android:textStyle="bold"
                     android:textSize="14dp" />
                 <TextView
@@ -153,7 +110,7 @@
                     android:layout_marginTop="8dp"
                     android:includeFontPadding="false"
                     android:text="공개 설정"
-                    android:textColor="#3C3C3C"
+                    android:textColor="@color/white"
                     android:textSize="14dp"
                     android:textStyle="bold" />
                 <TextView
