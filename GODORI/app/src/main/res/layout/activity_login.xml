@@ -4,7 +4,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/login_gradation"
     tools:context=".activity.LoginActivity">
 
     <TextView
@@ -20,37 +19,42 @@
         android:id="@+id/editTextid"
         android:layout_width="328dp"
         android:layout_height="wrap_content"
-        android:hint="ID"
-        android:textSize="16dp"
-        android:textColorHint="#ffffff"
+        android:hint="이메일 주소"
+        android:textSize="14dp"
+        android:textColorHint="#e6e4e6"
         android:layout_marginTop="300dp"
         android:layout_centerHorizontal="true"
         android:inputType="text"
-        android:background="@drawable/login_rectangle"
-        android:privateImeOptions="defaultInputmode=english"/>
+        android:drawablePadding="5dp"
+
+        android:privateImeOptions="defaultInputmode=english"
+        android:drawableLeft="@drawable/lg_img_mdi_mail_size"/>
     <!--기본 키보드 영문-->
 
     <EditText
         android:id="@+id/editTextTextPassword"
         android:layout_width="328dp"
         android:layout_height="wrap_content"
-        android:hint="PASSWORD"
-        android:textSize="16dp"
-        android:textColorHint="#ffffff"
+        android:hint="비밀번호"
+        android:textSize="14dp"
+        android:textColorHint="#e6e4e6"
         android:layout_below="@+id/editTextid"
+        android:drawablePadding="5dp"
         android:layout_marginTop="17dp"
         android:layout_centerHorizontal="true"
         android:ems="10"
         android:inputType="textPassword"
-        android:background="@drawable/login_rectangle"/>
+        android:drawableLeft="@drawable/lg_img_mdi_lock_size"
+        android:background="@drawable/login_rectangle" />
 
     <Button
         android:id="@+id/loginBtn"
-        android:layout_width="300dp"
-        android:layout_height="55dp"
+        android:layout_width="328dp"
+        android:layout_height="wrap_content"
         android:gravity="center"
         android:text="로그인"
-        android:textColor="#6776F0"
+        android:textSize="16dp"
+        android:textColor="#e6e4e6"
         android:background="@drawable/button_login_rectangle"
         android:layout_marginTop="55dp"
         android:layout_below="@+id/editTextTextPassword"
@@ -62,7 +66,7 @@
         android:layout_height="wrap_content"
         android:text="아이디 찾기"
         android:textSize="13dp"
-        android:textColor="#60ffffff"
+        android:textColor="#c6c3c7"
         android:layout_marginTop="40dp"
         android:layout_marginLeft="61dp"
         android:layout_below="@+id/loginBtn"
@@ -74,7 +78,7 @@
         android:layout_height="wrap_content"
         android:text="비밀번호 찾기"
         android:textSize="13dp"
-        android:textColor="#60ffffff"
+        android:textColor="#c6c3c7"
         android:layout_marginTop="40dp"
         android:layout_toRightOf="@+id/idFind"
         android:layout_marginLeft="36dp"
@@ -87,11 +91,29 @@
         android:layout_height="wrap_content"
         android:text="회원가입"
         android:textSize="13dp"
-        android:textColor="#60ffffff"
+        android:textColor="#c6c3c7"
         android:layout_marginTop="40dp"
         android:layout_toRightOf="@+id/passwordFind"
         android:layout_marginLeft="36dp"
         android:layout_below="@+id/loginBtn"
         android:includeFontPadding="false"/>
+
+    <ImageButton
+        android:id="@id/kakaoLg"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_below="@+id/idFind"
+        android:layout_marginTop="140dp"
+        android:layout_marginLeft="140dp"
+        android:background="@drawable/lg_btn_login_kakao"/>
+    <ImageButton
+        android:id="@+id/googleLg"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_below="@+id/idFind"
+        android:layout_toRightOf="@+id/kakaoLg"
+        android:layout_marginTop="140dp"
+        android:layout_marginLeft="50dp"
+        android:background="@drawable/lg_btn_login_google"/>
 
 </RelativeLayout>

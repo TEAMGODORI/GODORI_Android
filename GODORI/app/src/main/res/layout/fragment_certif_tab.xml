@@ -65,11 +65,21 @@
             android:layout_height="match_parent"
             android:orientation="vertical">
 
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageButton
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginLeft="140dp"
+                    android:layout_marginTop="14dp"/>
             <com.prolificinteractive.materialcalendarview.MaterialCalendarView
                 android:id="@+id/cal"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 tools:ignore="MissingConstraints"
+                android:background="@color/white"
                 app:mcv_weekDayTextAppearance="@style/customTextViewFontStyle"
                 app:mcv_dateTextAppearance="@style/customTextViewFontStyle"
                 app:mcv_leftArrowMask="@drawable/certif_left_arrow"
@@ -77,6 +87,7 @@
                 app:mcv_selectionColor="#7380F3"
                 app:mcv_showOtherDates="other_months"/>
 
+            </FrameLayout>
             <View
                 android:layout_width="match_parent"
                 android:layout_height="8dp"
@@ -86,6 +97,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
+                android:background="@color/white"
                 android:padding="16dp">
 
                 <TextView

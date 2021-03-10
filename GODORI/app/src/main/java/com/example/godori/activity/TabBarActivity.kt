@@ -1,11 +1,15 @@
 package com.example.godori.activity
 
+import android.annotation.SuppressLint
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.viewpager.widget.ViewPager
 import com.example.godori.R
 import com.example.godori.adapter.TabBarViewPagerAdapter
 import kotlinx.android.synthetic.main.activity_tab_bar.*
+import kotlinx.android.synthetic.main.fragment_certif_tab.*
+import java.text.SimpleDateFormat
+import java.util.*
 import kotlin.properties.Delegates
 
 
@@ -48,7 +52,6 @@ class TabBarActivity : AppCompatActivity() {
             }
             tabbar_viewpager.currentItem = index
             true
-
         }
 
     }

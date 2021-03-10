@@ -10,7 +10,7 @@
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar1"
         android:layout_width="match_parent"
-        android:layout_height="56dp">
+        android:layout_height="64dp">
 
         <ImageView
             android:id="@+id/backBtn1"
@@ -57,17 +57,18 @@
                 android:layout_toRightOf="@+id/version"
                 android:includeFontPadding="false"
                 android:text="1.0.0"
+                android:textSize="14dp"
                 android:textColor="@color/blue" />
 
             <ImageButton
                 android:id="@+id/version_imgBtn"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="10dp"
-                android:layout_marginTop="32dp"
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                android:layout_marginTop="24dp"
                 android:layout_toRightOf="@+id/version_num"
                 android:background="@color/transparent"
-                android:src="@drawable/certif_right_arrow" />
+                android:scaleType="fitCenter"
+                android:src="@drawable/st_btn_arrow_right" />
 
         </RelativeLayout>
     </LinearLayout>
@@ -93,13 +94,14 @@
 
         <ImageButton
             android:id="@+id/logoutImgBtn"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="300dp"
-            android:layout_marginTop="32dp"
+            android:layout_width="28dp"
+            android:layout_height="28dp"
+            android:layout_marginLeft="290dp"
+            android:layout_marginTop="24dp"
             android:layout_toRightOf="@+id/logoutText"
             android:background="@color/transparent"
-            android:src="@drawable/certif_right_arrow" />
+            android:src="@drawable/st_btn_arrow_right"
+            android:scaleType="fitCenter"/>
         </RelativeLayout>
     </LinearLayout>
 </LinearLayout>

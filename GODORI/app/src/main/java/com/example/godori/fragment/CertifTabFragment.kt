@@ -14,6 +14,9 @@ import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.annotation.RequiresApi
+import androidx.appcompat.content.res.AppCompatResources.getDrawable
+import androidx.core.content.ContextCompat
+import androidx.core.content.res.ResourcesCompat
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.RecyclerView
@@ -21,13 +24,11 @@ import com.example.godori.R
 import com.example.godori.activity.CertifTabDetailActivity
 import com.example.godori.activity.CertifTabUpload1Activity
 import com.prolificinteractive.materialcalendarview.*
-import com.prolificinteractive.materialcalendarview.CalendarDay.today
 import kotlinx.android.synthetic.main.activity_certif_tab_upload1.*
 import kotlinx.android.synthetic.main.fragment_certif_tab.*
 import kotlinx.android.synthetic.main.fragment_certif_tab.view.*
 import java.text.SimpleDateFormat
 import java.time.format.DateTimeFormatter
-import java.time.temporal.TemporalAccessor
 import java.util.*
 import kotlin.collections.ArrayList
 
@@ -45,10 +46,8 @@ private const val ARG_PARAM2 = "param2"
 class CertifTabFragment : Fragment(), OnDateSelectedListener {
 
     @RequiresApi(Build.VERSION_CODES.O)
-    private val FORMATTER = DateTimeFormatter.ofPattern("yyyy.MM.dd")
 
-    @SuppressLint("ResourceType")
-    @RequiresApi(Build.VERSION_CODES.O)
+    @SuppressLint("ResourceType", "SetTextI18n")
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -56,7 +55,6 @@ class CertifTabFragment : Fragment(), OnDateSelectedListener {
         // Inflate the layout for this fragment
         val view = inflater.inflate(R.layout.fragment_certif_tab, container, false)
         val materialCalendarView : MaterialCalendarView = view.findViewById(R.id.cal)
-
 
         materialCalendarView.state().edit()
             .setFirstDayOfWeek(Calendar.MONDAY)
@@ -71,13 +69,9 @@ class CertifTabFragment : Fragment(), OnDateSelectedListener {
             OneDayDecorator()
         )
 
-//        calendarText = (TextView)findViewById(R.id.calendarText)
-
-
-
-        // calendarText에 클릭하면 날짜 표시
+        // calendarText에 클릭하면 날짜 표시 -> 요일두 하기
         materialCalendarView.setOnDateChangedListener(OnDateSelectedListener { widget, date, selected ->
-            calendarText.setText(String.format("%d년% d월 %d일 %d요일", date.year, date.month + 1, date.day))
+            calendarText.setText(String.format("%d년 %d월 %d일", date.year, date.month + 1, date.day))
         })
 
         materialCalendarView.setTileSizeDp(55)
@@ -123,7 +117,8 @@ class CertifTabFragment : Fragment(), OnDateSelectedListener {
 //            view.addSpan(StyleSpan(Typeface.BOLD))
 //            view.addSpan(RelativeSizeSpan(1.4f))
             view.addSpan(ForegroundColorSpan(Color.RED))
-//            view.setBackgroundDrawable(getDrawable(R.drawable.button_circle))
+//            view.setBackgroundDrawable(getResources().getDrawable(R.drawable.button_circle, null))
+
         }
         /**
          * We're changing the internals, so make sure to call [MaterialCalendarView.invalidateDecorators]
@@ -233,13 +228,33 @@ class CertifTabFragment : Fragment(), OnDateSelectedListener {
         }
     }
 
+    @SuppressLint("SetTextI18n")
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
+
+        var date: CalendarDay
+        val calendar = Calendar.getInstance()
 
         uploadBtn1.setOnClickListener {
             val intent = Intent(getActivity(), CertifTabUpload1Activity::class.java)
             startActivity(intent)
         }
+
+        val currentTime = Calendar.getInstance().time
+        val weekdayFormat = SimpleDateFormat("EE", Locale.getDefault())
+        val dayFormat = SimpleDateFormat("d", Locale.getDefault())
+        val monthFormat = SimpleDateFormat("M", Locale.getDefault())
+        val yearFormat = SimpleDateFormat("yyyy", Locale.getDefault())
+
+        val weekDay = weekdayFormat.format(currentTime)
+        val year = yearFormat.format(currentTime)
+        val month = monthFormat.format(currentTime)
+        val day = dayFormat.format(currentTime)
+
+        //오늘 날짜 가져오기
+        calendarText.text = year + "년 " + month + "월 " + day + "일 " + weekDay + "요일"
+        
+        
     }
 
 }
