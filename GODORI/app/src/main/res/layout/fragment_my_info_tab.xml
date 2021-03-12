@@ -39,6 +39,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_centerHorizontal="true"
+                    android:includeFontPadding="false"
                     android:layout_marginTop="160dp"
                     android:text="도리"
                     android:textColor="#000000"
@@ -168,6 +169,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="65dp"
                 android:text="선호하는 운동"
+                android:includeFontPadding="false"
                 android:gravity="left|center_vertical"
                 android:background="#FFFFFF"/>
             <Button
@@ -175,6 +177,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="65dp"
                 android:text="그룹 히스토리"
+                android:includeFontPadding="false"
                 android:gravity="left|center_vertical"
                 android:background="#FFFFFF"/>
             <Button
@@ -182,6 +185,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="65dp"
                 android:text="취향 관리"
+                android:includeFontPadding="false"
                 android:gravity="left|center_vertical"
                 android:background="#FFFFFF"/>
         </LinearLayout>

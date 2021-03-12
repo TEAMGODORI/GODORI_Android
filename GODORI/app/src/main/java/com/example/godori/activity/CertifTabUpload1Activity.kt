@@ -21,7 +21,7 @@ class CertifTabUpload1Activity : AppCompatActivity() {
     @SuppressLint("ClickableViewAccessibility")
 
     // 여러 개의 버튼을 배열로 처리하기 위해 버튼에 대해 배열 선언을 함
-    private var  time_Btn: Array<Button?>? = arrayOfNulls(6)
+    private var timeBtn: Array<Button?>? = arrayOfNulls(6)
 
     @SuppressLint("ClickableViewAccessibility")
     override fun onCreate(savedInstanceState: Bundle?) {

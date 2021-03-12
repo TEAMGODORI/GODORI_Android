@@ -33,7 +33,7 @@ class GroupTabFragment : Fragment() {
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
         btnMoreGroup.setOnClickListener {
-            val intent = Intent(getActivity(), GroupRecruitingActivity::class.java)
+            val intent = Intent(context, GroupRecruitingActivity::class.java)
             startActivity(intent)
         }
 
