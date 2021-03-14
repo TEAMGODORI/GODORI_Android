@@ -53,6 +53,7 @@
             android:layout_height="380dp"
             android:layout_marginTop="18dp"
             android:layout_marginLeft="16dp"
+            android:scaleType="fitXY"
             android:background="@drawable/ct_btn_photo"/>
         <ImageView
             android:layout_width="251dp"
