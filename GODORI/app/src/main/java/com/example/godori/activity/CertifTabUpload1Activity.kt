@@ -1,29 +1,41 @@
 package com.example.godori.activity
 
+import android.Manifest
 import android.annotation.SuppressLint
 import android.content.Intent
-import android.graphics.Color
+import android.content.pm.PackageManager
+import android.graphics.Bitmap
+import android.graphics.ImageDecoder
+import android.net.Uri
+import android.os.Build
 import android.os.Bundle
+import android.os.Environment
+import android.provider.MediaStore
+import android.util.Log
 import android.view.View
-import android.view.animation.AccelerateInterpolator
-import android.view.animation.AlphaAnimation
-import android.view.animation.Animation
 import android.widget.*
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.app.ActivityCompat
+import androidx.core.content.FileProvider
 import com.example.godori.R
 import kotlinx.android.synthetic.main.activity_certif_tab_upload1.*
 import kotlinx.android.synthetic.main.activity_certif_tab_upload2.*
+import java.io.File
+import java.io.IOException
 import java.text.SimpleDateFormat
 import java.util.*
 
 
 class CertifTabUpload1Activity : AppCompatActivity() {
     @SuppressLint("ClickableViewAccessibility")
+    private val TAG : String = "태그명"
+    val TAKE_PICTURE: Int  = 1
 
-    // 여러 개의 버튼을 배열로 처리하기 위해 버튼에 대해 배열 선언을 함
-    private var timeBtn: Array<Button?>? = arrayOfNulls(6)
+    // 경로 변수와 요청변수 생성
+    lateinit var mCurrentPhotoPath: String
+    val REQUEST_TAKE_PHOTO: Int= 1
 
-    @SuppressLint("ClickableViewAccessibility")
+    @SuppressLint("SimpleDateFormat")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_certif_tab_upload1)
@@ -39,6 +51,29 @@ class CertifTabUpload1Activity : AppCompatActivity() {
             startActivity(intent)
         }
 
+        //사진 권한 설정
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+            if (checkSelfPermission(Manifest.permission.CAMERA) == PackageManager.PERMISSION_GRANTED && checkSelfPermission(
+                    Manifest.permission.WRITE_EXTERNAL_STORAGE
+                ) == PackageManager.PERMISSION_GRANTED
+            ) {
+                Log.d(TAG, "권한 설정 완료")
+            } else {
+                Log.d(TAG, "권한 설정 요청")
+                ActivityCompat.requestPermissions(
+                    this@CertifTabUpload1Activity,
+                    arrayOf(Manifest.permission.CAMERA, Manifest.permission.WRITE_EXTERNAL_STORAGE),
+                    1
+                )
+            }
+        }
+
+        //버튼 누르면 촬영하는 부분을 dispatchTakePictureIntent를 불러오게 수정
+        Img_Upload.setOnClickListener { v ->
+            when (v.id) {
+                R.id.Img_Upload -> dispatchTakePictureIntent()
+            }
+        }
         //현재 시간 가져오기
         val now: Long = System.currentTimeMillis()
 
@@ -56,17 +91,13 @@ class CertifTabUpload1Activity : AppCompatActivity() {
         time_Btn4.setText(getTime)
         time_Btn5.setText(getTime)
 
-//        time_Btn1.setOnClickListener {
-//            time_Btn1.setTextColor(Color.WHITE)
-//        }
-
         time_RBtn1.setOnCheckedChangeListener(listener1)
         time_RBtn2.setOnCheckedChangeListener(listener2)
 
     }
 
     //라디오 버튼 멀티라인
-    private var listener1: RadioGroup.OnCheckedChangeListener? =
+    private var listener1: RadioGroup.OnCheckedChangeListener =
         RadioGroup.OnCheckedChangeListener { group, checkedId ->
             if (checkedId != -1) {
                 time_RBtn2.setOnCheckedChangeListener(null)
@@ -85,6 +116,83 @@ class CertifTabUpload1Activity : AppCompatActivity() {
             }
         }
 
+    // 권한 요청
+    override fun onRequestPermissionsResult(
+        requestCode: Int,
+        permissions: Array<String>,
+        grantResults: IntArray
+    ) {
+        super.onRequestPermissionsResult(requestCode, permissions, grantResults)
+        Log.d(TAG, "onRequestPermissionsResult")
+        if (grantResults[0] == PackageManager.PERMISSION_GRANTED && grantResults[1] == PackageManager.PERMISSION_GRANTED) {
+            Log.d(TAG, "Permission: " + permissions[0] + "was " + grantResults[0])
+        }
+    }
+
+    // 카메라로 촬영한 영상을 가져오는 부분
+    override fun onActivityResult(requestCode: Int, resultCode: Int, intent: Intent?) {
+        super.onActivityResult(requestCode, resultCode, intent)
+    // API 29 이상일 경우 미만일 경우 나누어 Bitmap 생성
+        try {
+            when (requestCode) {
+                REQUEST_TAKE_PHOTO -> {
+                    if (resultCode === RESULT_OK) {
+                        val file = File(mCurrentPhotoPath)
+                        val bitmap: Bitmap?
+                        if (Build.VERSION.SDK_INT >= 29) {
+                            val source = ImageDecoder.createSource(
+                                contentResolver, Uri.fromFile(file)
+                            )
+                            try {
+                                bitmap = ImageDecoder.decodeBitmap(source)
+                                Img_Upload.setImageBitmap(bitmap)
+                            } catch (e: IOException) {
+                                e.printStackTrace()
+                            }
+                        } else {
+                            try {
+                                bitmap = MediaStore.Images.Media.getBitmap(
+                                    this.contentResolver,
+                                    Uri.fromFile(file)
+                                )
+                                if (bitmap != null) {
+                                    Img_Upload.setImageBitmap(bitmap)
+                                }
+                            } catch (e: IOException) {
+                                e.printStackTrace()
+                            }
+                        }
+                    }
+                }
+            }
+        } catch (error: Exception) {
+            error.printStackTrace()
+        }
+    }
+    // 사진 촬영 후 썸네일만 띄워줌. 이미지를 파일로 저장해야 함. 촬영한 사진을 이미지 파일로 저장하는 함수 createImageFile
+    @SuppressLint("SimpleDateFormat")
+    @Throws(IOException::class)
+    private fun createImageFile(): File {
+        val timeStamp = SimpleDateFormat("yyyyMMdd_HHmmss").format(Date())
+        val imageFileName = "JPEG_" + timeStamp + "_"
+        val storageDir: File? = getExternalFilesDir(Environment.DIRECTORY_PICTURES)
+        val image: File = File.createTempFile(imageFileName, ".jpg", storageDir)
+        mCurrentPhotoPath = image.absolutePath
+        return image
+    }
+
+    // 카메라 인텐트 실행하는 부분
+    @SuppressLint("QueryPermissionsNeeded")
+    private fun dispatchTakePictureIntent() {
+        val takePictureIntent = Intent(MediaStore.ACTION_IMAGE_CAPTURE)
+        var photoFile: File? = null
+        photoFile = createImageFile()
+
+        val photoURI: Uri =
+            FileProvider.getUriForFile(this, "com.example.godori.fileprovider", photoFile)
+        takePictureIntent.putExtra(MediaStore.EXTRA_OUTPUT, photoURI)
+        startActivityForResult(takePictureIntent, REQUEST_TAKE_PHOTO)
+    }
 //    @SuppressLint("ResourceType")
 //    fun onClick(v: View) {
 //        // TODO Auto-generated method stub
@@ -106,9 +214,3 @@ class CertifTabUpload1Activity : AppCompatActivity() {
 //    }
 }
 
-//fun time_Btn(view: View){
-//    when(view?.id)
-//    {
-//        R.id
-//    }
-//}

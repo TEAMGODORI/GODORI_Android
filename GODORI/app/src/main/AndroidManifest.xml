@@ -9,7 +9,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.GODORI">
-        <activity android:name=".activity.GroupCreation4Activity"/>
+        <activity android:name=".SettingActivity" />
         <activity android:name=".activity.LoginActivity" />
         <activity android:name=".activity.Information2Activity" />
         <activity android:name=".activity.Information1Activity" />
@@ -17,9 +17,9 @@
         <activity android:name=".activity.GroupJoinCompleActivity" />
         <activity android:name=".GroupJoinCompleteActivity" />
         <activity android:name=".GroupCreationCompleteActivity" />
-        <activity android:name=".activity.GroupCreation3Activity" />
-        <activity android:name=".activity.GroupCreation2Activity" />
-        <activity android:name=".activity.GroupCreation1Activity" />
+        <activity android:name=".GroupCreation3Activity" />
+        <activity android:name=".GroupCreation2Activity" />
+        <activity android:name=".GroupCreation1Activity" />
         <activity android:name=".GroupInfoActivity" />
         <activity
             android:name=".activity.SplashActivity"
@@ -34,8 +34,21 @@
         <activity android:name=".activity.CertifTabUpload1Activity" />
         <activity android:name=".activity.CertifTabUpload2Activity" />
         <activity android:name=".activity.CertifTabUpload3Activity" />
+        <activity android:name=".activity.CertifTabUpload4Activity" />
         <activity android:name=".activity.CertifTabDetailActivity" />
         <activity android:name=".activity.TabBarActivity" />
+
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="com.example.godori.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+        </provider>
     </application>
+
+
 
 </manifest>
