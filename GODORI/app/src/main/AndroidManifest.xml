@@ -9,6 +9,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.GODORI">
+        <activity android:name=".activity.GroupCreation4Activity"></activity>
         <activity android:name=".SettingActivity" />
         <activity android:name=".activity.LoginActivity" />
         <activity android:name=".activity.Information2Activity" />
@@ -17,9 +18,7 @@
         <activity android:name=".activity.GroupJoinCompleActivity" />
         <activity android:name=".GroupJoinCompleteActivity" />
         <activity android:name=".GroupCreationCompleteActivity" />
-        <activity android:name=".GroupCreation3Activity" />
-        <activity android:name=".GroupCreation2Activity" />
-        <activity android:name=".GroupCreation1Activity" />
+        <activity android:name=".activity.GroupCreation1Activity" />
         <activity android:name=".GroupInfoActivity" />
         <activity
             android:name=".activity.SplashActivity"
@@ -48,7 +47,5 @@
                 android:resource="@xml/file_paths" />
         </provider>
     </application>
-
-
 
 </manifest>
