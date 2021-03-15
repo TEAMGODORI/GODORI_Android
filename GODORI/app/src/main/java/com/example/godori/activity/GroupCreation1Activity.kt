@@ -10,6 +10,7 @@ import android.widget.EditText
 import android.widget.ImageButton
 import android.widget.TextView
 import com.example.godori.R
+import kotlinx.android.synthetic.main.activity_group_creation1.*
 
 class GroupCreation1Activity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -42,20 +43,20 @@ class GroupCreation1Activity : AppCompatActivity() {
         name.addTextChangedListener(textWatcher)
 
         //다음
-        next.setOnClickListener {
+        gr_btn_creation1_next.setOnClickListener {
             // 이름 2글자 이상 filter
-            numS = name.text.toString()
-            if (numS.length < 3){
+//            numS = name.text.toString()
+//            if (numS.length < 3){
 //                val layout = layoutInflater.inflate(R.layout.toast_group)
 //                val myToast = Toast(applicationContext)
 //                myToast.duration = Toast.LENGTH_SHORT
 //                myToast.setGravity(Gravity.CENTER_VERTICAL, 0, 0)
 //                myToast.view = layout//setting the view of custom toast layout
 //                myToast.show()
-            } else {
+//            } else {
                 val intent = Intent(this, GroupCreation2Activity::class.java)
                 startActivity(intent)
-            }
+//            }
         }
     }
 }
