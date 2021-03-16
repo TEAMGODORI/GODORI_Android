@@ -10,270 +10,307 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical"
-        android:background="#F7F7F7">
-
-        <androidx.appcompat.widget.Toolbar
-            android:id="@+id/btnRecruitingBack"
-            android:layout_width="match_parent"
-            android:layout_height="54dp"
-            android:background="@drawable/group_info_gradation">
-
-            <ImageButton
-                android:layout_width="20dp"
-                android:layout_height="20dp"
-                android:layout_marginLeft="15dp"
-                android:background="@drawable/arrow"
-                android:backgroundTint="@color/white"
-                android:gravity="center" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:gravity="center"
-                android:text="그룹정보"
-                android:textStyle="bold"
-                android:textColor="#ffffff"
-                android:textSize="12dp" />
-
-        </androidx.appcompat.widget.Toolbar>
-
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
         <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="150dp"
-        android:background="@drawable/group_info_gradation" />
+            android:layout_width="match_parent"
+            android:layout_height="269dp"
+            android:background="@drawable/gr_img_info_title">
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/btnRecruitingBack"
+                android:layout_width="match_parent"
+                android:layout_height="54dp">
+                <ImageButton
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_marginLeft="15dp"
+                    android:background="@drawable/gr_btn_back"
+                    android:gravity="center"/>
+            </androidx.appcompat.widget.Toolbar>
+        </LinearLayout>
         <RelativeLayout
-            android:layout_width="380dp"
-            android:layout_height="170dp"
-            android:layout_marginTop="-120dp"
-            android:background="@drawable/group_info_round"
-            android:layout_marginHorizontal="16dp"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_marginTop="-62dp"
+            android:background="@drawable/gr_ly_rl_info1"
             android:elevation="4dp">
             <TextView
-                android:id="@+id/grouInfo_groupName"
+                android:id="@+id/gr_tv_info_title_exercise"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="고도리"
-                android:textStyle="bold"
-                android:textSize="20dp"
+                android:text="헬스"
+                android:textSize="14sp"
                 android:includeFontPadding="false"
                 android:layout_centerHorizontal="true"
                 android:layout_marginTop="25dp"
+                android:textColor="#5c6cf3"/>
+            <TextView
+                android:id="@+id/gr_tv_info_title_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/gr_tv_info_title_exercise"
+                android:text="고도리"
+                android:textStyle="bold"
+                android:textSize="18sp"
+                android:includeFontPadding="false"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"
                 android:textColor="@color/black"/>
-
-            <RelativeLayout
-                android:id="@+id/groupInfo_host_rl"
+            <ImageView
+                android:layout_width="312dp"
+                android:layout_height="57dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="89dp"
+                android:background="@drawable/gr_img_info_line"/>
+            <TextView
+                android:id="@+id/gr_tv_info_title_line"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/grouInfo_groupName"
-                android:layout_marginTop="30dp"
-                android:layout_marginLeft="70dp">
-                <ImageView
-                    android:id="@+id/groupInfo_startDate_img"
-                    android:layout_width="21dp"
-                    android:layout_height="24dp"
-                    android:src="@drawable/ic_start_date"/>
-                <TextView
-                    android:id="@+id/groupInfo_startDate_tv"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="시작날짜"
-                    android:textStyle="bold"
-                    android:includeFontPadding="false"
-                    android:textSize="16dp"
-                    android:layout_marginLeft="10dp"
-                    android:textColor="@color/black"
-                    android:layout_toRightOf="@+id/groupInfo_startDate_img"/>
-                <TextView
-                    android:id="@+id/groupInfo_startDate_name"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="2020/11/16"
-                    android:textSize="15dp"
-                    android:includeFontPadding="false"
-                    android:layout_marginLeft="10dp"
-                    android:textColor="@color/main"
-                    android:layout_below="@+id/groupInfo_startDate_tv"
-                    android:layout_marginTop="8dp"
-                    android:paddingLeft="23dp"/>
-            </RelativeLayout>
-
-            <RelativeLayout
+                android:text="헬린이들 집합"
+                android:letterSpacing="-0.05"
+                android:textSize="16sp"
+                android:textColor="#2c2c2d"
+                android:includeFontPadding="false"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="111dp"/>
+            <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/grouInfo_groupName"
-                android:layout_marginTop="30dp"
-                android:layout_alignParentRight="true"
-                android:layout_marginRight="80dp">
-                <ImageView
-                    android:id="@+id/groupInfo_host_img"
-                    android:layout_width="21dp"
-                    android:layout_height="24dp"
-                    android:src="@drawable/ic_host"/>
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="23dp"
+                android:layout_centerHorizontal="true">
                 <TextView
-                    android:id="@+id/groupInfo_host_tv"
+                    android:id="@+id/gr_tv_info_title_startdate"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="호스트"
-                    android:textStyle="bold"
-                    android:textSize="16dp"
-                    android:layout_marginLeft="10dp"
+                    android:text="2021.01.26~"
+                    android:textSize="12sp"
                     android:includeFontPadding="false"
-                    android:textColor="@color/black"
-                    android:layout_toRightOf="@+id/groupInfo_host_img"/>
+                    android:textColor="#979797"/>
                 <TextView
-                    android:id="@+id/groupInfo_host_name"
+                    android:id="@+id/gr_tv_info_title_point"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="・"
+                    android:textSize="12sp"
+                    android:includeFontPadding="false"
+                    android:layout_marginLeft="8dp"
+                    android:layout_toRightOf="@id/gr_tv_info_title_startdate"
+                    android:textColor="#979797"/>
+                <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="벅지니"
-                    android:textSize="15dp"
+                    android:textSize="12sp"
                     android:includeFontPadding="false"
-                    android:layout_marginLeft="9dp"
-                    android:textColor="@color/main"
-                    android:layout_below="@+id/groupInfo_host_tv"
-                    android:layout_marginTop="8dp"
-                    android:paddingLeft="23dp"/>
-            </RelativeLayout>
+                    android:layout_marginLeft="8dp"
+                    android:layout_toRightOf="@id/gr_tv_info_title_point"
+                    android:textColor="#979797"/>
+            </LinearLayout>
         </RelativeLayout>
-
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@color/white"
-            android:layout_marginTop="20dp"
-            android:orientation="vertical">
-
+            android:background="#F5F5F5">
             <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+                android:layout_width="376dp"
+                android:layout_height="277dp"
+                android:layout_margin="18dp"
+                android:padding="16dp"
+                android:background="@drawable/gr_ly_rl_info2">
                 <TextView
-                    android:id="@+id/groupInfo_recruitmentNumber"
+                    android:id="@+id/gr_tv_info_info"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_margin="16dp"
                     android:textStyle="bold"
-                    android:text="모집인원"
-                    android:textColor="@color/black"/>
-                <TextView
-                    android:id="@+id/groupInfo_recruitmentNumber_result"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="16dp"
-                    android:layout_alignParentRight="true"
-                    android:text="5/13"
-                    android:textAlignment="textEnd"
-                    android:textColor="@color/black"
-                    android:gravity="end" />
-            </RelativeLayout>
-            <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-                <TextView
-                    android:id="@+id/groupInfo_exerciseCycle"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="16dp"
-                    android:textStyle="bold"
-                    android:text="운동주기"
-                    android:textColor="@color/black"/>
-                <TextView
-                    android:id="@+id/groupInfo_exerciseCycle_result"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="16dp"
-                    android:text="주 3회"
-                    android:layout_alignParentRight="true"
-                    android:textColor="@color/black"/>
-            </RelativeLayout>
-            <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-                <TextView
-                    android:id="@+id/groupInfo_exerciseLevel"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="16dp"
-                    android:textStyle="bold"
-                    android:text="운동강도"
-                    android:textColor="@color/black"/>
-                <TextView
-                    android:id="@+id/groupInfo_exerciseLevel_result"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="16dp"
-                    android:text="중"
-                    android:layout_alignParentRight="true"
-                    android:textColor="@color/black"/>
-            </RelativeLayout>
-            <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-                <TextView
-                    android:id="@+id/groupInfo_minimumTime"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="16dp"
-                    android:textStyle="bold"
-                    android:text="최소 운동 시간"
-                    android:textColor="@color/black"/>
-                <TextView
-                    android:id="@+id/groupInfo_minimumTime_result"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="16dp"
-                    android:text="20"
-                    android:layout_alignParentRight="true"
-                    android:textColor="@color/black"/>
-            </RelativeLayout>
-            <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-
-                <TextView
-                    android:id="@+id/groupInfo_averageAchievementRate"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="16dp"
-                    android:layout_marginLeft="16dp"
-                    android:layout_marginTop="16dp"
-                    android:layout_marginBottom="16dp"
-                    android:text="그룹원 평균 달성률"
-                    android:textStyle="bold"
-                    android:textColor="@color/black" />
-                <ImageView
-                    android:layout_width="100dp"
-                    android:layout_height="100dp"
-                    android:layout_marginLeft="16dp"
-                    android:src="@drawable/ic_percent_example"
-                    android:layout_below="@+id/groupInfo_averageAchievementRate"
-                    android:layout_marginBottom="10dp"/>
-            </RelativeLayout>
-            <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-                <TextView
-                    android:id="@+id/groupInfo_favoriteExercise"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="16dp"
-                    android:textStyle="bold"
-                    android:text="선호하는 운동"
-                    android:textColor="@color/black"/>
-                <androidx.recyclerview.widget.RecyclerView
-                    android:id="@+id/recyclerview_favoriteExercise"
-                    android:layout_below="@+id/groupInfo_favoriteExercise"
-                    android:divider="@null"
-                    android:orientation="horizontal"
-                    app:reverseLayout="true"
-                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-                    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+                    android:textSize="14sp"
+                    android:includeFontPadding="false"
+                    android:textColor="#2c2c2d"
+                    android:letterSpacing="-0.02"
+                    tools:text="그룹 정보"/>
+                <RelativeLayout
+                    android:id="@+id/gr_rl_info_info"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
-                </androidx.recyclerview.widget.RecyclerView>
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/gr_tv_info_info"
+                    android:layout_marginTop="20dp">
+                    <ImageView
+                        android:id="@+id/gr_iv_info_info"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:src="@drawable/gr_img_info_group"/>
+                    <TextView
+                        android:id="@+id/gr_tv_info_member"
+                        android:layout_centerVertical="true"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textStyle="bold"
+                        android:layout_toRightOf="@id/gr_iv_info_info"
+                        android:layout_marginLeft="11dp"
+                        android:includeFontPadding="false"
+                        android:text="모집 인원"
+                        android:textColor="#6280f2"/>
+                    <TextView
+                        android:id="@+id/gr_tv_info_member_num"
+                        android:layout_centerVertical="true"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:text="13명"
+                        android:includeFontPadding="false"
+                        android:textAlignment="textEnd"
+                        android:textColor="@color/black"
+                        android:gravity="end" />
+                </RelativeLayout>
+                <RelativeLayout
+                    android:id="@+id/gr_rl_info_cycle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/gr_rl_info_info"
+                    android:layout_marginTop="19dp">
+                    <ImageView
+                        android:id="@+id/gr_iv_info_cycle"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:src="@drawable/gr_img_info_cycle"/>
+                    <TextView
+                        android:id="@+id/gr_tv_info_cycle"
+                        android:layout_centerVertical="true"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textStyle="bold"
+                        android:includeFontPadding="false"
+                        android:layout_toRightOf="@id/gr_iv_info_cycle"
+                        android:layout_marginLeft="11dp"
+                        android:text="운동 주기"
+                        android:textColor="#6280f2"/>
+                    <TextView
+                        android:id="@+id/gr_tv_info_cycle_num"
+                        android:layout_centerVertical="true"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:includeFontPadding="false"
+                        android:layout_alignParentRight="true"
+                        android:text="주4회"
+                        android:textAlignment="textEnd"
+                        android:textColor="@color/black"
+                        android:gravity="end" />
+                </RelativeLayout>
+                <RelativeLayout
+                    android:id="@+id/gr_rl_info_level"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/gr_rl_info_cycle"
+                    android:layout_marginTop="19dp">
+                    <ImageView
+                        android:id="@+id/gr_iv_info_level"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:src="@drawable/gr_img_info_level"/>
+                    <TextView
+                        android:id="@+id/gr_tv_info_level"
+                        android:layout_centerVertical="true"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textStyle="bold"
+                        android:includeFontPadding="false"
+                        android:layout_toRightOf="@id/gr_iv_info_level"
+                        android:layout_marginLeft="11dp"
+                        android:text="운동 강도"
+                        android:textColor="#6280f2"/>
+                    <TextView
+                        android:id="@+id/gr_tv_info_level_num"
+                        android:layout_centerVertical="true"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:includeFontPadding="false"
+                        android:layout_alignParentRight="true"
+                        android:text="중"
+                        android:textAlignment="textEnd"
+                        android:textColor="@color/black"
+                        android:gravity="end" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/gr_rl_info_percent"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/gr_rl_info_level"
+                    android:layout_marginTop="19dp">
+                    <ImageView
+                        android:id="@+id/gr_iv_info_percent"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:src="@drawable/gr_img_info_percent"/>
+                    <TextView
+                        android:id="@+id/gr_tv_info_percent"
+                        android:layout_centerVertical="true"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textStyle="bold"
+                        android:layout_toRightOf="@id/gr_iv_info_percent"
+                        android:layout_marginLeft="11dp"
+                        android:text="달성률"
+                        android:includeFontPadding="false"
+                        android:textColor="#6280f2"/>
+                    <TextView
+                        android:id="@+id/gr_tv_info_percent_num"
+                        android:layout_centerVertical="true"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:text="100%"
+                        android:includeFontPadding="false"
+                        android:textAlignment="textEnd"
+                        android:textColor="@color/black"
+                        android:gravity="end" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/gr_rl_info_exercise"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/gr_rl_info_percent"
+                    android:layout_marginTop="19dp">
+                    <ImageView
+                        android:id="@+id/gr_iv_info_exercise"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:src="@drawable/gr_img_info_excersie"/>
+                    <TextView
+                        android:id="@+id/gr_tv_info_exercise"
+                        android:layout_centerVertical="true"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textStyle="bold"
+                        android:layout_toRightOf="@id/gr_iv_info_exercise"
+                        android:layout_marginLeft="11dp"
+                        android:text="선호하는 운동"
+                        android:includeFontPadding="false"
+                        android:textColor="#6280f2"/>
+                    <TextView
+                        android:id="@+id/gr_tv_info_exercise_num"
+                        android:layout_centerVertical="true"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:text="헬스"
+                        android:includeFontPadding="false"
+                        android:textAlignment="textEnd"
+                        android:textColor="@color/black"
+                        android:gravity="end" />
+                </RelativeLayout>
             </RelativeLayout>
         </LinearLayout>
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="59dp"
+            android:background="@drawable/gr_ly_gradation"
+            android:textSize="18sp"
+            android:textColor="#ffffff"
+            android:letterSpacing="-0.05"
+            android:gravity="center"
+            tools:text="참여하기" />
     </LinearLayout>
 </ScrollView>
