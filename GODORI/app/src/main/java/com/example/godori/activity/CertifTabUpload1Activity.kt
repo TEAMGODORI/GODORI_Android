@@ -248,7 +248,7 @@ class CertifTabUpload1Activity : AppCompatActivity() {
                 this@CertifTabUpload1Activity,
                 R.style.MyAlertDialogStyle
             )
-        alt_bld.setTitle("사진 업로드").setIcon(R.drawable.certif_un).setCancelable(
+        alt_bld.setTitle("사진 업로드").setIcon(R.drawable.gr_img_info_excersie).setCancelable(
             false
         ).setPositiveButton("사진촬영",
             DialogInterface.OnClickListener { dialog, id ->
