@@ -223,7 +223,7 @@ class CertifTabFragment : Fragment(), OnDateSelectedListener {
 
         //뷰를 그리는 부분
         override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-            holder.certifImg.setImageResource(R.drawable.certif_un)
+//            holder.certifImg.setImageResource(R.drawable.certif_un)
             holder.personName.setText(itemList.get(position).name)
         }
     }
