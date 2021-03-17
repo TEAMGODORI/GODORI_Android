@@ -55,12 +55,12 @@
             android:layout_marginLeft="16dp"
             android:scaleType="fitXY"
             android:background="@drawable/ct_btn_photo"/>
-        <ImageView
-            android:layout_width="251dp"
-            android:layout_height="71dp"
-            android:layout_marginTop="251dp"
-            android:layout_marginLeft="81dp"
-            android:src="@drawable/ct_photo_speech"/>
+<!--        <ImageView-->
+<!--            android:layout_width="251dp"-->
+<!--            android:layout_height="71dp"-->
+<!--            android:layout_marginTop="251dp"-->
+<!--            android:layout_marginLeft="81dp"-->
+<!--            android:src="@drawable/ct_photo_speech"/>-->
 
     </FrameLayout>
 
